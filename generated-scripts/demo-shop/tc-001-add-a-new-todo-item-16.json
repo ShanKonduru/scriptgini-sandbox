@@ -1,0 +1,10 @@
+{
+  "script_id": 16,
+  "project_name": "Demo Shop",
+  "test_case_title": "TC-001 Add a new todo item",
+  "framework": "playwright_python",
+  "llm_provider": "gemini",
+  "llm_model": "runtime-default",
+  "exported_at": "2026-05-06T08:45:19.185115+00:00",
+  "script_path": "generated-scripts/demo-shop/tc-001-add-a-new-todo-item-16.py"
+}
