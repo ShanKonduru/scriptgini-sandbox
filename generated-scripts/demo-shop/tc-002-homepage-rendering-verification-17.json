@@ -1,0 +1,10 @@
+{
+  "script_id": 17,
+  "project_name": "Demo Shop",
+  "test_case_title": "TC-002 Homepage Rendering Verification",
+  "framework": "playwright_python",
+  "llm_provider": "claude",
+  "llm_model": "claude-sonnet-4-6",
+  "exported_at": "2026-06-01T00:00:00.000000+00:00",
+  "script_path": "generated-scripts/demo-shop/tc-002-homepage-rendering-verification-17.py"
+}
