@@ -1,0 +1,26 @@
+# Normalize text files by default.
+* text=auto
+
+# Linux shell scripts.
+*.sh text eol=lf
+
+# Windows scripts.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Text files used by both environments.
+*.md text eol=lf
+*.py text eol=lf
+*.sql text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.conf text eol=lf
+*.env text eol=lf
+
+# Example/config text variants in this repo.
+*.example text eol=lf
+
+# Binary files.
+*.dll binary
+*.xlsx binary

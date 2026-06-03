@@ -1,0 +1,30 @@
+================================================================================
+CHANGELOG
+================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-01
+Test Case Reference: TC-002 Homepage Rendering Verification
+--------------------------------------------------------------------------------
+
+What was added:
+  - generated-scripts/demo-shop/tc-002-homepage-rendering-verification-17.py
+      New Playwright/Python test function: test_tc_002_homepage_rendering_verification
+      Verifies HTTP 200 status, presence/visibility of hero section, navigation
+      bar, and product tiles, and absence of JavaScript console errors on the
+      sauce-demo.myshopify.com homepage.
+
+  - generated-scripts/demo-shop/tc-002-homepage-rendering-verification-17.json
+      Metadata file for script ID 17 following the project's naming convention
+      (mirrors the .json format established by existing tc-001 scripts).
+
+Why it was necessary:
+  No existing test covered the homepage rendering verification scenario for
+  https://sauce-demo.myshopify.com/. The only prior scripts (IDs 14 and 16)
+  target the TodoMVC demo app (https://demo.playwright.dev/todomvc) and test
+  todo-item creation — a completely different application and test objective.
+  No existing steps, locators, or helper logic could be reused for this new
+  AUT or test scenario. A new test file was therefore required.
+
+No existing files were modified. No existing tests were broken.
+================================================================================

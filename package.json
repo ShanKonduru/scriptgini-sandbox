@@ -1,0 +1,24 @@
+{
+  "name": "scriptgini-sandbox",
+  "version": "1.0.0",
+  "description": "scriptgini-sandbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShanKonduru/scriptgini-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShanKonduru/scriptgini-sandbox/issues"
+  },
+  "homepage": "https://github.com/ShanKonduru/scriptgini-sandbox#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}
