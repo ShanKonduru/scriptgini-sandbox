@@ -46,7 +46,7 @@ python -m pip install -U pip
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 python -m pip install -U pytest pytest-playwright playwright
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
-python -m playwright install chromium
+python -m playwright install chrome
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 echo.

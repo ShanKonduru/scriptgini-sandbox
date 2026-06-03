@@ -23,7 +23,7 @@ source "$VENV_DIR/bin/activate"
 echo "Installing Python dependencies for Playwright tests in $VENV_DIR..."
 python -m pip install -U pip
 python -m pip install -U pytest pytest-playwright playwright
-python -m playwright install chromium
+python -m playwright install chrome
 
 echo
 echo "Setup complete."

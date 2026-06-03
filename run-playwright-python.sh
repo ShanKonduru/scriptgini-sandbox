@@ -3,7 +3,12 @@ set -euo pipefail
 
 DEFAULT_SCRIPT="generated-scripts/demo-shop/tc-002-homepage-rendering-verification-17.py"
 SCRIPT="${1:-$DEFAULT_SCRIPT}"
+if [[ $# -gt 0 ]]; then
+  shift
+fi
+EXTRA_ARGS=("$@")
 VENV_PY=".venv/bin/python"
+PLAYWRIGHT_ARGS=(--headed --browser chromium --browser-channel chrome)
 
 if [[ ! -f "$SCRIPT" ]]; then
   echo "Error: Script not found: $SCRIPT"
@@ -23,4 +28,4 @@ else
   exit 1
 fi
 
-"$PYTHON_BIN" -m pytest -v "$SCRIPT"
+"$PYTHON_BIN" -m pytest -v "${PLAYWRIGHT_ARGS[@]}" "$SCRIPT" "${EXTRA_ARGS[@]}"
