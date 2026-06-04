@@ -160,6 +160,33 @@ def _is_captcha_failure_page(page: Page) -> bool:
     return False
 
 
+def _click_login_submit(page: Page) -> None:
+    login_form = page.locator(
+        "form[action*='/account/login'], form[action*='/account'], form#customer_login"
+    ).first
+    expect(login_form).to_be_visible(timeout=10000)
+
+    submit_button = login_form.locator(
+        "button[name='commit'][type='submit'], input[name='commit'][type='submit'], "
+        "button[type='submit'], input[type='submit'], "
+        "button:has-text('Sign in'), button:has-text('Log in')"
+    ).first
+    expect(submit_button).to_be_visible(timeout=10000)
+    submit_button.scroll_into_view_if_needed()
+    submit_button.click()
+    _wait_for_page_ready(page)
+
+
+def _login_password_still_present(page: Page) -> bool:
+    try:
+        current_password = page.locator(
+            "form[action*='/account/login'], form[action*='/account'], form#customer_login"
+        ).first.locator("input[name='customer[password]'], input[type='password']").first.input_value(timeout=3000)
+        return current_password != ""
+    except Exception:
+        return False
+
+
 def _recover_storefront_page(page: Page, fallback_url: str) -> None:
     if not _is_storefront_error_page(page):
         return
@@ -496,17 +523,19 @@ def test_tc_003_shopify_login_search_add_to_cart(page: Page):
     password_input.fill(user_password)
     assert password_input.input_value() != "", "Password field is empty after fill"
 
-    sign_in_button.scroll_into_view_if_needed()
-    sign_in_button.click()
-    _wait_for_page_ready(page)
+    _click_login_submit(page)
 
-    if "/account/login" in page.url:
-        password_input.press("Enter")
-        _wait_for_page_ready(page)
-
-    if "/account/login" in page.url:
+    if "/account/login" in page.url and _login_password_still_present(page):
         try:
-            login_form.evaluate("form => form.requestSubmit ? form.requestSubmit() : form.submit()")
+            _click_login_submit(page)
+        except Exception:
+            pass
+
+    if "/account/login" in page.url and _login_password_still_present(page):
+        try:
+            page.locator(
+                "form[action*='/account/login'], form[action*='/account'], form#customer_login"
+            ).first.evaluate("form => form.requestSubmit ? form.requestSubmit() : form.submit()")
         except Exception:
             pass
         _wait_for_page_ready(page)
