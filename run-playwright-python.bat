@@ -8,7 +8,7 @@ set "DEFAULT_SCRIPT=generated-scripts\demo-shop\tc-004-navigation-broken-links-c
 
 REM Run mode options: headless | headed | maximized
 set "DEFAULT_RUN_MODE=maximized"
-set "RUN_MODE=%DEFAULT_RUN_MODE%"
+set "RUN_MODE=%PW_RUN_MODE%"
 if "%RUN_MODE%"=="" set "RUN_MODE=%DEFAULT_RUN_MODE%"
 
 if /I "%RUN_MODE%"=="max" set "RUN_MODE=maximized"

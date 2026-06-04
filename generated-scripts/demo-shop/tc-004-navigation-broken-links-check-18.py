@@ -132,10 +132,12 @@ def _is_expected_restricted_link(href: str, status: int | None) -> bool:
     return path.startswith(restricted_prefixes)
 
 
-def _click_link_on_current_page(page: Page, target_href: str) -> bool:
+def _click_link_on_current_page(page: Page, target_href: str) -> tuple[bool, "Page"]:
     """
     Click a visible anchor matching target_href on the current page.
-    Returns True when a click is executed and navigation is attempted.
+    If the click opens a new tab, switches focus to that tab.
+    Returns (clicked: bool, active_page: Page) where active_page is the
+    new tab when one was opened, otherwise the original page.
     """
     anchors = page.locator("a[href]")
     count = anchors.count()
@@ -156,13 +158,24 @@ def _click_link_on_current_page(page: Page, target_href: str) -> bool:
             if not candidate.is_visible(timeout=1000):
                 continue
             candidate.scroll_into_view_if_needed()
+
+            # Capture any new tab that the click might spawn.
+            new_pages: list = []
+            page.context.once("page", lambda p: new_pages.append(p))
             candidate.click(timeout=8000)
+
+            if new_pages:
+                new_tab = new_pages[0]
+                _wait_for_page_ready(new_tab)
+                new_tab.bring_to_front()
+                return True, new_tab
+
             _wait_for_page_ready(page)
-            return True
+            return True, page
         except Exception:
             continue
 
-    return False
+    return False, page
 
 
 # ─── test ─────────────────────────────────────────────────────────────────────
@@ -205,20 +218,24 @@ def test_tc_004_navigation_broken_links_check(page: Page):
         try:
             page.goto(base_url, wait_until="load")
             _wait_for_page_ready(page)
-            clicked = _click_link_on_current_page(page, link["href"])
+            clicked, active_page = _click_link_on_current_page(page, link["href"])
             result["clicked"] = clicked
-            result["navigated_url"] = page.url if clicked else ""
+            result["navigated_url"] = active_page.url if clicked else ""
             if not clicked:
                 result["ui_ok"] = False
             elif not _requires_ui_navigation(link["href"]):
                 result["ui_ok"] = True
-            elif "/account/login" in link["href"] and "/account/login" in page.url:
+            elif "/account/login" in link["href"] and "/account/login" in active_page.url:
                 result["ui_ok"] = True
             else:
                 # Allow exact target landing or canonicalized redirects.
-                current = _normalize_url(page.url)
+                current = _normalize_url(active_page.url)
                 target = _normalize_url(link["href"])
                 result["ui_ok"] = (current == target) or current.startswith(target + "/")
+            # Close any new tab that was opened so the next iteration
+            # starts cleanly from the homepage on the original page.
+            if active_page is not page and not active_page.is_closed():
+                active_page.close()
         except Exception as exc:
             result["clicked"] = False
             result["ui_ok"] = False

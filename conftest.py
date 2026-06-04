@@ -169,6 +169,40 @@ def browser_context_args(browser_context_args, pytestconfig: pytest.Config):
     return browser_context_args
 
 
+def _activate_page_window(page: Page, run_mode: str) -> None:
+    try:
+        page.bring_to_front()
+    except Exception:
+        pass
+
+    if run_mode != "maximized":
+        return
+
+    try:
+        session = page.context.new_cdp_session(page)
+        window_info = session.send("Browser.getWindowForTarget")
+        session.send(
+            "Browser.setWindowBounds",
+            {
+                "windowId": window_info["windowId"],
+                "bounds": {"windowState": "maximized"},
+            },
+        )
+        return
+    except Exception:
+        pass
+
+    try:
+        page.evaluate(
+            """() => {
+                window.moveTo(0, 0);
+                window.resizeTo(screen.availWidth, screen.availHeight);
+            }"""
+        )
+    except Exception:
+        pass
+
+
 @pytest.fixture(autouse=True)
 def track_navigation_and_highlight_clicks(page: Page, request: pytest.FixtureRequest):
     """
@@ -183,6 +217,9 @@ def track_navigation_and_highlight_clicks(page: Page, request: pytest.FixtureReq
 
     action_counter = {"value": 0}
     navigation_counter = {"value": 0}
+    run_mode = _normalize_run_mode(request.config.getoption("run_mode"))
+
+    _activate_page_window(page, run_mode)
 
     # Make the current test state available to the patched Locator methods.
     _test_state.current = {
