@@ -144,6 +144,22 @@ def _is_storefront_error_page(page: Page) -> bool:
     return False
 
 
+def _is_captcha_failure_page(page: Page) -> bool:
+    try:
+        if page.get_by_text("Captcha failed", exact=False).first.is_visible(timeout=1000):
+            return True
+    except Exception:
+        pass
+
+    try:
+        if page.get_by_text("Something went wrong.", exact=False).first.is_visible(timeout=1000):
+            return True
+    except Exception:
+        pass
+
+    return False
+
+
 def _recover_storefront_page(page: Page, fallback_url: str) -> None:
     if not _is_storefront_error_page(page):
         return
@@ -457,9 +473,18 @@ def test_tc_003_shopify_login_search_add_to_cart(page: Page):
     page.goto(login_url, wait_until="load")
     _wait_for_page_ready(page)
 
-    email_input = page.locator("input[name='customer[email]'], input[type='email']").first
-    password_input = page.locator("input[name='customer[password]'], input[type='password']").first
-    sign_in_button = page.locator("button[type='submit'], input[type='submit'], button:has-text('Sign in')").first
+    login_form = page.locator(
+        "form[action*='/account/login'], form[action*='/account'], form#customer_login"
+    ).first
+    expect(login_form).to_be_visible(timeout=10000)
+
+    email_input = login_form.locator("input[name='customer[email]'], input[type='email']").first
+    password_input = login_form.locator("input[name='customer[password]'], input[type='password']").first
+    sign_in_button = login_form.locator(
+        "button[name='commit'][type='submit'], input[name='commit'][type='submit'], "
+        "button[type='submit'], input[type='submit'], "
+        "button:has-text('Sign in'), button:has-text('Log in')"
+    ).first
 
     expect(email_input).to_be_visible(timeout=10000)
     expect(password_input).to_be_visible(timeout=10000)
@@ -471,10 +496,40 @@ def test_tc_003_shopify_login_search_add_to_cart(page: Page):
     password_input.fill(user_password)
     assert password_input.input_value() != "", "Password field is empty after fill"
 
+    sign_in_button.scroll_into_view_if_needed()
     sign_in_button.click()
     _wait_for_page_ready(page)
 
-    assert "/account/login" not in page.url, "Login did not complete successfully"
+    if "/account/login" in page.url:
+        password_input.press("Enter")
+        _wait_for_page_ready(page)
+
+    if "/account/login" in page.url:
+        try:
+            login_form.evaluate("form => form.requestSubmit ? form.requestSubmit() : form.submit()")
+        except Exception:
+            pass
+        _wait_for_page_ready(page)
+
+    if _is_captcha_failure_page(page):
+        pytest.fail(
+            "Login submit was triggered on the correct sign-in control, but Shopify rejected the request with 'Captcha failed'. "
+            "This is an anti-bot challenge, not a selector click issue."
+        )
+
+    if "/account/login" in page.url:
+        login_error_text = ""
+        login_error = login_form.locator(".errors, [role='alert'], .form__message, .customer .errors").first
+        try:
+            if login_error.count() > 0 and login_error.is_visible(timeout=2000):
+                login_error_text = (login_error.inner_text(timeout=2000) or "").strip()
+        except Exception:
+            pass
+        assert "/account/login" not in page.url, (
+            "Login did not complete successfully"
+            + (f"; UI message: {login_error_text}" if login_error_text else "")
+            + "; credentials may be invalid or the account may require additional verification"
+        )
     login_error = page.locator(
         ".errors, [role='alert'], .form__message, .customer .errors"
     ).first
