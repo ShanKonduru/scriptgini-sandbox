@@ -1,12 +1,112 @@
 from datetime import datetime
 from pathlib import Path
 import re
+import threading
 
 import pytest
-from playwright.sync_api import Page
+from playwright.sync_api import Locator, Page
 
 
 RESULTS_DIR = Path("test-results")
+
+# Thread-local storage so the Locator patches know which test is active.
+_test_state = threading.local()
+
+# Locator action methods that represent real user interactions.
+_INTERACTION_METHODS = [
+    "click",
+    "dblclick",
+    "fill",
+    "press",
+    "type",
+    "check",
+    "uncheck",
+    "select_option",
+    "tap",
+    "hover",
+    "focus",
+    "clear",
+    "press_sequentially",
+    "set_input_files",
+    "drag_to",
+    "dispatch_event",
+]
+
+_LOCATOR_CLASS_PATCHED = False
+
+
+def _patch_locator_class() -> None:
+    """
+    Monkey-patch Playwright Locator action methods once at module load so that
+    every interaction:
+      1. Highlights the target element with a dark-green rectangle.
+      2. Takes a 'before' screenshot showing the highlighted element.
+      3. Executes the real action.
+      4. Takes an 'after' screenshot showing the resulting page state.
+    """
+    global _LOCATOR_CLASS_PATCHED
+    if _LOCATOR_CLASS_PATCHED:
+        return
+    _LOCATOR_CLASS_PATCHED = True
+
+    def make_wrapper(orig, mname):
+        def wrapper(self, *args, **kwargs):
+            state = getattr(_test_state, "current", None)
+
+            if state:
+                # --- Highlight the element with a dark-green rectangle ---
+                try:
+                    self.evaluate(
+                        """el => {
+                            el.style.outline        = '3px solid darkgreen';
+                            el.style.outlineOffset  = '2px';
+                            el.style.boxShadow      = '0 0 0 2px rgba(0, 100, 0, 0.3)';
+                        }"""
+                    )
+                except Exception:
+                    pass  # Element may not be in DOM yet; proceed anyway.
+
+                # --- Screenshot BEFORE the action (highlight is visible) ---
+                try:
+                    state["counter"]["value"] += 1
+                    ts = datetime.now().strftime("%Y%m%d-%H%M%S-%f")[:-3]
+                    spath = (
+                        state["dir"]
+                        / f"step-{state['counter']['value']:03d}-{mname}-before-{ts}.png"
+                    )
+                    state["page"].screenshot(path=str(spath), full_page=True)
+                except Exception:
+                    pass
+
+            # --- Execute the real Playwright action ---
+            result = orig(self, *args, **kwargs)
+
+            if state:
+                # --- Screenshot AFTER the action (result / new page state) ---
+                try:
+                    state["counter"]["value"] += 1
+                    ts = datetime.now().strftime("%Y%m%d-%H%M%S-%f")[:-3]
+                    spath = (
+                        state["dir"]
+                        / f"step-{state['counter']['value']:03d}-{mname}-after-{ts}.png"
+                    )
+                    state["page"].screenshot(path=str(spath), full_page=True)
+                except Exception:
+                    pass
+
+            return result
+
+        return wrapper
+
+    for method_name in _INTERACTION_METHODS:
+        if not hasattr(Locator, method_name):
+            continue
+        original = getattr(Locator, method_name)
+        setattr(Locator, method_name, make_wrapper(original, method_name))
+
+
+# Patch once when conftest is first imported.
+_patch_locator_class()
 
 
 def _safe_name(value: str) -> str:
@@ -14,74 +114,34 @@ def _safe_name(value: str) -> str:
     return safe or "test"
 
 
-_HIGHLIGHT_SCRIPT = """
-() => {
-  const styleId = '__pw-click-highlight-style';
-  const markerAttr = 'data-pw-click-highlight-bound';
-  const activeClass = '__pw-click-highlight';
-
-  if (!document.getElementById(styleId)) {
-    const style = document.createElement('style');
-    style.id = styleId;
-    style.textContent = `
-      .${activeClass} {
-        outline: 3px solid darkgreen !important;
-        outline-offset: 2px !important;
-        box-shadow: 0 0 0 2px rgba(0, 100, 0, 0.3) !important;
-        transition: outline 120ms ease-in-out;
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  if (!document.documentElement.hasAttribute(markerAttr)) {
-    document.documentElement.setAttribute(markerAttr, '1');
-
-    document.addEventListener('click', (event) => {
-      const target = event.target instanceof Element ? event.target : null;
-      if (!target) {
-        return;
-      }
-
-      const previous = document.querySelector('.' + activeClass);
-      if (previous && previous !== target) {
-        previous.classList.remove(activeClass);
-      }
-
-      target.classList.add(activeClass);
-      setTimeout(() => target.classList.remove(activeClass), 1200);
-    }, true);
-  }
-}
-"""
-
-
 @pytest.fixture(autouse=True)
 def track_navigation_and_highlight_clicks(page: Page, request: pytest.FixtureRequest):
-    """Highlight clicked elements and save screenshots for each main-frame navigation."""
+    """
+    Per-test fixture that:
+    - Registers the current test's page/dir/counter in thread-local state so the
+      Locator patches can access them.
+    - Saves a screenshot on every main-frame navigation.
+    """
     test_dir = RESULTS_DIR / _safe_name(request.node.name)
     test_dir.mkdir(parents=True, exist_ok=True)
 
+    action_counter = {"value": 0}
     navigation_counter = {"value": 0}
 
-    page.add_init_script(_HIGHLIGHT_SCRIPT)
-
-    # Also inject into the current document so the first page is covered.
-    try:
-        page.evaluate(_HIGHLIGHT_SCRIPT)
-    except Exception:
-        # Some transitional documents can reject evaluation; next navigation re-injects.
-        pass
+    # Make the current test state available to the patched Locator methods.
+    _test_state.current = {
+        "page": page,
+        "dir": test_dir,
+        "counter": action_counter,
+    }
 
     def _on_frame_navigated(frame):
         if frame != page.main_frame:
             return
-
         navigation_counter["value"] += 1
         timestamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")[:-3]
         file_name = f"nav-{navigation_counter['value']:03d}-{timestamp}.png"
         screenshot_path = test_dir / file_name
-
         try:
             page.screenshot(path=str(screenshot_path), full_page=True)
         except Exception:
@@ -93,3 +153,4 @@ def track_navigation_and_highlight_clicks(page: Page, request: pytest.FixtureReq
     yield
 
     page.remove_listener("framenavigated", _on_frame_navigated)
+    _test_state.current = None
