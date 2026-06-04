@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 from pathlib import Path
 import re
 import threading
@@ -112,6 +113,54 @@ _patch_locator_class()
 def _safe_name(value: str) -> str:
     safe = re.sub(r"[^A-Za-z0-9._-]+", "_", value).strip("_")
     return safe or "test"
+
+
+def _normalize_run_mode(value: str) -> str:
+    mode = (value or "").strip().lower()
+    if mode in {"max", "maximize", "maximized"}:
+        return "maximized"
+    if mode in {"head", "headed"}:
+        return "headed"
+    if mode in {"headless", "nohead"}:
+        return "headless"
+    return "maximized"
+
+
+def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption(
+        "--run-mode",
+        action="store",
+        default=os.getenv("PW_RUN_MODE", "maximized"),
+        help="UI run mode: headless, headed, maximized",
+    )
+
+
+@pytest.fixture(scope="session")
+def browser_type_launch_args(browser_type_launch_args, pytestconfig: pytest.Config):
+    run_mode = _normalize_run_mode(pytestconfig.getoption("run_mode"))
+    merged_args = list(browser_type_launch_args.get("args", []))
+
+    launch_headless = run_mode == "headless"
+    if run_mode == "maximized" and "--start-maximized" not in merged_args:
+        merged_args.append("--start-maximized")
+
+    return {
+        **browser_type_launch_args,
+        "headless": launch_headless,
+        "args": merged_args,
+    }
+
+
+@pytest.fixture(scope="session")
+def browser_context_args(browser_context_args, pytestconfig: pytest.Config):
+    run_mode = _normalize_run_mode(pytestconfig.getoption("run_mode"))
+    if run_mode == "maximized":
+        # Remove fixed viewport so page uses the real maximized window size.
+        return {
+            **browser_context_args,
+            "viewport": None,
+        }
+    return browser_context_args
 
 
 @pytest.fixture(autouse=True)
