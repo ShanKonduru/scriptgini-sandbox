@@ -59,11 +59,14 @@ def _patch_locator_class() -> None:
                 try:
                     self.evaluate(
                         """el => {
-                            el.style.outline        = '3px solid darkgreen';
-                            el.style.outlineOffset  = '2px';
-                            el.style.boxShadow      = '0 0 0 2px rgba(0, 100, 0, 0.3)';
+                            el.style.setProperty('outline', '4px solid darkgreen', 'important');
+                            el.style.setProperty('outline-offset', '2px', 'important');
+                            el.style.setProperty('box-shadow', '0 0 0 3px rgba(0, 100, 0, 0.35)', 'important');
                         }"""
                     )
+                    # Give the browser a short moment to paint the highlight
+                    # before the screenshot is captured.
+                    state["page"].wait_for_timeout(120)
                 except Exception:
                     pass  # Element may not be in DOM yet; proceed anyway.
 
@@ -143,6 +146,9 @@ def browser_type_launch_args(browser_type_launch_args, pytestconfig: pytest.Conf
     launch_headless = run_mode == "headless"
     if run_mode == "maximized" and "--start-maximized" not in merged_args:
         merged_args.append("--start-maximized")
+    if run_mode == "maximized" and not any(arg.startswith("--window-size=") for arg in merged_args):
+        # Fallback for environments where start-maximized is ignored.
+        merged_args.append("--window-size=1920,1080")
 
     return {
         **browser_type_launch_args,
@@ -171,7 +177,8 @@ def track_navigation_and_highlight_clicks(page: Page, request: pytest.FixtureReq
       Locator patches can access them.
     - Saves a screenshot on every main-frame navigation.
     """
-    test_dir = RESULTS_DIR / _safe_name(request.node.name)
+    run_timestamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")[:-3]
+    test_dir = RESULTS_DIR / _safe_name(request.node.name) / run_timestamp
     test_dir.mkdir(parents=True, exist_ok=True)
 
     action_counter = {"value": 0}

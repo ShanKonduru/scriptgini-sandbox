@@ -1,8 +1,9 @@
 @echo off
 setlocal
 
-set "DEFAULT_SCRIPT=generated-scripts\demo-shop\tc-002-homepage-rendering-verification-17.py"
+REM set "DEFAULT_SCRIPT=generated-scripts\demo-shop\tc-002-homepage-rendering-verification-17.py"
 REM set "DEFAULT_SCRIPT=generated-scripts\demo-shop\tc-003-graceful-error-page-handling-18.py"
+set "DEFAULT_SCRIPT=generated-scripts\demo-shop\tc-003-shopify-login-search-add-to-cart.py"
 
 REM Run mode options: headless | headed | maximized
 set "DEFAULT_RUN_MODE=maximized"
@@ -29,7 +30,8 @@ if "%SCRIPT%"=="" (
   shift
 )
 set "VENV_PY=.venv\Scripts\python.exe"
-set "PLAYWRIGHT_ARGS=--browser chromium --browser-channel chrome"
+REM Browser/channel are already configured in pytest.ini addopts.
+set "PLAYWRIGHT_ARGS="
 
 if not exist "%SCRIPT%" (
   echo Error: Script not found: %SCRIPT%
