@@ -3,6 +3,58 @@ CHANGELOG
 ================================================================================
 
 --------------------------------------------------------------------------------
+Entry: 2026-06-04 11:49:00
+Test Case Reference: TC-001 No Despacho Previo Validation
+--------------------------------------------------------------------------------
+
+What was added:
+  - generated-scripts/dsp/
+      New project folder created for DSP (Despacho) system test automation.
+      This is the first test case for the DSP application.
+
+  - generated-scripts/dsp/tc-001-no-despacho-previo-validation.py
+      New Playwright/Python test function: test_tc_001_no_despacho_previo_validation
+      Implements end-to-end workflow for DSP user testing the "No Despacho previo"
+      feature including:
+      - DSP user login with credentials from environment variables
+      - Navigation to car by release page
+      - Filtering equipment by "to be released" status
+      - Setting waybill date to June 6th 2025
+      - Equipment selection via checkbox
+      - Triggering actions menu
+      - Selecting "No Despacho previo" option
+      - Validating popup displays reason for the action
+
+  - generated-scripts/dsp/tc-001-no-despacho-previo-validation.json
+      Metadata file for script ID 101 following the project's naming convention
+      and metadata format. Includes test steps documentation.
+
+Why it was necessary:
+  This is a completely new test scenario for a new application (DSP system).
+  No existing tests covered:
+  - DSP application login and authentication
+  - Car by release page navigation and functionality
+  - Equipment filtering and selection workflows
+  - "No Despacho previo" action validation
+  - Popup reason validation for dispatch-related actions
+
+  The existing tests only cover demo-shop (TodoMVC and Shopify demo site) scenarios.
+  No existing steps, locators, page objects, or helper logic could be reused as
+  this is a different application domain (dispatch/logistics management system).
+  A new project folder and test file were required to maintain separation of concerns.
+
+Test execution requirements:
+  - Environment variables must be set: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL
+  - Test validates a complete user workflow from login to popup validation
+  - Uses robust locator strategies (role-based with CSS fallbacks)
+  - Includes explicit waits and assertions at each critical step
+
+No existing files were modified. No existing tests were broken.
+The framework structure and standards documented in README.md were strictly followed.
+
+================================================================================
+
+--------------------------------------------------------------------------------
 Entry: 2026-06-01
 Test Case Reference: TC-002 Homepage Rendering Verification
 --------------------------------------------------------------------------------
