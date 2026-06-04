@@ -1,0 +1,21 @@
+test_case_id,step_no,action,locator_or_target,input_data,expected_result,validation
+TC-003,1,Launch browser (Chrome),Browser=chromium channel=chrome; Run mode=maximized,NA,Chrome launches in maximized visible mode,Verify browser window is open and page context is created
+TC-003,2,Navigate to URL,https://sauce-demo.myshopify.com/,NA,Homepage loads successfully,Verify response status is 200 and page title is not empty
+TC-003,3,Verify homepage key sections,"header; nav; main body",NA,Core homepage sections are visible,Assert header and navigation are visible
+TC-003,4,Open account login page,https://sauce-demo.myshopify.com/account/login,NA,Login page is displayed,Verify email and password fields are visible
+TC-003,5,Enter email,"input[name='customer[email]']",cpkcshankonduru@gmail.com,Email value is entered,Assert email input value matches provided user id
+TC-003,6,Enter password,"input[name='customer[password]']",Cpkc$h@nK0nduru123,Password value is entered,Assert password field is non-empty and masked
+TC-003,7,Click Sign in,"button[type='submit']; button:has-text('Sign in')",NA,Login request is submitted,Verify URL changes or account section/profile link appears
+TC-003,8,Validate logged-in state,"account icon/link; logout link",NA,User session is active,Assert account page element is visible and no login error banner is shown
+TC-003,9,Search product 1,"input[type='search']; input[name='q']",shirt,Search results for product 1 are shown,Verify at least one product tile is visible in results
+TC-003,10,Open product 1 details,"first product link from results",NA,Product 1 details page opens,Verify product title and Add to cart button are visible
+TC-003,11,Add product 1 to cart,"button:has-text('Add to cart')",NA,Product 1 is added to cart,Verify cart count badge equals 1 and product 1 appears in cart/drawer
+TC-003,12,Search product 2,"input[type='search']; input[name='q']",hoodie,Search results for product 2 are shown,Verify at least one product tile is visible in results
+TC-003,13,Open product 2 details,"first product link from results",NA,Product 2 details page opens,Verify product title and Add to cart button are visible
+TC-003,14,Add product 2 to cart,"button:has-text('Add to cart')",NA,Product 2 is added to cart,Verify cart count badge equals 2 and product 2 appears in cart/drawer
+TC-003,15,Search product 3,"input[type='search']; input[name='q']",cap,Search results for product 3 are shown,Verify at least one product tile is visible in results
+TC-003,16,Open product 3 details,"first product link from results",NA,Product 3 details page opens,Verify product title and Add to cart button are visible
+TC-003,17,Add product 3 to cart,"button:has-text('Add to cart')",NA,Product 3 is added to cart,Verify cart count badge equals 3 and product 3 appears in cart/drawer
+TC-003,18,Open cart,"a[href*='/cart']; cart icon",NA,Cart page/drawer opens with selected items,Assert total line items count is 3
+TC-003,19,Validate all selected products in cart,"cart line items",shirt|hoodie|cap,All intended products are present in cart,Assert each selected product name exists in cart line items
+TC-003,20,Validate no console blocking errors,Browser console,NA,No blocking JS errors during flow,Assert blocking console error list is empty
