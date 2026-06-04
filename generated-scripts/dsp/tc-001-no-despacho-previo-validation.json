@@ -1,0 +1,19 @@
+{
+  "script_id": 101,
+  "project_name": "DSP",
+  "test_case_title": "TC-001 No Despacho Previo Validation",
+  "framework": "playwright_python",
+  "llm_provider": "anthropic",
+  "llm_model": "claude-sonnet-4-5",
+  "exported_at": "2026-06-04T11:49:00.000000+00:00",
+  "script_path": "generated-scripts/dsp/tc-001-no-despacho-previo-validation.py",
+  "test_steps": [
+    "login as dsp user",
+    "navigate to car by release page",
+    "select 'to be released' status and select June 6th 2025 in waybill date from field",
+    "select equipment with checkbox",
+    "click on actions button",
+    "select No Despacho previo option",
+    "check popup is containing reason for No Despacho previo option"
+  ]
+}
