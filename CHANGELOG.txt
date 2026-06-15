@@ -3,6 +3,58 @@ CHANGELOG
 ================================================================================
 
 --------------------------------------------------------------------------------
+Entry: 2026-06-15T09:50:00Z
+Test Case Reference: TC-002 — Equipment Action Reason Configuration Verification
+--------------------------------------------------------------------------------
+
+What was added:
+  - generated-scripts/dsp/tc-002-equipment-action-reason-config-verification.py
+      New Playwright/Python test function: test_tc_002_equipment_action_reason_config_verification
+      Implements end-to-end configuration verification workflow including:
+      - Navigation to base URL and SSO authentication via Despachoprevio button
+      - Post-authentication navigation to Configuration section
+      - Access to Equipment Action Reason Configuration page
+      - Table validation verifying presence of all required actions:
+        * Cargue Diferido
+        * Descargue Diferido
+        * Liberación Diferida
+        * No Despacho previo
+        * Rechazo
+      - Verification that each action has an associated non-empty reason value
+      - Support for Pega iframe-based layout with multiple selector fallback strategies
+
+  - generated-scripts/dsp/tc-002-equipment-action-reason-config-verification.json
+      Metadata file for script ID 102 documenting test steps, expected actions,
+      preconditions, and environment variable requirements.
+
+Why it was necessary:
+  This test case addresses a new verification requirement for the Equipment Action
+  Reason Configuration page. No existing tests covered:
+  - SSO authentication flow via "Login with Despachoprevio" button
+  - Navigation to Configuration section from authenticated state
+  - Equipment Action Reason Configuration page access
+  - Table-based validation of action-reason mappings
+  - Pega iframe navigation patterns
+
+  The existing DSP test (TC-001) focuses on operational workflow (equipment filtering,
+  selection, and "No Despacho previo" action execution), not configuration verification.
+  No existing page objects, locators, or validation logic could be reused as this test
+  targets a completely different page/module with distinct DOM structure.
+
+Test execution requirements:
+  - SSO authentication must be completed (manual or pre-configured session)
+  - User must have access to Configuration section
+  - Test uses robust locator strategies with iframe awareness for Pega applications
+  - Extended timeouts accommodate SSO redirect flow (60s for post-auth URL)
+  - Validates both presence and content of action-reason pairs
+
+Files changed: generated-scripts/dsp/tc-002-equipment-action-reason-config-verification.py,
+               generated-scripts/dsp/tc-002-equipment-action-reason-config-verification.json,
+               CHANGELOG.txt
+
+================================================================================
+
+--------------------------------------------------------------------------------
 Entry: 2026-06-04 11:49:00
 Test Case Reference: TC-001 No Despacho Previo Validation
 --------------------------------------------------------------------------------

@@ -1,0 +1,59 @@
+{
+  "test_case_id": "TC-002",
+  "test_case_name": "Equipment Action Reason Configuration Verification",
+  "script_id": 102,
+  "application": "DSP (Despacho Previo)",
+  "module": "Configuration",
+  "test_type": "UI Verification",
+  "priority": "High",
+  "created_date": "2026-06-15",
+  "description": "Verify that the Equipment Action Reason Configuration section displays all required actions and their associated reasons correctly",
+  "preconditions": [
+    "Valid Despachoprevio SSO credentials must be available",
+    "User has access to Configuration section",
+    "Equipment Action Reason Configuration is set up in the system"
+  ],
+  "test_steps": [
+    {
+      "step": 1,
+      "action": "Navigate to base URL",
+      "test_data": "https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth",
+      "expected_result": "Login page is displayed with 'Login with Despachoprevio' button"
+    },
+    {
+      "step": 2,
+      "action": "Click on 'Login with Despachoprevio' button to authenticate",
+      "test_data": "SSO authentication via Microsoft",
+      "expected_result": "User is authenticated and redirected to main application"
+    },
+    {
+      "step": 3,
+      "action": "Click on Configuration icon from the left menu",
+      "test_data": "Configuration menu item",
+      "expected_result": "Configuration section opens"
+    },
+    {
+      "step": 4,
+      "action": "Navigate to Equipment Action Reason Configuration section",
+      "test_data": "Equipment Action Reason Configuration link",
+      "expected_result": "Equipment Action Reason Configuration page is displayed"
+    },
+    {
+      "step": 5,
+      "action": "Verify presence of all specified actions and their associated reasons",
+      "test_data": "Expected actions: Cargue Diferido, Descargue Diferido, Liberación Diferida, No Despacho previo, Rechazo",
+      "expected_result": "All actions are visible with non-empty reason values in the configuration table"
+    }
+  ],
+  "expected_actions": [
+    "Cargue Diferido",
+    "Descargue Diferido",
+    "Liberación Diferida",
+    "No Despacho previo",
+    "Rechazo"
+  ],
+  "environment_variables": [
+    "DSP_BASE_URL (optional, defaults to https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth)"
+  ],
+  "tags": ["configuration", "verification", "equipment", "actions", "reasons", "dsp"]
+}
