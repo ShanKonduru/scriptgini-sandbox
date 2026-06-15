@@ -80,3 +80,68 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-15T10:48:00Z
+Test Case: Equipment Action Reason Configuration - UI Elements Verification
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/login_page.py
+      New Page Object class: LoginPage
+      Implements Pega SSO authentication workflow via "Login with Despachoprevio":
+      - navigate() - Navigate to Pega login page
+      - click_despachoprevio_login() - Click SSO authentication button
+      - enter_email() - Enter email in Microsoft SSO form
+      - click_next() - Click Next on Microsoft SSO page
+      - enter_password() - Enter password in Microsoft SSO form
+      - click_signin() - Click Sign in button
+      - handle_stay_signed_in() - Handle "Stay signed in?" prompt
+
+  - pages/configuration_page.py
+      New Page Object class: ConfigurationPage
+      Handles Equipment Action Reason Configuration section with Pega iframe support:
+      - _get_main_frame() - Get main Pega content frame (handles PegaGadgetXIfr)
+      - click_configuration_icon() - Click Configuration icon in left menu
+      - navigate_to_equipment_action_reason_config() - Navigate to config section
+      - get_add_button() - Locate Add button
+      - get_delete_icons() - Locate all delete icons in config table
+      - get_save_configuration_button() - Locate Save Configuration button
+      - verify_add_button_present() - Verify Add button visibility
+      - verify_delete_icons_present() - Verify delete icons visibility
+      - verify_save_configuration_button_present() - Verify Save button visibility
+
+  - tests/test_equipment_action_reason_config.py
+      New test function: test_equipment_action_reason_configuration_ui_elements
+      Verifies Equipment Action Reason Configuration UI elements:
+      - Clears browser cookies/cache
+      - Authenticates as Super Admin via SSO
+      - Navigates to Configuration → Equipment Action Reason Configuration
+      - Verifies Add button presence
+      - Verifies Delete icon presence (one per configuration row)
+      - Verifies Save Configuration button presence
+
+Why it was necessary:
+  This is the first test for Pega Configuration section UI verification.
+  No existing code covered:
+  - Pega SSO authentication via "Login with Despachoprevio" button
+  - Microsoft Azure AD/SAML authentication flow
+  - Pega iframe navigation (PegaGadgetXIfr frame handling)
+  - Configuration icon navigation in Pega left menu
+  - Equipment Action Reason Configuration section
+  - UI elements verification (Add/Delete/Save buttons)
+
+  The existing dsp test (tc-001-no-despacho-previo-validation.py) covers DSP user
+  workflow but not Super Admin Configuration access. No page objects existed, so
+  a new Page Object Model structure was created following pytest-playwright standards.
+
+Files changed: pages/login_page.py, pages/configuration_page.py, tests/test_equipment_action_reason_config.py, CHANGELOG.txt
+
+Test execution requirements:
+  - Environment variables: ADMIN_EMAIL, ADMIN_PASSWORD (Super Admin credentials)
+  - Optional: BASE_URL (defaults to https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth)
+  - Test uses synchronous Playwright API (playwright.sync_api)
+  - Handles Pega's complex iframe structure with frame_locator
+  - Includes robust waits for SSO redirects and Pega SPA loading
+
+================================================================================
