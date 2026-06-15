@@ -80,3 +80,79 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-15T09:28:00Z
+Test Case Reference: TC-002 DSP Configuration - Navigate to General Settings
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/__init__.py
+      New package marker for Page Object Model classes.
+
+  - pages/dsp_login_page.py
+      New page object class: DSPLoginPage
+      Methods:
+        - __init__(page): Initialize with locators for username, password, login button
+        - navigate(base_url): Navigate to DSP login page
+        - enter_username(username): Fill username field
+        - enter_password(password): Fill password field
+        - click_login(): Click login button
+        - wait_for_login_success(): Wait for redirect after successful login
+        - login_as_super_user(base_url): Complete login flow using Super User credentials
+                                         from environment variables DSP_SUPER_USERNAME
+                                         and DSP_SUPER_PASSWORD
+
+  - pages/dsp_configuration_page.py
+      New page object class: DSPConfigurationPage
+      Methods:
+        - __init__(page): Initialize with locators for configuration icon and general menu item
+        - click_configuration_icon(): Click Configuration icon to open menu
+        - click_general(): Click General menu item
+        - is_on_general_page(): Verify navigation to General configuration page
+        - navigate_to_general_configuration(): Complete navigation flow
+
+  - tests/__init__.py
+      New package marker for test modules.
+
+  - tests/test_dsp_configuration_general.py
+      New Playwright/Python test function: test_navigate_to_general_configuration
+      Implements POM-based workflow:
+        - Login with Super User credentials from environment
+        - Click Configuration icon
+        - Click General menu item
+        - Verify successful navigation to General configuration page
+
+Why it was necessary:
+  This test case introduces Page Object Model (POM) architecture to the DSP test suite.
+  The existing DSP test (tc-001-no-despacho-previo-validation.py) used inline locators
+  without POM structure. This new test establishes reusable page objects for:
+    - DSP login functionality (reusable for future DSP tests)
+    - Configuration navigation (reusable for other configuration sections)
+
+  Coverage gap filled:
+    - Super User authentication (previous test used regular DSP user)
+    - Configuration menu navigation
+    - General settings access
+    - POM pattern implementation for maintainability
+
+  No existing page objects existed for DSP application. No existing code covered
+  Configuration icon or General menu navigation. New classes and test required.
+
+  ⚠️ IMPORTANT: Application URL not provided in test steps. Generated selectors follow
+  Playwright best practices but MUST be verified against the actual DSP application.
+  DSP applications (often Pega-based) may require:
+    - frame_locator() for nested iframes
+    - Pega-specific attributes (data-test-id, pega-* attributes)
+    - Table-based layout selectors
+
+Test execution requirements:
+  - Environment variables: DSP_SUPER_USERNAME, DSP_SUPER_PASSWORD, DSP_BASE_URL
+  - Run with: pytest tests/test_dsp_configuration_general.py
+  - Uses existing conftest.py fixtures (page, browser context)
+  - Follows pytest.ini configuration (headed mode, chromium)
+
+Files changed: pages/__init__.py, pages/dsp_login_page.py, pages/dsp_configuration_page.py,
+               tests/__init__.py, tests/test_dsp_configuration_general.py, CHANGELOG.txt
+
+================================================================================
