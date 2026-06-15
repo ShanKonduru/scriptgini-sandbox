@@ -1,0 +1,30 @@
+{
+  "testCaseId": "TC-002",
+  "testCaseName": "Equipment Action Reason Configuration - Audit Icon Verification",
+  "scriptId": "102",
+  "application": "DSP",
+  "module": "Configuration",
+  "createdDate": "2026-06-15T11:19:00Z",
+  "testSteps": [
+    "Clear all browser cookies and cache",
+    "Navigate to base URL: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/",
+    "Click on 'Login with Despachoprevio' button using locator: page.get_by_role('link', name='despachoprevio').click()",
+    "Handle SSO authentication flow with Microsoft login",
+    "Click on Configuration icon from the left menu",
+    "Navigate to Equipment Action Reason Configuration section",
+    "Verify column headers are displayed: Action, Reason and Audit History",
+    "Verify Audit icon is present next to each reason in the configuration table"
+  ],
+  "environmentVariables": [
+    "DSP_USERNAME",
+    "DSP_PASSWORD",
+    "DSP_BASE_URL"
+  ],
+  "tags": [
+    "dsp",
+    "configuration",
+    "audit",
+    "verification",
+    "smoke"
+  ]
+}

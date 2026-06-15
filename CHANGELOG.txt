@@ -55,6 +55,54 @@ The framework structure and standards documented in README.md were strictly foll
 ================================================================================
 
 --------------------------------------------------------------------------------
+Entry: 2026-06-15T11:19:00Z
+Test Case Reference: TC-002 — Equipment Action Reason Configuration - Audit Icon Verification
+--------------------------------------------------------------------------------
+
+What was added:
+  - generated-scripts/dsp/tc-002-equipment-action-reason-config-audit.py
+      New Playwright/Python test function: test_tc_002_equipment_action_reason_config_audit
+      Implements end-to-end workflow for verifying Equipment Action Reason Configuration
+      section including:
+      - Navigation to base URL and login with Despachoprevio SSO
+      - Microsoft SSO authentication flow handling
+      - Navigation to Configuration section from left menu
+      - Navigation to Equipment Action Reason Configuration subsection
+      - Column header verification (Action, Reason, Audit History)
+      - Audit icon presence verification for each configuration row
+
+  - generated-scripts/dsp/tc-002-equipment-action-reason-config-audit.json
+      Metadata file for script ID 102 following the project's naming convention.
+      Documents test steps and required environment variables.
+
+Why it was necessary:
+  This is a new test scenario for configuration verification in the DSP system.
+  No existing tests covered:
+  - Configuration menu navigation and icon interaction
+  - Equipment Action Reason Configuration section access
+  - Column header validation for configuration tables
+  - Audit icon presence verification across table rows
+  - Microsoft SSO authentication with "Stay signed in?" prompt handling
+
+  The existing DSP test (tc-001) covers a different workflow (car by release,
+  equipment filtering, and "No Despacho previo" action). No existing locators,
+  page navigation patterns, or table verification logic could be reused for
+  this configuration audit scenario.
+
+  Key implementation details:
+  - Robust locator strategies with multiple fallback selectors for Pega UI
+  - Microsoft SSO flow handling with email/password split screens
+  - Iterative row verification to ensure every configuration entry has audit icon
+  - Wait strategies tuned for Pega application initialization delays
+
+Files changed:
+  generated-scripts/dsp/tc-002-equipment-action-reason-config-audit.py,
+  generated-scripts/dsp/tc-002-equipment-action-reason-config-audit.json,
+  CHANGELOG.txt
+
+================================================================================
+
+--------------------------------------------------------------------------------
 Entry: 2026-06-01
 Test Case Reference: TC-002 Homepage Rendering Verification
 --------------------------------------------------------------------------------
