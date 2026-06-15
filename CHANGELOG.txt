@@ -3,6 +3,81 @@ CHANGELOG
 ================================================================================
 
 --------------------------------------------------------------------------------
+Entry: 2026-06-15T12:30:00Z
+Test Case Reference: Equipment Action Reason Configuration - Add Cancelled with Duplicate Waybill
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/__init__.py
+      Package initialization file for page object models.
+
+  - pages/login_page.py
+      New page object class: LoginPage
+      Methods:
+        - navigate(url): Navigate to the Pega login page
+        - click_login_with_despachoprevio(): Click the SSO login button
+        - enter_email(email): Fill email in Microsoft SSO
+        - click_next(): Click Next button on email page
+        - enter_password(password): Fill password in Microsoft SSO
+        - click_signin(): Click Sign in button
+        - accept_cookies_if_present(): Accept cookies dialog if it appears
+
+  - pages/configurations_page.py
+      New page object class: ConfigurationsPage
+      Methods:
+        - navigate_to_configurations(): Click Configurations menu link
+        - scroll_to_equipment_action_reason_section(): Scroll to section
+        - click_add_equipment_action_reason(): Click Add button in the section
+        - select_action_in_last_row(action): Select action from dropdown
+        - enter_reason_in_last_row(reason): Enter reason text
+        - click_save_configuration(): Click Save configurations button
+        - verify_action_reason_exists(action, reason): Verify entry exists
+        - get_action_reason_count(action, reason): Count matching entries
+
+  - tests/__init__.py
+      Package initialization file for test modules.
+
+  - tests/test_equipment_action_reason.py
+      New test function: test_add_equipment_action_reason_cancelled_duplicate_waybill
+      Complete end-to-end test covering:
+        - Microsoft SSO login via Pega authentication
+        - Navigation to Configurations page
+        - Equipment Action Reason Configuration section verification
+        - Adding new action-reason combination (Cancelled + Duplicate Waybill)
+        - Verification that the entry exists in the configuration table
+      Uses real DOM selectors captured from live browser session with Playwright MCP.
+
+Why it was necessary:
+  This is a new test case for the DSP Configurations module. No existing test covered:
+    - Equipment Action Reason Configuration functionality
+    - Adding action-reason combinations to the configuration table
+    - Working with Pega iframe-based configuration forms
+    - Microsoft SSO authentication flow with email and password steps
+
+  The existing DSP test (tc-001-no-despacho-previo-validation.py) covered a different
+  workflow (car release functionality) and did not include configuration management.
+
+  Key technical challenges addressed:
+    - Pega application uses nested iframes for configuration forms (PegaGadget6ef5dIfr)
+    - Dynamic element IDs require name-based selectors (e.g., [name*="pActionReason"])
+    - Multiple configuration sections on the same page require ancestor traversal
+    - Duplicate entry validation requires checking existing entries before adding
+
+  All selectors were captured from a live browser session using Playwright MCP tools,
+  ensuring they match the actual DOM structure of the staging environment.
+
+Test execution requirements:
+  - Environment variables: EMAIL, PASSWORD, BASE_URL (optional, defaults to staging)
+  - The test handles both scenarios: entry already exists or needs to be added
+  - Uses page object model pattern for maintainability and reusability
+
+Files changed:
+  pages/__init__.py, pages/login_page.py, pages/configurations_page.py,
+  tests/__init__.py, tests/test_equipment_action_reason.py, CHANGELOG.txt
+
+================================================================================
+
+--------------------------------------------------------------------------------
 Entry: 2026-06-04 11:49:00
 Test Case Reference: TC-001 No Despacho Previo Validation
 --------------------------------------------------------------------------------
