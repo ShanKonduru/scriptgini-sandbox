@@ -1,0 +1,39 @@
+- generic [ref=e3]:
+  - img "Pega Logo" [ref=e5]
+  - generic [ref=e7]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - img [ref=e12]
+          - generic [ref=e14]: User name
+          - text: "*"
+        - textbox "User name *" [active] [ref=e15]:
+          - /placeholder: User name
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - img [ref=e18]
+          - generic [ref=e20]: Password
+          - text: "*"
+        - textbox "Password *" [ref=e21]:
+          - /placeholder: Password
+    - button "Log in" [ref=e23] [cursor=pointer]
+    - link "Trouble logging in?" [ref=e25] [cursor=pointer]:
+      - /url: "#"
+    - heading "or" [level=4] [ref=e26]
+    - list [ref=e28]:
+      - button "Login with isamoidc" [ref=e29] [cursor=pointer]:
+        - link "Login with isamoidc" [ref=e30]:
+          - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/default/isamoidc/
+      - button "Login with isamoidceqapp" [ref=e31] [cursor=pointer]:
+        - link "Login with isamoidceqapp" [ref=e32]:
+          - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/default/isamoidceqapp/
+      - button "Login with biodiversity" [ref=e33] [cursor=pointer]:
+        - link "Login with biodiversity" [ref=e34]:
+          - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/default/biodiversity/
+      - button "Login with despachoprevio" [ref=e35] [cursor=pointer]:
+        - link "Login with despachoprevio" [ref=e36]:
+          - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/default/despachoprevio/
+  - contentinfo [ref=e37]:
+    - paragraph [ref=e38]:
+      - img "Pega Infinity Logo" [ref=e39]
+      - text: Copyright © 2001-2026 Pegasystems Inc. All rights reserved. Pegasystems®

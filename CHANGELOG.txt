@@ -80,3 +80,55 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-15T12:20:00Z
+Test Case Reference: TC-002 — Equipment Action Reason Configuration - Browser Refresh Validation
+--------------------------------------------------------------------------------
+
+What was added:
+  - generated-scripts/dsp/tc-002-equipment-action-reason-refresh-validation.py
+      New Playwright/Python test function: test_tc_002_equipment_action_reason_refresh_validation
+      Implements end-to-end workflow testing unsaved data discard behavior including:
+      - Browser cookie and cache clearing
+      - Microsoft SSO authentication flow (captured from live browser walkthrough)
+      - Navigation to Configuration menu in Pega application
+      - Access to Equipment Action Reason Configuration section
+      - Adding new action reason ('Cancelled' action with 'Duplicate Waybill' reason)
+      - Browser refresh without saving changes
+      - Validation that unsaved entry is properly discarded
+
+  - generated-scripts/dsp/tc-002-equipment-action-reason-refresh-validation.json
+      Metadata file for TC-002 following the project's naming convention.
+      Includes comprehensive test steps, expected results, test data, and tags.
+
+Why it was necessary:
+  This test covers a new critical scenario for data integrity validation in the
+  DSP application's Equipment Action Reason Configuration feature. No existing
+  tests covered:
+  - Equipment Action Reason Configuration UI and workflows
+  - Browser refresh behavior with unsaved form data
+  - Configuration menu navigation in Pega applications
+  - Add functionality in configuration sections
+  - Negative testing for unsaved changes (ensuring proper data discard)
+
+  The existing TC-001 test covers "No Despacho previo" validation workflow but
+  does not touch configuration management, unsaved data handling, or browser
+  refresh scenarios. This test reuses the Microsoft SSO login flow pattern from
+  TC-001 but all configuration-related interactions are new.
+
+  Real DOM selectors were captured from live browser walkthrough for the login
+  flow (Microsoft SSO username field, Next button, password field, Sign in button).
+  Pega-standard selectors (iframe navigation, table structures) were applied for
+  post-login steps based on Pega UI patterns.
+
+Test execution requirements:
+  - Environment variables must be set: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL
+  - Test validates browser refresh properly discards unsaved configuration changes
+  - Uses Pega iframe navigation patterns (PegaGadget0Ifr, PegaGadget1Ifr, etc.)
+  - Includes robust locator strategies with multiple fallback options
+  - Validates absence of unsaved data (negative assertion)
+
+Files changed: generated-scripts/dsp/tc-002-equipment-action-reason-refresh-validation.py,
+               generated-scripts/dsp/tc-002-equipment-action-reason-refresh-validation.json
+================================================================================

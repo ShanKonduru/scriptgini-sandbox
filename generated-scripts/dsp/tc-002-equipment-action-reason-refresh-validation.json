@@ -1,0 +1,61 @@
+{
+  "test_case_id": "TC-002",
+  "test_case_name": "Equipment Action Reason Configuration - Browser Refresh Validation",
+  "business_intent": "Verify that unsaved changes in Equipment Action Reason Configuration are discarded when the browser is refreshed, ensuring data integrity and preventing accidental additions without explicit save.",
+  "preconditions": [
+    "Valid DSP user credentials available via environment variables DSP_USERNAME and DSP_PASSWORD",
+    "User has access to Configuration menu and Equipment Action Reason Configuration section",
+    "Base URL is accessible at DSP_BASE_URL environment variable"
+  ],
+  "test_steps": [
+    "Clear all browser cookies and cache",
+    "Navigate to base URL: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth",
+    "Click on 'Login with Despachoprevio' button",
+    "Enter username: SivaRajesh.Gottumukkala@cpkcr.com",
+    "Click Next button on SSO page",
+    "Enter password (from DSP_PASSWORD env var)",
+    "Click on Sign In button",
+    "Handle accept cookies popup if it appears",
+    "Click on Configuration icon from the left menu",
+    "Navigate to Equipment Action Reason Configuration section and verify it is displayed",
+    "Click on Add button in Equipment Action Reason Configuration section",
+    "Select 'Cancelled' Action from the Action dropdown",
+    "Enter reason 'Duplicate Waybill' in the Reason text box",
+    "Click on browser refresh button without saving changes",
+    "Verify the newly added reason 'Duplicate Waybill' for 'Cancelled' action is absent from the configuration table"
+  ],
+  "expected_results": [
+    "Login is successful via Microsoft SSO",
+    "Configuration page loads successfully",
+    "Equipment Action Reason Configuration section is visible",
+    "Add form opens when Add button is clicked",
+    "Action dropdown accepts 'Cancelled' selection",
+    "Reason field accepts 'Duplicate Waybill' text input",
+    "Page refreshes successfully",
+    "After refresh, 'Duplicate Waybill' reason is NOT present in the configuration table",
+    "Unsaved changes are properly discarded"
+  ],
+  "test_data": {
+    "username": "SivaRajesh.Gottumukkala@cpkcr.com",
+    "password": "from_env_DSP_PASSWORD",
+    "base_url": "https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth",
+    "action_type": "Cancelled",
+    "reason_text": "Duplicate Waybill"
+  },
+  "environment_variables": [
+    "DSP_USERNAME",
+    "DSP_PASSWORD",
+    "DSP_BASE_URL"
+  ],
+  "tags": [
+    "configuration",
+    "equipment-action-reason",
+    "browser-refresh",
+    "unsaved-changes",
+    "data-integrity",
+    "negative-test"
+  ],
+  "generated_timestamp": "2026-06-15T12:20:00Z",
+  "playwright_version": "sync_api",
+  "test_framework": "pytest"
+}
