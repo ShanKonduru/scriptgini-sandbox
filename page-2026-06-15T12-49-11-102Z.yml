@@ -1,0 +1,1018 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e22]:
+      - generic "Skip navigation menu" [ref=e23]:
+        - generic [ref=e24]:
+          - button "Go to main content"
+        - generic [ref=e25]:
+          - generic: Shortcuts
+          - list "Shortcuts":
+            - listitem [ref=e26]:
+              - generic [ref=e27]: Jump to toast
+              - generic:
+                - generic [ref=e28]: ⌥
+                - generic [ref=e29]:
+                  - text: ↵
+                  - generic [ref=e30]: Enter
+            - listitem [ref=e31]:
+              - generic [ref=e32]: Dismiss toast
+              - generic:
+                - generic [ref=e33]: ⌥
+                - generic [ref=e34]: Q
+            - listitem [ref=e35]:
+              - generic [ref=e36]: Next region
+              - generic [ref=e37]: F9
+            - listitem [ref=e38]:
+              - generic [ref=e39]: Previous region
+              - generic:
+                - generic [ref=e40]:
+                  - text: ⇧
+                  - generic [ref=e41]: Shift
+                - generic [ref=e42]: F9
+      - navigation "Main" [ref=e43]:
+        - link "Despacho Previo" [ref=e44] [cursor=pointer]:
+          - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+          - img "Despacho Previo" [ref=e45]
+          - text: Despacho Previo
+        - generic [ref=e46]:
+          - list [ref=e48]:
+            - listitem [ref=e49]:
+              - link "Cars By Release Status" [active] [ref=e50] [cursor=pointer]:
+                - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+                - generic: Cars By Release Status
+            - listitem [ref=e54]:
+              - link "Cars History" [ref=e55] [cursor=pointer]:
+                - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/cars-history
+                - generic: Cars History
+            - listitem [ref=e59]:
+              - link "DSP Reports" [ref=e60] [cursor=pointer]:
+                - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/dsp-reports
+                - generic: DSP Reports
+            - listitem [ref=e64]:
+              - link "Configurations" [ref=e65] [cursor=pointer]:
+                - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/configurations
+                - generic: Configurations
+          - generic:
+            - list
+        - list [ref=e70]:
+          - listitem [ref=e71]:
+            - button "Account" [ref=e72] [cursor=pointer]:
+              - img "SivaRajesh Gottumukkala" [ref=e75]: SG
+              - generic: Account
+        - button "Expand navigation" [ref=e77] [cursor=pointer]
+      - main [ref=e79]:
+        - iframe [ref=e115]:
+          - generic [ref=f3e27]:
+            - text: 
+            - generic [ref=f3e28]:
+              - banner "Top Panel" [ref=f3e29]:
+                - generic [ref=f3e35]:
+                  - heading "Cars By Release Status / Notify Broker" [level=1] [ref=f3e36]
+                  - button "Click to Open Glossary" [ref=f3e41] [cursor=pointer]
+                  - generic [ref=f3e42]: no value
+                  - generic [ref=f3e43]: no value
+              - region "Center Panel" [ref=f3e61]:
+                - generic [ref=f3e65]:
+                  - generic [ref=f3e68]:
+                    - heading "Search" [level=2] [ref=f3e71]
+                    - generic [ref=f3e73]:
+                      - generic [ref=f3e75]:
+                        - generic [ref=f3e79]: "Note: Search Criteria fields should be at least 3 characters minimum"
+                        - generic [ref=f3e84]:
+                          - generic [ref=f3e85]: Release Status
+                          - radiogroup [ref=f3e87]:
+                            - generic [ref=f3e88]:
+                              - generic [ref=f3e89]:
+                                - radio "TO BE RELEASED" [checked] [ref=f3e90]
+                                - generic [ref=f3e91]: TO BE RELEASED
+                              - generic [ref=f3e92]:
+                                - radio "ON ORIGIN HOLD" [ref=f3e93]
+                                - generic [ref=f3e94] [cursor=pointer]: ON ORIGIN HOLD
+                              - generic [ref=f3e95]:
+                                - radio "DIVERTED / CANCELLED" [ref=f3e96]
+                                - generic [ref=f3e97] [cursor=pointer]: DIVERTED / CANCELLED
+                              - generic [ref=f3e98]:
+                                - radio "RELEASED" [ref=f3e99]
+                                - generic [ref=f3e100] [cursor=pointer]: RELEASED
+                              - generic [ref=f3e101]:
+                                - radio "ALL" [ref=f3e102]
+                                - generic [ref=f3e103] [cursor=pointer]: ALL
+                          - generic [ref=f3e107]:
+                            - button "Adv Search" [ref=f3e110] [cursor=pointer]
+                            - button "Clear" [ref=f3e113] [cursor=pointer]
+                            - button "Search" [ref=f3e116] [cursor=pointer]
+                        - generic [ref=f3e118]:
+                          - generic [ref=f3e119]:
+                            - generic [ref=f3e120]: Waybill Date From
+                            - group [ref=f3e122]:
+                              - textbox "Waybill Date From" [ref=f3e123]
+                              - button "Waybill Date From date picker" [ref=f3e124] [cursor=pointer]
+                          - generic [ref=f3e125]:
+                            - generic [ref=f3e126]: Waybill Date To
+                            - group [ref=f3e128]:
+                              - textbox "Waybill Date To" [ref=f3e129]
+                              - button "Waybill Date To date picker" [ref=f3e130] [cursor=pointer]
+                          - button "Upload Equipment List" [ref=f3e133] [cursor=pointer]
+                          - generic [ref=f3e134]:
+                            - generic [ref=f3e135]: Equipment ID
+                            - textbox "Equipment ID" [ref=f3e138]:
+                              - /placeholder: ""
+                          - generic [ref=f3e139]:
+                            - generic [ref=f3e140]: Waybill Number
+                            - textbox "Waybill Number" [ref=f3e143]:
+                              - /placeholder: ""
+                          - generic [ref=f3e144]:
+                            - generic [ref=f3e145]: USFF
+                            - textbox "USFF" [ref=f3e148]:
+                              - /placeholder: ""
+                          - generic [ref=f3e149]:
+                            - generic [ref=f3e150]: Mexican Broker
+                            - textbox "Mexican Broker" [ref=f3e153]:
+                              - /placeholder: ""
+                      - generic [ref=f3e159]:
+                        - generic [ref=f3e161]:
+                          - generic [ref=f3e164]:
+                            - generic [ref=f3e165]: "No Of Equipments:"
+                            - generic [ref=f3e166]: "11351"
+                          - generic [ref=f3e169]:
+                            - generic [ref=f3e170]: "Carload Equipment:"
+                            - generic [ref=f3e171]: "10088"
+                          - generic [ref=f3e174]:
+                            - generic [ref=f3e175]: "Intermodel Equipment:"
+                            - generic [ref=f3e176]: "1263"
+                          - generic [ref=f3e179]:
+                            - generic [ref=f3e180]: "Single Bill:"
+                            - generic [ref=f3e181]: "4212"
+                          - generic [ref=f3e184]:
+                            - generic [ref=f3e185]: "Bunch Bill:"
+                            - generic [ref=f3e186]: "7139"
+                        - generic [ref=f3e188]:
+                          - generic [ref=f3e191]:
+                            - generic [ref=f3e192]: "Invalid Freight Forwarder:"
+                            - generic [ref=f3e193]: "4357"
+                          - generic [ref=f3e196]:
+                            - generic [ref=f3e197]: "FW Not Notified:"
+                            - generic [ref=f3e198]: "0"
+                          - generic [ref=f3e201]:
+                            - generic [ref=f3e202]: "Invalid MX Broker:"
+                            - generic [ref=f3e203]: "10427"
+                          - generic [ref=f3e206]:
+                            - generic [ref=f3e207]: "No Manifest Number:"
+                            - generic [ref=f3e208]: "6300"
+                          - generic [ref=f3e211]:
+                            - generic [ref=f3e212]: "No Export Number:"
+                            - generic [ref=f3e213]: "10544"
+                          - generic [ref=f3e216]:
+                            - generic [ref=f3e217]: "No Pedimento:"
+                            - generic [ref=f3e218]: "11223"
+                          - generic [ref=f3e221]:
+                            - generic [ref=f3e222]: "Bypass DSP:"
+                            - generic [ref=f3e223]: "0"
+                          - generic [ref=f3e226]:
+                            - generic [ref=f3e227]: "Bypass Doc Delay:"
+                            - generic [ref=f3e228]: "380"
+                  - generic [ref=f3e233]:
+                    - generic [ref=f3e234]:
+                      - generic "Select All" [ref=f3e236]:
+                        - generic [ref=f3e237]: Select All
+                        - checkbox "Select All" [ref=f3e238]
+                      - generic [ref=f3e239]:
+                        - button "First Page" [ref=f3e241] [cursor=pointer]
+                        - button "Previous Page" [ref=f3e243] [cursor=pointer]
+                        - generic [ref=f3e244]: Page
+                        - textbox "Page 1 of 568." [ref=f3e246]: "1"
+                        - generic [ref=f3e247]: of
+                        - generic [ref=f3e248]: "568"
+                        - button "Next Page" [ref=f3e250] [cursor=pointer]
+                        - button "Last Page" [ref=f3e252] [cursor=pointer]
+                      - button "Export to Excel" [ref=f3e255] [cursor=pointer]
+                      - button "Actions" [ref=f3e258] [cursor=pointer]:
+                        - text: Actions
+                        - generic [ref=f3e259]: 
+                    - table [ref=f3e262]:
+                      - rowgroup [ref=f3e263]:
+                        - row "Select .pyTemplateInputBox Equipment ID Hold Type Waybill Number Waybill Date Initial Notify Date First Chargeable Day Doc Delay Charge MX Manifest Pedimento Export Number Export Status Export Response Code Release Date Commodity/STCC" [ref=f3e264]:
+                          - columnheader [ref=f3e265]
+                          - columnheader "Select" [ref=f3e267]:
+                            - generic [ref=f3e270]: Select
+                          - columnheader ".pyTemplateInputBox" [ref=f3e271] [cursor=pointer]:
+                            - generic [ref=f3e272]:
+                              - generic [ref=f3e273]:
+                                - button "Current Location" [ref=f3e276]
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e277]
+                          - columnheader "Equipment ID" [ref=f3e278] [cursor=pointer]:
+                            - generic [ref=f3e279]:
+                              - generic [ref=f3e280]:
+                                - generic [ref=f3e281]: Equipment ID
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e282]
+                          - columnheader "Hold Type" [ref=f3e283] [cursor=pointer]:
+                            - generic [ref=f3e284]:
+                              - generic [ref=f3e285]:
+                                - generic [ref=f3e286]: Hold Type
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e287]
+                          - columnheader "Waybill Number" [ref=f3e288] [cursor=pointer]:
+                            - generic [ref=f3e289]:
+                              - generic [ref=f3e290]:
+                                - generic [ref=f3e291]: Waybill Number
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e292]
+                          - columnheader "Waybill Date" [ref=f3e293] [cursor=pointer]:
+                            - generic [ref=f3e294]:
+                              - generic [ref=f3e295]:
+                                - generic [ref=f3e296]: Waybill Date
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e297]
+                          - columnheader "Initial Notify Date" [ref=f3e298] [cursor=pointer]:
+                            - generic [ref=f3e299]:
+                              - generic [ref=f3e300]:
+                                - generic [ref=f3e301]: Initial Notify Date
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e302]
+                          - columnheader "First Chargeable Day" [ref=f3e303] [cursor=pointer]:
+                            - generic [ref=f3e304]:
+                              - generic [ref=f3e305]:
+                                - generic [ref=f3e306]: First Chargeable Day
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e307]
+                          - columnheader "Doc Delay Charge" [ref=f3e308] [cursor=pointer]:
+                            - generic [ref=f3e309]:
+                              - generic [ref=f3e310]:
+                                - generic [ref=f3e311]: Doc Delay Charge
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e312]
+                          - columnheader "MX Manifest" [ref=f3e313] [cursor=pointer]:
+                            - generic [ref=f3e314]:
+                              - generic [ref=f3e315]:
+                                - generic [ref=f3e316]: MX Manifest
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e317]
+                          - columnheader "Pedimento" [ref=f3e318]:
+                            - generic [ref=f3e321]: Pedimento
+                          - columnheader "Export Number" [ref=f3e322]:
+                            - generic [ref=f3e323]:
+                              - generic [ref=f3e325]: Export Number
+                              - link "Click to filter" [ref=f3e326] [cursor=pointer]
+                          - columnheader "Export Status" [ref=f3e327] [cursor=pointer]:
+                            - generic [ref=f3e328]:
+                              - generic [ref=f3e329]:
+                                - generic [ref=f3e330]: Export Status
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e331]
+                          - columnheader "Export Response Code" [ref=f3e332] [cursor=pointer]:
+                            - generic [ref=f3e333]:
+                              - generic [ref=f3e334]:
+                                - generic [ref=f3e335]: Export Response Code
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e336]
+                          - columnheader "Release Date" [ref=f3e337] [cursor=pointer]:
+                            - generic [ref=f3e338]:
+                              - generic [ref=f3e339]:
+                                - generic [ref=f3e340]: Release Date
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e341]
+                          - columnheader "Commodity/STCC" [ref=f3e342] [cursor=pointer]:
+                            - generic [ref=f3e343]:
+                              - generic [ref=f3e344]:
+                                - generic [ref=f3e345]: Commodity/STCC
+                                - generic "Click to sort"
+                              - link "Click to filter" [ref=f3e346]
+                        - row "press enter to expand row SAN JUAN DEL RIO, QA CP651424 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 AEN 4567, ITN X20250109646559 No Response, -, no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e347]:
+                          - cell "press enter to expand row" [ref=f3e348] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e349]
+                          - cell [ref=f3e350] [cursor=pointer]:
+                            - checkbox [ref=f3e352]
+                          - cell "SAN JUAN DEL RIO, QA" [ref=f3e353] [cursor=pointer]:
+                            - generic [ref=f3e360]: SAN JUAN DEL RIO, QA
+                          - cell "CP651424" [ref=f3e361] [cursor=pointer]:
+                            - generic [ref=f3e362]: CP651424
+                          - cell "Despacho Hold" [ref=f3e363] [cursor=pointer]:
+                            - generic [ref=f3e369]: Despacho Hold
+                          - cell "29209" [ref=f3e370] [cursor=pointer]:
+                            - generic [ref=f3e371]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e372] [cursor=pointer]:
+                            - generic [ref=f3e373]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e374] [cursor=pointer]:
+                            - generic [ref=f3e375]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e376] [cursor=pointer]:
+                            - generic [ref=f3e377]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e378] [cursor=pointer]:
+                            - generic [ref=f3e381]: 265,636.00
+                          - cell [ref=f3e382] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e383] [cursor=pointer]
+                          - cell "AEN 4567, ITN X20250109646559" [ref=f3e384] [cursor=pointer]:
+                            - generic [ref=f3e387]:
+                              - text: AEN 4567,
+                              - text: ITN X20250109646559
+                          - cell "No Response," [ref=f3e388] [cursor=pointer]:
+                            - generic [ref=f3e389]: No Response,
+                          - cell "-," [ref=f3e390] [cursor=pointer]:
+                            - generic [ref=f3e391]: "-,"
+                          - cell "no value" [ref=f3e392] [cursor=pointer]:
+                            - generic [ref=f3e393]:
+                              - generic [ref=f3e394]: ––
+                              - generic [ref=f3e395]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e396] [cursor=pointer]:
+                            - paragraph [ref=f3e398]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– CP653747 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e399]:
+                          - cell "press enter to expand row" [ref=f3e400] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e401]
+                          - cell [ref=f3e402] [cursor=pointer]:
+                            - checkbox [ref=f3e404]
+                          - cell "––" [ref=f3e405] [cursor=pointer]:
+                            - generic [ref=f3e406]:
+                              - text: –– –– ––
+                              - generic [ref=f3e412]: ––
+                          - cell "CP653747" [ref=f3e413] [cursor=pointer]:
+                            - generic [ref=f3e414]: CP653747
+                          - cell "Despacho Hold" [ref=f3e415] [cursor=pointer]:
+                            - generic [ref=f3e421]: Despacho Hold
+                          - cell "29209" [ref=f3e422] [cursor=pointer]:
+                            - generic [ref=f3e423]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e424] [cursor=pointer]:
+                            - generic [ref=f3e425]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e426] [cursor=pointer]:
+                            - generic [ref=f3e427]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e428] [cursor=pointer]:
+                            - generic [ref=f3e429]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e430] [cursor=pointer]:
+                            - generic [ref=f3e433]: 265,636.00
+                          - cell [ref=f3e434] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e435] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e436] [cursor=pointer]:
+                            - generic [ref=f3e438]: ITN X20250109646559
+                          - cell [ref=f3e439] [cursor=pointer]
+                          - cell [ref=f3e441] [cursor=pointer]
+                          - cell "no value" [ref=f3e443] [cursor=pointer]:
+                            - generic [ref=f3e444]:
+                              - generic [ref=f3e445]: ––
+                              - generic [ref=f3e446]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e447] [cursor=pointer]:
+                            - paragraph [ref=f3e449]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– DME51175 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e450]:
+                          - cell "press enter to expand row" [ref=f3e451] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e452]
+                          - cell [ref=f3e453] [cursor=pointer]:
+                            - checkbox [ref=f3e455]
+                          - cell "––" [ref=f3e456] [cursor=pointer]:
+                            - generic [ref=f3e457]:
+                              - text: –– –– ––
+                              - generic [ref=f3e463]: ––
+                          - cell "DME51175" [ref=f3e464] [cursor=pointer]:
+                            - generic [ref=f3e465]: DME51175
+                          - cell "Despacho Hold" [ref=f3e466] [cursor=pointer]:
+                            - generic [ref=f3e472]: Despacho Hold
+                          - cell "29209" [ref=f3e473] [cursor=pointer]:
+                            - generic [ref=f3e474]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e475] [cursor=pointer]:
+                            - generic [ref=f3e476]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e477] [cursor=pointer]:
+                            - generic [ref=f3e478]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e479] [cursor=pointer]:
+                            - generic [ref=f3e480]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e481] [cursor=pointer]:
+                            - generic [ref=f3e484]: 265,636.00
+                          - cell [ref=f3e485] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e486] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e487] [cursor=pointer]:
+                            - generic [ref=f3e489]: ITN X20250109646559
+                          - cell [ref=f3e490] [cursor=pointer]
+                          - cell [ref=f3e492] [cursor=pointer]
+                          - cell "no value" [ref=f3e494] [cursor=pointer]:
+                            - generic [ref=f3e495]:
+                              - generic [ref=f3e496]: ––
+                              - generic [ref=f3e497]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e498] [cursor=pointer]:
+                            - paragraph [ref=f3e500]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row SAN JUAN DEL RIO, QA CP654314 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e501]:
+                          - cell "press enter to expand row" [ref=f3e502] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e503]
+                          - cell [ref=f3e504] [cursor=pointer]:
+                            - checkbox [ref=f3e506]
+                          - cell "SAN JUAN DEL RIO, QA" [ref=f3e507] [cursor=pointer]:
+                            - generic [ref=f3e514]: SAN JUAN DEL RIO, QA
+                          - cell "CP654314" [ref=f3e515] [cursor=pointer]:
+                            - generic [ref=f3e516]: CP654314
+                          - cell "Despacho Hold" [ref=f3e517] [cursor=pointer]:
+                            - generic [ref=f3e523]: Despacho Hold
+                          - cell "29209" [ref=f3e524] [cursor=pointer]:
+                            - generic [ref=f3e525]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e526] [cursor=pointer]:
+                            - generic [ref=f3e527]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e528] [cursor=pointer]:
+                            - generic [ref=f3e529]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e530] [cursor=pointer]:
+                            - generic [ref=f3e531]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e532] [cursor=pointer]:
+                            - generic [ref=f3e535]: 265,636.00
+                          - cell [ref=f3e536] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e537] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e538] [cursor=pointer]:
+                            - generic [ref=f3e540]: ITN X20250109646559
+                          - cell [ref=f3e541] [cursor=pointer]
+                          - cell [ref=f3e543] [cursor=pointer]
+                          - cell "no value" [ref=f3e545] [cursor=pointer]:
+                            - generic [ref=f3e546]:
+                              - generic [ref=f3e547]: ––
+                              - generic [ref=f3e548]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e549] [cursor=pointer]:
+                            - paragraph [ref=f3e551]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row SAN JUAN DEL RIO, QA CP653978 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e552]:
+                          - cell "press enter to expand row" [ref=f3e553] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e554]
+                          - cell [ref=f3e555] [cursor=pointer]:
+                            - checkbox [ref=f3e557]
+                          - cell "SAN JUAN DEL RIO, QA" [ref=f3e558] [cursor=pointer]:
+                            - generic [ref=f3e565]: SAN JUAN DEL RIO, QA
+                          - cell "CP653978" [ref=f3e566] [cursor=pointer]:
+                            - generic [ref=f3e567]: CP653978
+                          - cell "Despacho Hold" [ref=f3e568] [cursor=pointer]:
+                            - generic [ref=f3e574]: Despacho Hold
+                          - cell "29209" [ref=f3e575] [cursor=pointer]:
+                            - generic [ref=f3e576]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e577] [cursor=pointer]:
+                            - generic [ref=f3e578]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e579] [cursor=pointer]:
+                            - generic [ref=f3e580]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e581] [cursor=pointer]:
+                            - generic [ref=f3e582]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e583] [cursor=pointer]:
+                            - generic [ref=f3e586]: 265,636.00
+                          - cell [ref=f3e587] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e588] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e589] [cursor=pointer]:
+                            - generic [ref=f3e591]: ITN X20250109646559
+                          - cell [ref=f3e592] [cursor=pointer]
+                          - cell [ref=f3e594] [cursor=pointer]
+                          - cell "no value" [ref=f3e596] [cursor=pointer]:
+                            - generic [ref=f3e597]:
+                              - generic [ref=f3e598]: ––
+                              - generic [ref=f3e599]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e600] [cursor=pointer]:
+                            - paragraph [ref=f3e602]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– CP654305 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e603]:
+                          - cell "press enter to expand row" [ref=f3e604] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e605]
+                          - cell [ref=f3e606] [cursor=pointer]:
+                            - checkbox [ref=f3e608]
+                          - cell "––" [ref=f3e609] [cursor=pointer]:
+                            - generic [ref=f3e610]:
+                              - text: –– –– ––
+                              - generic [ref=f3e616]: ––
+                          - cell "CP654305" [ref=f3e617] [cursor=pointer]:
+                            - generic [ref=f3e618]: CP654305
+                          - cell "Despacho Hold" [ref=f3e619] [cursor=pointer]:
+                            - generic [ref=f3e625]: Despacho Hold
+                          - cell "29209" [ref=f3e626] [cursor=pointer]:
+                            - generic [ref=f3e627]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e628] [cursor=pointer]:
+                            - generic [ref=f3e629]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e630] [cursor=pointer]:
+                            - generic [ref=f3e631]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e632] [cursor=pointer]:
+                            - generic [ref=f3e633]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e634] [cursor=pointer]:
+                            - generic [ref=f3e637]: 265,636.00
+                          - cell [ref=f3e638] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e639] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e640] [cursor=pointer]:
+                            - generic [ref=f3e642]: ITN X20250109646559
+                          - cell [ref=f3e643] [cursor=pointer]
+                          - cell [ref=f3e645] [cursor=pointer]
+                          - cell "no value" [ref=f3e647] [cursor=pointer]:
+                            - generic [ref=f3e648]:
+                              - generic [ref=f3e649]: ––
+                              - generic [ref=f3e650]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e651] [cursor=pointer]:
+                            - paragraph [ref=f3e653]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– SOO116150 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e654]:
+                          - cell "press enter to expand row" [ref=f3e655] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e656]
+                          - cell [ref=f3e657] [cursor=pointer]:
+                            - checkbox [ref=f3e659]
+                          - cell "––" [ref=f3e660] [cursor=pointer]:
+                            - generic [ref=f3e661]:
+                              - text: –– –– ––
+                              - generic [ref=f3e667]: ––
+                          - cell "SOO116150" [ref=f3e668] [cursor=pointer]:
+                            - generic [ref=f3e669]: SOO116150
+                          - cell "Despacho Hold" [ref=f3e670] [cursor=pointer]:
+                            - generic [ref=f3e676]: Despacho Hold
+                          - cell "29209" [ref=f3e677] [cursor=pointer]:
+                            - generic [ref=f3e678]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e679] [cursor=pointer]:
+                            - generic [ref=f3e680]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e681] [cursor=pointer]:
+                            - generic [ref=f3e682]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e683] [cursor=pointer]:
+                            - generic [ref=f3e684]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e685] [cursor=pointer]:
+                            - generic [ref=f3e688]: 265,636.00
+                          - cell [ref=f3e689] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e690] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e691] [cursor=pointer]:
+                            - generic [ref=f3e693]: ITN X20250109646559
+                          - cell [ref=f3e694] [cursor=pointer]
+                          - cell [ref=f3e696] [cursor=pointer]
+                          - cell "no value" [ref=f3e698] [cursor=pointer]:
+                            - generic [ref=f3e699]:
+                              - generic [ref=f3e700]: ––
+                              - generic [ref=f3e701]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e702] [cursor=pointer]:
+                            - paragraph [ref=f3e704]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– KCS310113 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e705]:
+                          - cell "press enter to expand row" [ref=f3e706] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e707]
+                          - cell [ref=f3e708] [cursor=pointer]:
+                            - checkbox [ref=f3e710]
+                          - cell "––" [ref=f3e711] [cursor=pointer]:
+                            - generic [ref=f3e712]:
+                              - text: –– –– ––
+                              - generic [ref=f3e718]: ––
+                          - cell "KCS310113" [ref=f3e719] [cursor=pointer]:
+                            - generic [ref=f3e720]: KCS310113
+                          - cell "Despacho Hold" [ref=f3e721] [cursor=pointer]:
+                            - generic [ref=f3e727]: Despacho Hold
+                          - cell "29209" [ref=f3e728] [cursor=pointer]:
+                            - generic [ref=f3e729]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e730] [cursor=pointer]:
+                            - generic [ref=f3e731]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e732] [cursor=pointer]:
+                            - generic [ref=f3e733]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e734] [cursor=pointer]:
+                            - generic [ref=f3e735]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e736] [cursor=pointer]:
+                            - generic [ref=f3e739]: 265,636.00
+                          - cell [ref=f3e740] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e741] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e742] [cursor=pointer]:
+                            - generic [ref=f3e744]: ITN X20250109646559
+                          - cell [ref=f3e745] [cursor=pointer]
+                          - cell [ref=f3e747] [cursor=pointer]
+                          - cell "no value" [ref=f3e749] [cursor=pointer]:
+                            - generic [ref=f3e750]:
+                              - generic [ref=f3e751]: ––
+                              - generic [ref=f3e752]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e753] [cursor=pointer]:
+                            - paragraph [ref=f3e755]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– CP653147 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e756]:
+                          - cell "press enter to expand row" [ref=f3e757] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e758]
+                          - cell [ref=f3e759] [cursor=pointer]:
+                            - checkbox [ref=f3e761]
+                          - cell "––" [ref=f3e762] [cursor=pointer]:
+                            - generic [ref=f3e763]:
+                              - text: –– –– ––
+                              - generic [ref=f3e769]: ––
+                          - cell "CP653147" [ref=f3e770] [cursor=pointer]:
+                            - generic [ref=f3e771]: CP653147
+                          - cell "Despacho Hold" [ref=f3e772] [cursor=pointer]:
+                            - generic [ref=f3e778]: Despacho Hold
+                          - cell "29209" [ref=f3e779] [cursor=pointer]:
+                            - generic [ref=f3e780]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e781] [cursor=pointer]:
+                            - generic [ref=f3e782]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e783] [cursor=pointer]:
+                            - generic [ref=f3e784]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e785] [cursor=pointer]:
+                            - generic [ref=f3e786]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e787] [cursor=pointer]:
+                            - generic [ref=f3e790]: 265,636.00
+                          - cell [ref=f3e791] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e792] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e793] [cursor=pointer]:
+                            - generic [ref=f3e795]: ITN X20250109646559
+                          - cell [ref=f3e796] [cursor=pointer]
+                          - cell [ref=f3e798] [cursor=pointer]
+                          - cell "no value" [ref=f3e800] [cursor=pointer]:
+                            - generic [ref=f3e801]:
+                              - generic [ref=f3e802]: ––
+                              - generic [ref=f3e803]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e804] [cursor=pointer]:
+                            - paragraph [ref=f3e806]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– KCS287214 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e807]:
+                          - cell "press enter to expand row" [ref=f3e808] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e809]
+                          - cell [ref=f3e810] [cursor=pointer]:
+                            - checkbox [ref=f3e812]
+                          - cell "––" [ref=f3e813] [cursor=pointer]:
+                            - generic [ref=f3e814]:
+                              - text: –– –– ––
+                              - generic [ref=f3e820]: ––
+                          - cell "KCS287214" [ref=f3e821] [cursor=pointer]:
+                            - generic [ref=f3e822]: KCS287214
+                          - cell "Despacho Hold" [ref=f3e823] [cursor=pointer]:
+                            - generic [ref=f3e829]: Despacho Hold
+                          - cell "29209" [ref=f3e830] [cursor=pointer]:
+                            - generic [ref=f3e831]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e832] [cursor=pointer]:
+                            - generic [ref=f3e833]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e834] [cursor=pointer]:
+                            - generic [ref=f3e835]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e836] [cursor=pointer]:
+                            - generic [ref=f3e837]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e838] [cursor=pointer]:
+                            - generic [ref=f3e841]: 265,636.00
+                          - cell [ref=f3e842] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e843] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e844] [cursor=pointer]:
+                            - generic [ref=f3e846]: ITN X20250109646559
+                          - cell [ref=f3e847] [cursor=pointer]
+                          - cell [ref=f3e849] [cursor=pointer]
+                          - cell "no value" [ref=f3e851] [cursor=pointer]:
+                            - generic [ref=f3e852]:
+                              - generic [ref=f3e853]: ––
+                              - generic [ref=f3e854]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e855] [cursor=pointer]:
+                            - paragraph [ref=f3e857]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– SOO113682 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e858]:
+                          - cell "press enter to expand row" [ref=f3e859] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e860]
+                          - cell [ref=f3e861] [cursor=pointer]:
+                            - checkbox [ref=f3e863]
+                          - cell "––" [ref=f3e864] [cursor=pointer]:
+                            - generic [ref=f3e865]:
+                              - text: –– –– ––
+                              - generic [ref=f3e871]: ––
+                          - cell "SOO113682" [ref=f3e872] [cursor=pointer]:
+                            - generic [ref=f3e873]: SOO113682
+                          - cell "Despacho Hold" [ref=f3e874] [cursor=pointer]:
+                            - generic [ref=f3e880]: Despacho Hold
+                          - cell "29209" [ref=f3e881] [cursor=pointer]:
+                            - generic [ref=f3e882]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e883] [cursor=pointer]:
+                            - generic [ref=f3e884]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e885] [cursor=pointer]:
+                            - generic [ref=f3e886]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e887] [cursor=pointer]:
+                            - generic [ref=f3e888]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e889] [cursor=pointer]:
+                            - generic [ref=f3e892]: 265,636.00
+                          - cell [ref=f3e893] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e894] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e895] [cursor=pointer]:
+                            - generic [ref=f3e897]: ITN X20250109646559
+                          - cell [ref=f3e898] [cursor=pointer]
+                          - cell [ref=f3e900] [cursor=pointer]
+                          - cell "no value" [ref=f3e902] [cursor=pointer]:
+                            - generic [ref=f3e903]:
+                              - generic [ref=f3e904]: ––
+                              - generic [ref=f3e905]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e906] [cursor=pointer]:
+                            - paragraph [ref=f3e908]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row NORTH COUNCIL BLUFFS, IA SOO115870 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e909]:
+                          - cell "press enter to expand row" [ref=f3e910] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e911]
+                          - cell [ref=f3e912] [cursor=pointer]:
+                            - checkbox [ref=f3e914]
+                          - cell "NORTH COUNCIL BLUFFS, IA" [ref=f3e915] [cursor=pointer]:
+                            - generic [ref=f3e922]: NORTH COUNCIL BLUFFS, IA
+                          - cell "SOO115870" [ref=f3e923] [cursor=pointer]:
+                            - generic [ref=f3e924]: SOO115870
+                          - cell "Despacho Hold" [ref=f3e925] [cursor=pointer]:
+                            - generic [ref=f3e931]: Despacho Hold
+                          - cell "29209" [ref=f3e932] [cursor=pointer]:
+                            - generic [ref=f3e933]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e934] [cursor=pointer]:
+                            - generic [ref=f3e935]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e936] [cursor=pointer]:
+                            - generic [ref=f3e937]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e938] [cursor=pointer]:
+                            - generic [ref=f3e939]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e940] [cursor=pointer]:
+                            - generic [ref=f3e943]: 265,636.00
+                          - cell [ref=f3e944] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e945] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e946] [cursor=pointer]:
+                            - generic [ref=f3e948]: ITN X20250109646559
+                          - cell [ref=f3e949] [cursor=pointer]
+                          - cell [ref=f3e951] [cursor=pointer]
+                          - cell "no value" [ref=f3e953] [cursor=pointer]:
+                            - generic [ref=f3e954]:
+                              - generic [ref=f3e955]: ––
+                              - generic [ref=f3e956]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e957] [cursor=pointer]:
+                            - paragraph [ref=f3e959]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– KCS287367 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e960]:
+                          - cell "press enter to expand row" [ref=f3e961] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e962]
+                          - cell [ref=f3e963] [cursor=pointer]:
+                            - checkbox [ref=f3e965]
+                          - cell "––" [ref=f3e966] [cursor=pointer]:
+                            - generic [ref=f3e967]:
+                              - text: –– –– ––
+                              - generic [ref=f3e973]: ––
+                          - cell "KCS287367" [ref=f3e974] [cursor=pointer]:
+                            - generic [ref=f3e975]: KCS287367
+                          - cell "Despacho Hold" [ref=f3e976] [cursor=pointer]:
+                            - generic [ref=f3e982]: Despacho Hold
+                          - cell "29209" [ref=f3e983] [cursor=pointer]:
+                            - generic [ref=f3e984]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e985] [cursor=pointer]:
+                            - generic [ref=f3e986]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e987] [cursor=pointer]:
+                            - generic [ref=f3e988]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e989] [cursor=pointer]:
+                            - generic [ref=f3e990]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e991] [cursor=pointer]:
+                            - generic [ref=f3e994]: 265,636.00
+                          - cell [ref=f3e995] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e996] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e997] [cursor=pointer]:
+                            - generic [ref=f3e999]: ITN X20250109646559
+                          - cell [ref=f3e1000] [cursor=pointer]
+                          - cell [ref=f3e1002] [cursor=pointer]
+                          - cell "no value" [ref=f3e1004] [cursor=pointer]:
+                            - generic [ref=f3e1005]:
+                              - generic [ref=f3e1006]: ––
+                              - generic [ref=f3e1007]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1008] [cursor=pointer]:
+                            - paragraph [ref=f3e1010]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– SOO123016 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1011]:
+                          - cell "press enter to expand row" [ref=f3e1012] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e1013]
+                          - cell [ref=f3e1014] [cursor=pointer]:
+                            - checkbox [ref=f3e1016]
+                          - cell "––" [ref=f3e1017] [cursor=pointer]:
+                            - generic [ref=f3e1018]:
+                              - text: –– –– ––
+                              - generic [ref=f3e1024]: ––
+                          - cell "SOO123016" [ref=f3e1025] [cursor=pointer]:
+                            - generic [ref=f3e1026]: SOO123016
+                          - cell "Despacho Hold" [ref=f3e1027] [cursor=pointer]:
+                            - generic [ref=f3e1033]: Despacho Hold
+                          - cell "29209" [ref=f3e1034] [cursor=pointer]:
+                            - generic [ref=f3e1035]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e1036] [cursor=pointer]:
+                            - generic [ref=f3e1037]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e1038] [cursor=pointer]:
+                            - generic [ref=f3e1039]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e1040] [cursor=pointer]:
+                            - generic [ref=f3e1041]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e1042] [cursor=pointer]:
+                            - generic [ref=f3e1045]: 265,636.00
+                          - cell [ref=f3e1046] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e1047] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e1048] [cursor=pointer]:
+                            - generic [ref=f3e1050]: ITN X20250109646559
+                          - cell [ref=f3e1051] [cursor=pointer]
+                          - cell [ref=f3e1053] [cursor=pointer]
+                          - cell "no value" [ref=f3e1055] [cursor=pointer]:
+                            - generic [ref=f3e1056]:
+                              - generic [ref=f3e1057]: ––
+                              - generic [ref=f3e1058]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1059] [cursor=pointer]:
+                            - paragraph [ref=f3e1061]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row TROUTDALE, OR UCIR200095 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1062]:
+                          - cell "press enter to expand row" [ref=f3e1063] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e1064]
+                          - cell [ref=f3e1065] [cursor=pointer]:
+                            - checkbox [ref=f3e1067]
+                          - cell "TROUTDALE, OR" [ref=f3e1068] [cursor=pointer]:
+                            - generic [ref=f3e1075]: TROUTDALE, OR
+                          - cell "UCIR200095" [ref=f3e1076] [cursor=pointer]:
+                            - generic [ref=f3e1077]: UCIR200095
+                          - cell "Despacho Hold" [ref=f3e1078] [cursor=pointer]:
+                            - generic [ref=f3e1084]: Despacho Hold
+                          - cell "29209" [ref=f3e1085] [cursor=pointer]:
+                            - generic [ref=f3e1086]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e1087] [cursor=pointer]:
+                            - generic [ref=f3e1088]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e1089] [cursor=pointer]:
+                            - generic [ref=f3e1090]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e1091] [cursor=pointer]:
+                            - generic [ref=f3e1092]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e1093] [cursor=pointer]:
+                            - generic [ref=f3e1096]: 265,636.00
+                          - cell [ref=f3e1097] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e1098] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e1099] [cursor=pointer]:
+                            - generic [ref=f3e1101]: ITN X20250109646559
+                          - cell [ref=f3e1102] [cursor=pointer]
+                          - cell [ref=f3e1104] [cursor=pointer]
+                          - cell "no value" [ref=f3e1106] [cursor=pointer]:
+                            - generic [ref=f3e1107]:
+                              - generic [ref=f3e1108]: ––
+                              - generic [ref=f3e1109]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1110] [cursor=pointer]:
+                            - paragraph [ref=f3e1112]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row SAN JUAN DEL RIO, QA CP650662 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1113]:
+                          - cell "press enter to expand row" [ref=f3e1114] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e1115]
+                          - cell [ref=f3e1116] [cursor=pointer]:
+                            - checkbox [ref=f3e1118]
+                          - cell "SAN JUAN DEL RIO, QA" [ref=f3e1119] [cursor=pointer]:
+                            - generic [ref=f3e1126]: SAN JUAN DEL RIO, QA
+                          - cell "CP650662" [ref=f3e1127] [cursor=pointer]:
+                            - generic [ref=f3e1128]: CP650662
+                          - cell "Despacho Hold" [ref=f3e1129] [cursor=pointer]:
+                            - generic [ref=f3e1135]: Despacho Hold
+                          - cell "29209" [ref=f3e1136] [cursor=pointer]:
+                            - generic [ref=f3e1137]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e1138] [cursor=pointer]:
+                            - generic [ref=f3e1139]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e1140] [cursor=pointer]:
+                            - generic [ref=f3e1141]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e1142] [cursor=pointer]:
+                            - generic [ref=f3e1143]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e1144] [cursor=pointer]:
+                            - generic [ref=f3e1147]: 265,636.00
+                          - cell [ref=f3e1148] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e1149] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e1150] [cursor=pointer]:
+                            - generic [ref=f3e1152]: ITN X20250109646559
+                          - cell [ref=f3e1153] [cursor=pointer]
+                          - cell [ref=f3e1155] [cursor=pointer]
+                          - cell "no value" [ref=f3e1157] [cursor=pointer]:
+                            - generic [ref=f3e1158]:
+                              - generic [ref=f3e1159]: ––
+                              - generic [ref=f3e1160]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1161] [cursor=pointer]:
+                            - paragraph [ref=f3e1163]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– CP650962 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1164]:
+                          - cell "press enter to expand row" [ref=f3e1165] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e1166]
+                          - cell [ref=f3e1167] [cursor=pointer]:
+                            - checkbox [ref=f3e1169]
+                          - cell "––" [ref=f3e1170] [cursor=pointer]:
+                            - generic [ref=f3e1171]:
+                              - text: –– –– ––
+                              - generic [ref=f3e1177]: ––
+                          - cell "CP650962" [ref=f3e1178] [cursor=pointer]:
+                            - generic [ref=f3e1179]: CP650962
+                          - cell "Despacho Hold" [ref=f3e1180] [cursor=pointer]:
+                            - generic [ref=f3e1186]: Despacho Hold
+                          - cell "29209" [ref=f3e1187] [cursor=pointer]:
+                            - generic [ref=f3e1188]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e1189] [cursor=pointer]:
+                            - generic [ref=f3e1190]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e1191] [cursor=pointer]:
+                            - generic [ref=f3e1192]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e1193] [cursor=pointer]:
+                            - generic [ref=f3e1194]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e1195] [cursor=pointer]:
+                            - generic [ref=f3e1198]: 265,636.00
+                          - cell [ref=f3e1199] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e1200] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e1201] [cursor=pointer]:
+                            - generic [ref=f3e1203]: ITN X20250109646559
+                          - cell [ref=f3e1204] [cursor=pointer]
+                          - cell [ref=f3e1206] [cursor=pointer]
+                          - cell "no value" [ref=f3e1208] [cursor=pointer]:
+                            - generic [ref=f3e1209]:
+                              - generic [ref=f3e1210]: ––
+                              - generic [ref=f3e1211]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1212] [cursor=pointer]:
+                            - paragraph [ref=f3e1214]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– CP653185 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1215]:
+                          - cell "press enter to expand row" [ref=f3e1216] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e1217]
+                          - cell [ref=f3e1218] [cursor=pointer]:
+                            - checkbox [ref=f3e1220]
+                          - cell "––" [ref=f3e1221] [cursor=pointer]:
+                            - generic [ref=f3e1222]:
+                              - text: –– –– ––
+                              - generic [ref=f3e1228]: ––
+                          - cell "CP653185" [ref=f3e1229] [cursor=pointer]:
+                            - generic [ref=f3e1230]: CP653185
+                          - cell "Despacho Hold" [ref=f3e1231] [cursor=pointer]:
+                            - generic [ref=f3e1237]: Despacho Hold
+                          - cell "29209" [ref=f3e1238] [cursor=pointer]:
+                            - generic [ref=f3e1239]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e1240] [cursor=pointer]:
+                            - generic [ref=f3e1241]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e1242] [cursor=pointer]:
+                            - generic [ref=f3e1243]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e1244] [cursor=pointer]:
+                            - generic [ref=f3e1245]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e1246] [cursor=pointer]:
+                            - generic [ref=f3e1249]: 265,636.00
+                          - cell [ref=f3e1250] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e1251] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e1252] [cursor=pointer]:
+                            - generic [ref=f3e1254]: ITN X20250109646559
+                          - cell [ref=f3e1255] [cursor=pointer]
+                          - cell [ref=f3e1257] [cursor=pointer]
+                          - cell "no value" [ref=f3e1259] [cursor=pointer]:
+                            - generic [ref=f3e1260]:
+                              - generic [ref=f3e1261]: ––
+                              - generic [ref=f3e1262]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1263] [cursor=pointer]:
+                            - paragraph [ref=f3e1265]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– KCS288643 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1266]:
+                          - cell "press enter to expand row" [ref=f3e1267] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e1268]
+                          - cell [ref=f3e1269] [cursor=pointer]:
+                            - checkbox [ref=f3e1271]
+                          - cell "––" [ref=f3e1272] [cursor=pointer]:
+                            - generic [ref=f3e1273]:
+                              - text: –– –– ––
+                              - generic [ref=f3e1279]: ––
+                          - cell "KCS288643" [ref=f3e1280] [cursor=pointer]:
+                            - generic [ref=f3e1281]: KCS288643
+                          - cell "Despacho Hold" [ref=f3e1282] [cursor=pointer]:
+                            - generic [ref=f3e1288]: Despacho Hold
+                          - cell "29209" [ref=f3e1289] [cursor=pointer]:
+                            - generic [ref=f3e1290]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e1291] [cursor=pointer]:
+                            - generic [ref=f3e1292]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e1293] [cursor=pointer]:
+                            - generic [ref=f3e1294]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e1295] [cursor=pointer]:
+                            - generic [ref=f3e1296]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e1297] [cursor=pointer]:
+                            - generic [ref=f3e1300]: 265,636.00
+                          - cell [ref=f3e1301] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e1302] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e1303] [cursor=pointer]:
+                            - generic [ref=f3e1305]: ITN X20250109646559
+                          - cell [ref=f3e1306] [cursor=pointer]
+                          - cell [ref=f3e1308] [cursor=pointer]
+                          - cell "no value" [ref=f3e1310] [cursor=pointer]:
+                            - generic [ref=f3e1311]:
+                              - generic [ref=f3e1312]: ––
+                              - generic [ref=f3e1313]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1314] [cursor=pointer]:
+                            - paragraph [ref=f3e1316]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+                        - row "press enter to expand row –– CP650862 Despacho Hold 29209 02/12/2025 12:00 AM 01/07/2025 07:01 PM 01/09/2025 07:01 AM 265,636.00 ITN X20250109646559 no value CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1317]:
+                          - cell "press enter to expand row" [ref=f3e1318] [cursor=pointer]:
+                            - generic "press enter to expand row" [ref=f3e1319]
+                          - cell [ref=f3e1320] [cursor=pointer]:
+                            - checkbox [ref=f3e1322]
+                          - cell "––" [ref=f3e1323] [cursor=pointer]:
+                            - generic [ref=f3e1324]:
+                              - text: –– –– ––
+                              - generic [ref=f3e1330]: ––
+                          - cell "CP650862" [ref=f3e1331] [cursor=pointer]:
+                            - generic [ref=f3e1332]: CP650862
+                          - cell "Despacho Hold" [ref=f3e1333] [cursor=pointer]:
+                            - generic [ref=f3e1339]: Despacho Hold
+                          - cell "29209" [ref=f3e1340] [cursor=pointer]:
+                            - generic [ref=f3e1341]: "29209"
+                          - cell "02/12/2025 12:00 AM" [ref=f3e1342] [cursor=pointer]:
+                            - generic [ref=f3e1343]: 02/12/2025 12:00 AM
+                          - cell "01/07/2025 07:01 PM" [ref=f3e1344] [cursor=pointer]:
+                            - generic [ref=f3e1345]: 01/07/2025 07:01 PM
+                          - cell "01/09/2025 07:01 AM" [ref=f3e1346] [cursor=pointer]:
+                            - generic [ref=f3e1347]: 01/09/2025 07:01 AM
+                          - cell "265,636.00" [ref=f3e1348] [cursor=pointer]:
+                            - generic [ref=f3e1351]: 265,636.00
+                          - cell [ref=f3e1352] [cursor=pointer]:
+                            - generic:
+                              - paragraph
+                          - cell [ref=f3e1353] [cursor=pointer]
+                          - cell "ITN X20250109646559" [ref=f3e1354] [cursor=pointer]:
+                            - generic [ref=f3e1356]: ITN X20250109646559
+                          - cell [ref=f3e1357] [cursor=pointer]
+                          - cell [ref=f3e1359] [cursor=pointer]
+                          - cell "no value" [ref=f3e1361] [cursor=pointer]:
+                            - generic [ref=f3e1362]:
+                              - generic [ref=f3e1363]: ––
+                              - generic [ref=f3e1364]: no value
+                          - cell "CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215" [ref=f3e1365] [cursor=pointer]:
+                            - paragraph [ref=f3e1367]: CORN (NOT POPCORN) OR MAIZE (NOT POPCORN), SHELLED D, DRIED NOT ORGANICALLY GROWN FREE OF FERTILIZER, 0113215
+    - log [ref=e3]:
+      - heading "Polite Announcements" [level=6] [ref=e4]
+    - log [ref=e5]:
+      - heading "Assertive Announcements" [level=6] [ref=e6]
+  - tooltip "Cars By Release Status": Cars By Release Status

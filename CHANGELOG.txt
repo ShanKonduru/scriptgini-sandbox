@@ -80,3 +80,62 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-15 12:50:00
+Test Case: Equipment Action Reason Configuration Update and Verify
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/__init__.py
+      Package initialization file for Page Object Model
+
+  - pages/login_page.py
+      New LoginPage class with methods:
+        - navigate(), click_login_with_despachoprevio(), enter_email(), click_next()
+        - enter_password(), click_signin(), accept_cookies_if_present(), login()
+      Handles Microsoft SSO authentication flow via Pega including cookie consent
+
+  - pages/configurations_page.py
+      New ConfigurationsPage class with methods:
+        - navigate_to_configurations(), get_configuration_frame()
+        - verify_equipment_action_reason_section_visible()
+        - select_action_for_row(), update_reason_for_row()
+        - find_row_by_action_and_reason(), click_save_configurations()
+        - verify_reason_in_table(), get_all_action_reason_pairs()
+      Manages Equipment Action Reason Configuration section within Pega iframe
+
+  - pages/cars_by_release_page.py
+      New CarsByReleasePage class with methods:
+        - navigate_to_cars_by_release(), get_cars_frame()
+        - select_status(), select_equipment_checkbox(), verify_equipment_checkbox_checked()
+        - click_actions_button(), select_no_despacho_previo_action()
+        - select_action_reason(), click_submit(), verify_action_dialog_visible()
+        - get_available_action_reasons()
+      Handles Cars By Release Status page operations within Pega iframe
+
+  - tests/test_equipment_action_reason_configuration.py
+      New test function: test_equipment_action_reason_configuration_update_and_verify()
+      Implements complete workflow:
+        1. Login via Microsoft SSO with despachoprevio authentication
+        2. Navigate to Configurations and verify Equipment Action Reason section
+        3. Update action-reason configuration for "No Despacho Previo"
+        4. Save configuration and verify update in table
+        5. Navigate to Cars By Release page with TO BE RELEASED status
+        6. Select equipment and apply No Despacho Previo action
+        7. Verify updated reason is available in action reason dropdown
+        8. Submit action with selected reason
+
+Why it was necessary:
+  - First implementation of Page Object Model (POM) pattern for DSP Pega application
+  - Existing DSP test used inline locators without reusable page objects
+  - New test case requires configuration update followed by runtime verification
+  - Pega application uses nested iframes requiring frame_locator() handling
+  - Microsoft SSO flow needed dedicated page object for reuse across tests
+  - Complex multi-page workflow requires proper page abstraction and reusability
+
+Files changed:
+  pages/__init__.py, pages/login_page.py, pages/configurations_page.py,
+  pages/cars_by_release_page.py, tests/test_equipment_action_reason_configuration.py,
+  CHANGELOG.txt
+

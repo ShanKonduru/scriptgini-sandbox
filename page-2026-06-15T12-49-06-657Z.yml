@@ -1,0 +1,78 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e22]:
+      - generic "Skip navigation menu" [ref=e23]:
+        - generic [ref=e24]:
+          - button "Go to main content"
+        - generic [ref=e25]:
+          - generic: Shortcuts
+          - list "Shortcuts":
+            - listitem [ref=e26]:
+              - generic [ref=e27]: Jump to toast
+              - generic:
+                - generic [ref=e28]: ⌥
+                - generic [ref=e29]:
+                  - text: ↵
+                  - generic [ref=e30]: Enter
+            - listitem [ref=e31]:
+              - generic [ref=e32]: Dismiss toast
+              - generic:
+                - generic [ref=e33]: ⌥
+                - generic [ref=e34]: Q
+            - listitem [ref=e35]:
+              - generic [ref=e36]: Next region
+              - generic [ref=e37]: F9
+            - listitem [ref=e38]:
+              - generic [ref=e39]: Previous region
+              - generic:
+                - generic [ref=e40]:
+                  - text: ⇧
+                  - generic [ref=e41]: Shift
+                - generic [ref=e42]: F9
+      - navigation "Main" [ref=e43]:
+        - link "Despacho Previo" [ref=e44] [cursor=pointer]:
+          - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+          - img "Despacho Previo" [ref=e45]
+          - text: Despacho Previo
+        - generic [ref=e46]:
+          - list [ref=e48]:
+            - listitem [ref=e49]:
+              - link "Cars By Release Status" [active] [ref=e50] [cursor=pointer]:
+                - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+                - generic: Cars By Release Status
+            - listitem [ref=e54]:
+              - link "Cars History" [ref=e55] [cursor=pointer]:
+                - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/cars-history
+                - generic: Cars History
+            - listitem [ref=e59]:
+              - link "DSP Reports" [ref=e60] [cursor=pointer]:
+                - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/dsp-reports
+                - generic: DSP Reports
+            - listitem [ref=e64]:
+              - link "Configurations" [ref=e65] [cursor=pointer]:
+                - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/configurations
+                - generic: Configurations
+          - generic:
+            - list
+        - list [ref=e70]:
+          - listitem [ref=e71]:
+            - button "Account" [ref=e72] [cursor=pointer]:
+              - img "SivaRajesh Gottumukkala" [ref=e75]: SG
+              - generic: Account
+        - button "Expand navigation" [ref=e77] [cursor=pointer]
+      - main [ref=e79]:
+        - generic [ref=e104]:
+          - generic [ref=e108]:
+            - progressbar "Loading content..." [ref=e109]:
+              - img [ref=e110]
+            - generic [ref=e113]: Loading content...
+          - iframe [ref=e115]:
+            - generic [active] [ref=f3e1]:
+              - main [ref=f3e6]:
+                - article [ref=f3e7]
+              - generic: 
+    - log [ref=e3]:
+      - heading "Polite Announcements" [level=6] [ref=e4]
+    - log [ref=e5]:
+      - heading "Assertive Announcements" [level=6] [ref=e6]
+  - tooltip "Cars By Release Status": Cars By Release Status
