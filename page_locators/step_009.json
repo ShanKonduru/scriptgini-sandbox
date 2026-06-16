@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "select",
+  "description": "Select 'To be released' status and select June 6th 2025 in waybill date from field",
+  "selector": "iframe >> select[id*='Status'], iframe >> input[id*='Date'], iframe >> input[type='date']",
+  "selector_type": "css",
+  "iframe_path": "iframe",
+  "element_found": false,
+  "validation_note": "Elements inside Pega iframe - selectors need runtime verification. Application uses Pega Constellation framework with dynamic IDs.",
+  "screenshot_file": "step_008_cars_by_release_loaded.png"
+}

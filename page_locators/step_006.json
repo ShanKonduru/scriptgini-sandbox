@@ -1,0 +1,11 @@
+{
+  "step_number": 6,
+  "action": "click",
+  "description": "Click on 'Sign in' button",
+  "selector": "input[type='submit'], button:text('Sign in')",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Sign in button clicked - redirected to application with cookies dialog",
+  "screenshot_file": "step_006_after_click_signin_cookies.png"
+}

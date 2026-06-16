@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "click",
+  "description": "Select 'No Despacho previo' option",
+  "selector": "iframe >> button:has-text('No Despacho previo'), iframe >> a:has-text('No Despacho previo')",
+  "selector_type": "text",
+  "iframe_path": "iframe",
+  "element_found": false,
+  "validation_note": "Menu item inside Pega iframe - requires runtime verification",
+  "screenshot_file": null
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 3,
+  "action": "fill",
+  "description": "Enter email: SivaRajesh.Gottumukkala@cpkcr.com",
+  "selector": "input[type='email'], input[placeholder*='Email']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Email field filled successfully using role-based selector",
+  "screenshot_file": "step_003_after_enter_email.png"
+}

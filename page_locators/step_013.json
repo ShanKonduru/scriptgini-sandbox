@@ -1,0 +1,11 @@
+{
+  "step_number": 13,
+  "action": "click",
+  "description": "Click on 'Select No Despacho Previo Action Reason' dropdown",
+  "selector": "iframe >> select, iframe >> [role='combobox'], iframe >> button[aria-haspopup='listbox']",
+  "selector_type": "role",
+  "iframe_path": "iframe",
+  "element_found": false,
+  "validation_note": "Dropdown inside Pega iframe - requires runtime verification",
+  "screenshot_file": null
+}

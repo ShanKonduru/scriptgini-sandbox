@@ -1,0 +1,11 @@
+{
+  "step_number": 10,
+  "action": "click",
+  "description": "Select equipment with checkbox",
+  "selector": "iframe >> input[type='checkbox']:not([disabled])",
+  "selector_type": "css",
+  "iframe_path": "iframe",
+  "element_found": false,
+  "validation_note": "Checkbox inside Pega iframe - element requires runtime verification",
+  "screenshot_file": null
+}

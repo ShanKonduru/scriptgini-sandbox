@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "verify",
+  "description": "Verify if the following options are present: Duplicate waybill, Released on other waybill, Cancelled waybill",
+  "selector": "iframe >> [role='option'], iframe >> select option, iframe >> li",
+  "selector_type": "role",
+  "iframe_path": "iframe",
+  "element_found": false,
+  "validation_note": "Dropdown options inside Pega iframe - requires runtime verification of text content",
+  "screenshot_file": null
+}

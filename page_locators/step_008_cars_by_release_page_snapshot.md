@@ -1,0 +1,76 @@
+- generic [ref=e2] [box=0,0,0,0]:
+  - generic [ref=e22] [box=0,0,1280,720]:
+    - generic "Skip navigation menu" [ref=e23] [box=23,26,1,1]:
+      - generic [ref=e24] [box=23,26,16,35]:
+        - button "Go to main content" [box=31,34,0,19]
+      - generic [ref=e25] [box=23,61,16,151]:
+        - generic [box=31,70,0,22]: Shortcuts
+        - list "Shortcuts" [box=31,100,0,104]:
+          - listitem [ref=e26] [box=0,0,0,0]:
+            - generic [ref=e27] [box=31,101,102,19]: Jump to toast
+            - generic [box=141,100,0,20]:
+              - generic [ref=e28] [box=141,103,20,20]: ⌥
+              - generic [ref=e29] [box=165,103,20,20]:
+                - text: ↵
+                - generic [ref=e30] [box=178,105,1,1]: Enter
+          - listitem [ref=e31] [box=0,0,0,0]:
+            - generic [ref=e32] [box=31,129,102,19]: Dismiss toast
+            - generic [box=141,128,0,20]:
+              - generic [ref=e33] [box=141,131,20,20]: ⌥
+              - generic [ref=e34] [box=165,131,20,20]: Q
+          - listitem [ref=e35] [box=0,0,0,0]:
+            - generic [ref=e36] [box=31,157,102,19]: Next region
+            - generic [ref=e37] [box=141,159,20,20]: F9
+          - listitem [ref=e38] [box=0,0,0,0]:
+            - generic [ref=e39] [box=31,185,102,19]: Previous region
+            - generic [box=141,184,0,20]:
+              - generic [ref=e40] [box=141,187,20,20]:
+                - text: ⇧
+                - generic [ref=e41] [box=153,189,1,1]: Shift
+              - generic [ref=e42] [box=165,187,20,20]: F9
+    - navigation "Main" [ref=e43] [box=0,0,64,720]:
+      - link "Despacho Previo" [ref=e44] [cursor=pointer] [box=0,8,63,37]:
+        - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+        - img "Despacho Previo" [ref=e45] [box=16,24,31,7]
+        - text: Despacho Previo
+      - generic [ref=e46] [box=0,45,63,572]:
+        - list [ref=e48] [box=0,45,63,169]:
+          - listitem [ref=e49] [box=0,45,63,42]:
+            - link "Cars By Release Status" [ref=e50] [cursor=pointer] [box=0,45,63,42]:
+              - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+              - generic [box=64,56,0,19]: Cars By Release Status
+          - listitem [ref=e54] [box=0,87,63,42]:
+            - link "Cars History" [ref=e55] [cursor=pointer] [box=0,87,63,42]:
+              - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/cars-history
+              - generic [box=64,99,0,19]: Cars History
+          - listitem [ref=e59] [box=0,129,63,42]:
+            - link "DSP Reports" [ref=e60] [cursor=pointer] [box=0,129,63,42]:
+              - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/dsp-reports
+              - generic [box=64,141,0,19]: DSP Reports
+          - listitem [ref=e64] [box=0,172,63,42]:
+            - link "Configurations" [ref=e65] [cursor=pointer] [box=0,172,63,42]:
+              - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/configurations
+              - generic [box=64,183,0,19]: Configurations
+        - generic [box=0,214,63,0]:
+          - list [box=0,214,63,0]
+      - list [ref=e70] [box=0,618,63,62]:
+        - listitem [ref=e71] [box=0,618,63,62]:
+          - button "Account" [ref=e72] [cursor=pointer] [box=0,618,63,62]:
+            - img "SivaRajesh Gottumukkala" [ref=e75] [box=16,633,32,32]: SG
+            - generic [box=64,640,0,19]: Account
+      - button "Expand navigation" [ref=e77] [cursor=pointer] [box=20,688,24,24]
+    - main [ref=e79] [box=64,0,1216,720]:
+      - generic [ref=e80] [box=64,0,1216,668]:
+        - generic [ref=e84] [box=64,305,1216,54]:
+          - progressbar "Loading content..." [ref=e85] [box=656,305,32,32]:
+            - img [ref=e86] [box=656,305,32,32]
+          - generic [ref=e89] [box=616,341,112,18]: Loading content...
+        - iframe [ref=e91] [box=64,0,1216,664]:
+          - generic [active] [ref=f1e25] [box=0,0,1216,664]:
+            - main [ref=f1e5] [box=0,0,1216,664]:
+              - article [ref=f1e6] [box=0,0,1216,664]
+            - generic [box=0,0,1216,0]: 
+  - log [ref=e3] [box=-1,719,1,1]:
+    - heading "Polite Announcements" [level=6] [ref=e4] [box=-1,719,1,13]
+  - log [ref=e5] [box=-1,719,1,1]:
+    - heading "Assertive Announcements" [level=6] [ref=e6] [box=-1,719,1,13]
