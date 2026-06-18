@@ -80,3 +80,81 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+================================================================================
+[2026-06-18T09:35:00Z] Test Case: Equipment Action Reason Duplicate Validation
+================================================================================
+
+What was added:
+  - pages/microsoft_login_page.py
+      New Page Object class: MicrosoftLoginPage
+      Methods: enter_email(), click_next(), enter_password(), click_signin(),
+               handle_stay_signed_in(), complete_login()
+      Handles Microsoft OAuth/SAML SSO authentication flow used by Pega
+      Despachoprevio login. Encapsulates two-step login (email → password)
+      and optional "Stay signed in?" prompt.
+
+  - pages/pega_configuration_page.py
+      New Page Object class: PegaConfigurationPage
+      Methods: _get_app_frame(), accept_cookies_if_present(),
+               click_configuration_menu(), verify_equipment_action_reason_section_visible(),
+               click_add_button(), select_action_dropdown(), enter_reason_text(),
+               click_save_configuration(), verify_duplicate_validation_message()
+      Handles Pega application configuration screens with iframe support.
+      Provides methods for Equipment Action Reason Configuration management
+      including adding entries and validating duplicate detection.
+
+  - tests/test_equipment_action_reason_duplicate.py
+      New test function: test_equipment_action_reason_duplicate_validation()
+      End-to-end workflow testing duplicate validation (case-insensitive) for
+      Equipment Action Reason entries. Steps include:
+      - Microsoft SSO authentication via Despachoprevio
+      - Navigation to Configuration section
+      - Adding Equipment Action Reason: Action='Cancelled', Reason='duplicate waybill'
+      - Verification of duplicate validation message
+
+  - conftest.py (MODIFIED)
+      Added fixture: logged_in_page()
+      Provides reusable authenticated session for tests requiring pre-login state.
+      Completes Microsoft SSO authentication and returns page after redirect to Pega.
+      Reads credentials from DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL environment variables.
+
+  - page_locators/step_001.json through step_014.json
+      Captured real DOM selectors and validation notes from live browser walkthrough.
+      Steps 1-7 contain verified selectors from actual Microsoft SSO flow.
+      Steps 8-14 contain placeholder selectors marked REQUIRES_VERIFICATION
+      (could not complete full flow without valid production credentials).
+
+Why it was necessary:
+  This is the first test implementing Page Object Model (POM) architecture
+  for the Pega DSP application. Prior test (tc-001-no-despacho-previo-validation.py)
+  was a monolithic script without page objects.
+
+  Coverage gap filled:
+  - No existing page objects for Microsoft SSO authentication
+  - No existing page objects for Pega configuration screens
+  - No existing fixture for authenticated sessions
+  - No existing test for Equipment Action Reason duplicate validation
+  - No existing test demonstrating case-insensitive duplicate detection
+
+  Reuse opportunities created:
+  - MicrosoftLoginPage can be reused for all Despachoprevio login flows
+  - PegaConfigurationPage provides reusable methods for configuration management
+  - logged_in_page fixture eliminates repetitive authentication code in future tests
+  - Page locators JSON files document real selectors for maintenance and debugging
+
+Files changed:
+  conftest.py, pages/microsoft_login_page.py, pages/pega_configuration_page.py,
+  tests/test_equipment_action_reason_duplicate.py, page_locators/step_001.json,
+  page_locators/step_002.json, page_locators/step_003.json, page_locators/step_004.json,
+  page_locators/step_005.json, page_locators/step_006.json, page_locators/step_007.json,
+  page_locators/step_008.json, page_locators/step_009.json, page_locators/step_010.json,
+  page_locators/step_011.json, page_locators/step_012.json, page_locators/step_013.json,
+  page_locators/step_014.json
+
+Test execution requirements:
+  - Environment variables: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL
+  - Test assumes 'duplicate waybill' reason already exists in system for duplicate validation
+  - Playwright browser context automatically cleared before each test
+  - Run: pytest tests/test_equipment_action_reason_duplicate.py --headed
+

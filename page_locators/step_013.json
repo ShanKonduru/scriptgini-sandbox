@@ -1,0 +1,11 @@
+{
+  "step_number": 13,
+  "action": "fill",
+  "description": "Enter duplicate Reason 'duplicate waybill' in the Reason text box (with different case sensitivity)",
+  "selector": "REQUIRES_VERIFICATION",
+  "selector_type": "role",
+  "iframe_path": "PEGA_APPLICATION_FRAME",
+  "element_found": false,
+  "validation_note": "REQUIRES VERIFICATION - Text input with label 'Reason'. Test requirement: enter 'duplicate waybill' (case-insensitive duplicate test). Look for textbox/input with label or placeholder 'Reason'.",
+  "screenshot_file": null
+}

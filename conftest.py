@@ -203,6 +203,45 @@ def _activate_page_window(page: Page, run_mode: str) -> None:
         pass
 
 
+@pytest.fixture
+def logged_in_page(page: Page) -> Page:
+    """
+    Fixture that provides a page with completed Despachoprevio (Microsoft SSO) authentication.
+
+    Environment variables required:
+    - DSP_BASE_URL: Base URL for the Pega application
+    - DSP_USERNAME: Microsoft SSO username/email
+    - DSP_PASSWORD: Microsoft SSO password
+    """
+    import os
+    from pages.microsoft_login_page import MicrosoftLoginPage
+
+    base_url = os.environ.get(
+        "DSP_BASE_URL",
+        "https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth"
+    )
+    username = os.environ["DSP_USERNAME"]
+    password = os.environ["DSP_PASSWORD"]
+
+    # Navigate to Pega login page
+    page.goto(base_url, wait_until="networkidle")
+
+    # Click 'Login with Despachoprevio' button
+    login_button = page.get_by_role("button", name="Login with despachoprevio")
+    login_button.click()
+
+    # Complete Microsoft SSO authentication
+    page.wait_for_load_state("networkidle")
+    ms_login = MicrosoftLoginPage(page)
+    ms_login.complete_login(username, password, stay_signed_in=False)
+
+    # Wait for redirect back to Pega application
+    page.wait_for_load_state("networkidle", timeout=30000)
+    page.wait_for_url("**/pegacloud.net/**", timeout=30000)
+
+    return page
+
+
 @pytest.fixture(autouse=True)
 def track_navigation_and_highlight_clicks(page: Page, request: pytest.FixtureRequest):
     """

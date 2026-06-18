@@ -1,0 +1,11 @@
+{
+  "step_number": 10,
+  "action": "verify",
+  "description": "Verify Equipment Action Reason Configuration section is displayed",
+  "selector": "REQUIRES_VERIFICATION",
+  "selector_type": "text",
+  "iframe_path": "PEGA_APPLICATION_FRAME",
+  "element_found": false,
+  "validation_note": "REQUIRES VERIFICATION - Look for heading or section with text 'Equipment Action Reason Configuration'. May be in a table header or section title within the Pega iframe.",
+  "screenshot_file": null
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 4,
+  "action": "fill",
+  "description": "Enter email: SivaRajesh.Gottumukkala@cpkcr.com in the username field",
+  "selector": "input[name='loginfmt']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Microsoft login page - email field found using role=textbox with placeholder 'Email, phone, or Skype'",
+  "screenshot_file": "step_004_email_entered.png"
+}

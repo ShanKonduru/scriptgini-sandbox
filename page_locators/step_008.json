@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "click",
+  "description": "If accept cookies popup appears, click on Accept button",
+  "selector": "button:has-text('Accept')",
+  "selector_type": "text",
+  "iframe_path": null,
+  "element_found": false,
+  "validation_note": "REQUIRES VERIFICATION - Cookie consent popup selector needs to be verified after successful login. Common pattern: button with text 'Accept' or 'Accept cookies'",
+  "screenshot_file": null
+}

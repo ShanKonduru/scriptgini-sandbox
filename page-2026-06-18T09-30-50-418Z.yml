@@ -1,0 +1,21 @@
+- generic [ref=e8]:
+  - generic [ref=e9]:
+    - img "Organization background image" [ref=e11]
+    - generic [ref=e17]:
+      - img "Organization banner logo" [ref=e20]
+      - main [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e25]:
+            - button "Back" [ref=e26] [cursor=pointer]
+            - generic "sivarajesh.gottumukkala@cpkcr.com" [ref=e27]
+          - generic [ref=e29]:
+            - textbox [ref=e30]: sivarajesh.gottumukkala@cpkcr.com
+            - heading "Enter password" [level=1] [ref=e32]
+            - generic [ref=e34]:
+              - alert [ref=e35]:
+                - generic [ref=e36]: The password is incorrect. Please try again.
+              - textbox "Enter the password for sivarajesh.gottumukkala@cpkcr.com" [active] [ref=e38]:
+                - /placeholder: Password
+            - button "Sign in" [ref=e45] [cursor=pointer]
+  - contentinfo [ref=e46]:
+    - button "Click here for troubleshooting information" [ref=e48] [cursor=pointer]: ...

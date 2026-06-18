@@ -1,0 +1,11 @@
+{
+  "step_number": 11,
+  "action": "click",
+  "description": "Click on Add button at the left bottom corner of Equipment Action Reason Configuration section",
+  "selector": "REQUIRES_VERIFICATION",
+  "selector_type": "role",
+  "iframe_path": "PEGA_APPLICATION_FRAME",
+  "element_found": false,
+  "validation_note": "REQUIRES VERIFICATION - Add button likely within the Equipment Action Reason Configuration section. Common patterns: button with text 'Add', '+' icon, or data-test-id attribute. Position: left bottom corner of the section.",
+  "screenshot_file": null
+}

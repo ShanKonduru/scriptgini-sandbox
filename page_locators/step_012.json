@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "select",
+  "description": "Select 'Cancelled' Action from the Action dropdown",
+  "selector": "REQUIRES_VERIFICATION",
+  "selector_type": "role",
+  "iframe_path": "PEGA_APPLICATION_FRAME",
+  "element_found": false,
+  "validation_note": "REQUIRES VERIFICATION - Dropdown/combobox with label 'Action'. Pega often uses custom dropdown components. Look for select element or custom dropdown with data-test-id. Select option 'Cancelled'.",
+  "screenshot_file": null
+}

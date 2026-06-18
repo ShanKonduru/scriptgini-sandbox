@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "click",
+  "description": "Click on Configuration icon from the left menu",
+  "selector": "REQUIRES_VERIFICATION",
+  "selector_type": "css",
+  "iframe_path": "PEGA_APPLICATION_FRAME",
+  "element_found": false,
+  "validation_note": "REQUIRES VERIFICATION - Pega applications use iframes. Configuration menu item needs to be located within the main application iframe. Likely pattern: nav menu with icon/text 'Configuration' or data-test-id attribute.",
+  "screenshot_file": null
+}

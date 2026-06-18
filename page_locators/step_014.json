@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "click",
+  "description": "Click on Save Configuration button",
+  "selector": "REQUIRES_VERIFICATION",
+  "selector_type": "role",
+  "iframe_path": "PEGA_APPLICATION_FRAME",
+  "element_found": false,
+  "validation_note": "REQUIRES VERIFICATION - Button with text 'Save Configuration' or 'Save'. Likely at bottom of form within the Pega iframe. Common pattern: button[type='submit'] or button with text 'Save'.",
+  "screenshot_file": null
+}
