@@ -1,0 +1,11 @@
+{
+  "step_number": 11,
+  "action": "click",
+  "description": "Click on Add button in Equipment Action Reason Configuration section",
+  "selector": "xpath=//h1[contains(text(), 'Equipment Action Reason')]/following::button[contains(text(), 'Add')][1]",
+  "selector_type": "xpath",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Add button clicked using XPath relative to section heading inside iframe",
+  "screenshot_file": "step_020_highlight_add_button.png"
+}

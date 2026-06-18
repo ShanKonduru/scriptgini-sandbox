@@ -1,0 +1,11 @@
+{
+  "step_number": 2,
+  "action": "click",
+  "description": "Click on 'Login with Despachoprevio' button",
+  "selector": "a[href*='despachoprevio']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Element clicked successfully using role=link, name='Login with despachoprevio'",
+  "screenshot_file": "step_002_highlight_despachoprevio.png"
+}

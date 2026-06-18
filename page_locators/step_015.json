@@ -1,0 +1,11 @@
+{
+  "step_number": 15,
+  "action": "verify",
+  "description": "Verify newly added reason is present in the configuration table",
+  "selector": "input[type='text'][name*='pKey']",
+  "selector_type": "css",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Verified 'Duplicate Waybill' appears in configuration table after save",
+  "screenshot_file": "step_027_after_save.png"
+}

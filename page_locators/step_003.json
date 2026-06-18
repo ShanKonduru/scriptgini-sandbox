@@ -1,0 +1,11 @@
+{
+  "step_number": 3,
+  "action": "fill",
+  "description": "Enter email in the email field",
+  "selector": "input[type='email'], input[name='loginfmt']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Email field filled using role=textbox with placeholder text",
+  "screenshot_file": "step_005_email_filled.png"
+}

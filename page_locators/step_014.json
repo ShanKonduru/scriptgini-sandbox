@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "click",
+  "description": "Click on Save configuration button",
+  "selector": "button",
+  "selector_type": "role",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Save button clicked using role=button with name 'Save configurations' inside iframe",
+  "screenshot_file": "step_026_highlight_save_button.png"
+}

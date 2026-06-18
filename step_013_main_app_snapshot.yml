@@ -1,0 +1,43 @@
+- generic [ref=e2] [box=0,0,0,0]:
+  - generic [ref=e22] [box=0,0,1280,720]:
+    - generic "Skip navigation menu" [ref=e23] [box=23,26,1,1]:
+      - generic [ref=e24] [box=23,26,16,35]:
+        - button "Go to main content" [box=31,34,0,19]
+      - generic [ref=e25] [box=23,61,16,151]:
+        - generic [box=31,70,0,22]: Shortcuts
+        - list "Shortcuts" [box=31,100,0,104]:
+          - listitem [ref=e26] [box=0,0,0,0]
+          - listitem [ref=e31] [box=0,0,0,0]
+          - listitem [ref=e35] [box=0,0,0,0]
+          - listitem [ref=e38] [box=0,0,0,0]
+    - navigation "Main" [ref=e43] [box=0,0,64,720]:
+      - link "Despacho Previo" [ref=e44] [cursor=pointer] [box=0,8,63,37]:
+        - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+        - img "Despacho Previo" [ref=e45] [box=16,24,31,7]
+        - text: Despacho Previo
+      - generic [ref=e46] [box=0,45,63,572]:
+        - list [ref=e48] [box=0,45,63,169]:
+          - listitem [ref=e49] [box=0,45,63,42]
+          - listitem [ref=e54] [box=0,87,63,42]
+          - listitem [ref=e59] [box=0,129,63,42]
+          - listitem [ref=e64] [box=0,172,63,42]
+        - generic [box=0,214,63,0]:
+          - list [box=0,214,63,0]
+      - list [ref=e70] [box=0,618,63,62]:
+        - listitem [ref=e71] [box=0,618,63,62]:
+          - button "Account" [ref=e72] [cursor=pointer] [box=0,618,63,62]
+      - button "Expand navigation" [ref=e77] [cursor=pointer] [box=20,688,24,24]
+    - main [ref=e79] [box=64,0,1216,720]:
+      - generic [ref=e80] [box=64,0,1216,668]:
+        - generic [ref=e84] [box=64,305,1216,54]:
+          - progressbar "Loading content..." [ref=e85] [box=656,305,32,32]
+          - generic [ref=e89] [box=616,341,112,18]: Loading content...
+        - iframe [ref=e91] [box=64,0,1216,664]:
+          - generic [active] [ref=f1e25] [box=0,0,1216,664]:
+            - main [ref=f1e5] [box=0,0,1216,664]:
+              - article [ref=f1e6] [box=0,0,1216,664]
+            - generic [box=0,0,1216,0]: 
+  - log [ref=e3] [box=-1,719,1,1]:
+    - heading "Polite Announcements" [level=6] [ref=e4] [box=-1,719,1,13]
+  - log [ref=e5] [box=-1,719,1,1]:
+    - heading "Assertive Announcements" [level=6] [ref=e6] [box=-1,719,1,13]

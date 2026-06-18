@@ -49,6 +49,68 @@ Test execution requirements:
   - Uses robust locator strategies (role-based with CSS fallbacks)
   - Includes explicit waits and assertions at each critical step
 
+--------------------------------------------------------------------------------
+Entry: 2026-06-18T09:49:33Z
+Test Case Reference: TC-002 Equipment Action Reason Configuration
+--------------------------------------------------------------------------------
+
+What was added:
+  - generated-scripts/dsp/tc-002-equipment-action-reason-configuration.py
+      New Playwright/Python test function: test_tc_002_equipment_action_reason_configuration
+      Implements end-to-end workflow for equipment action reason configuration including:
+      - DSP user authentication via Microsoft Azure AD SSO
+      - Cookie consent acceptance
+      - Navigation menu expansion and configuration access
+      - Equipment Action Reason Configuration section verification
+      - Adding a new action reason with "Cancelled" action type
+      - Filling reason text with intentional leading/trailing spaces (" Duplicate Waybill ")
+      - Saving configuration changes
+      - Verification that the newly added reason appears in the configuration table
+      - Iframe handling for Pega application embedded content
+
+  - page_locators/step_001.json through step_015.json
+      Complete selector documentation for each test step with:
+      - Real CSS selectors, XPath expressions, role-based locators
+      - iframe path information for Pega embedded content
+      - Element validation notes
+      - Screenshot file references for visual traceability
+
+Why it was necessary:
+  This test covers a new configuration management workflow within the DSP application.
+  No existing tests covered:
+  - Configuration page navigation within the DSP system
+  - Equipment Action Reason Configuration section interactions
+  - Dynamic table row addition in Pega framework
+  - Complex iframe-based interactions (Pega applications use nested iframes)
+  - Dropdown selection for action types with dynamic name attributes
+  - Text input validation with whitespace handling requirements
+  - Configuration save operations and post-save verification
+
+  The test required capturing real DOM selectors from the live Pega application:
+  - Microsoft Azure AD SSO flow with email/password sequence
+  - Pega framework-specific selectors (e.g., select[name*='pParentKey'], input[name*='pKey'])
+  - iframe.first locator for accessing embedded Pega content
+  - XPath relative navigation (xpath=following::button) to locate Add button near section heading
+  - Dynamic table rows with Pega's naming convention ($PpyDisplayHarness$pActionReason$l<N>$...)
+
+  No existing page objects or methods could be reused as this is the first test to interact with:
+  - The Configurations page module
+  - Pega framework table components with dynamic add/edit functionality
+  - Configuration save workflows
+
+Test execution requirements:
+  - Environment variables: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL
+  - Test validates configuration CRUD operations from login to verification
+  - Uses iframe locators for Pega embedded content
+  - Handles dynamic Pega framework table rows with last() selector
+  - Intentionally preserves whitespace in test data as per requirement
+  - Includes scroll_into_view_if_needed() for elements in long scrollable pages
+
+Files changed:
+  generated-scripts/dsp/tc-002-equipment-action-reason-configuration.py (created),
+  page_locators/step_001.json through step_015.json (created),
+  CHANGELOG.txt (updated)
+
 No existing files were modified. No existing tests were broken.
 The framework structure and standards documented in README.md were strictly followed.
 

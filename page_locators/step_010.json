@@ -1,0 +1,11 @@
+{
+  "step_number": 10,
+  "action": "verify",
+  "description": "User verifies Equipment Action Reason Configuration section is shown",
+  "selector": "h1, h2, h3, h4, h5, h6",
+  "selector_type": "role",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Section heading found inside iframe using role=heading",
+  "screenshot_file": "step_019_equipment_action_reason_section.png"
+}

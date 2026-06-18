@@ -1,0 +1,11 @@
+{
+  "step_number": 6,
+  "action": "click",
+  "description": "Click on Sign in button",
+  "selector": "button[type='submit']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Sign in button clicked using role=button, name='Sign in'",
+  "screenshot_file": "step_010_highlight_signin_button.png"
+}

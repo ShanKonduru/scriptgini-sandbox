@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "click",
+  "description": "Expand navigation menu",
+  "selector": "button[aria-label='Expand navigation']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Navigation expanded using role=button with aria-label",
+  "screenshot_file": "step_016_navigation_expanded.png"
+}

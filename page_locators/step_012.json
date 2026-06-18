@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "select",
+  "description": "Select 'Cancelled' Action from dropdown",
+  "selector": "select[name*='pParentKey']",
+  "selector_type": "css",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Dropdown found using CSS selector for name attribute containing 'pParentKey', selected option 'Cancelled'",
+  "screenshot_file": "step_023_cancelled_selected.png"
+}
