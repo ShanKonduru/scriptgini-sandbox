@@ -80,3 +80,82 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-18 09:15:00
+Test Case Reference: TC-002 Equipment Action Reason Configuration - Blank Reason Validation
+--------------------------------------------------------------------------------
+
+What was added:
+  - generated-scripts/dsp/tc-002-equipment-action-reason-blank-validation.py
+      New Playwright/Python test function: test_tc_002_equipment_action_reason_blank_validation
+      Implements end-to-end workflow for validating blank Reason field validation in
+      Equipment Action Reason Configuration section including:
+      - Browser cookies and cache clearing
+      - SSO/OAuth login flow via "Login with Despachoprevio" button
+      - Multi-step authentication (email → Next → password → Sign in)
+      - Conditional cookies acceptance popup handling
+      - Navigation to Configuration section from left menu
+      - Equipment Action Reason Configuration section visibility verification
+      - Table structure verification (Action, Reason, Audit History columns)
+      - Add/Delete controls verification
+      - Add button interaction to create new equipment action reason
+      - Action dropdown selection (Cancelled action)
+      - Blank Reason field validation verification
+      - Blur event triggering to activate validation
+      - Validation error message assertion
+      - Optional Save button disabled state verification
+
+  - generated-scripts/dsp/tc-002-equipment-action-reason-blank-validation.json
+      Metadata file for script ID 102 following the project's naming convention
+      and metadata format. Includes complete test steps documentation, expected
+      results, and preconditions.
+
+  - page_locators/step_001.json through step_015.json
+      15 JSON locator documentation files capturing selector strategies, element
+      discovery approach, validation notes, and iframe path information for each
+      test step. These files document the multi-strategy locator approach (role-based
+      with CSS fallbacks) used throughout the test to handle Pega application's
+      complex DOM structure.
+
+Why it was necessary:
+  This test covers a new validation scenario within the DSP Configuration module.
+  While TC-001 covered the "No Despacho previo" workflow in the car by release
+  page, TC-002 validates form field validation in the Equipment Action Reason
+  Configuration administrative section.
+
+  New interactions not covered by existing tests:
+  - SSO/OAuth multi-step login flow with "Login with Despachoprevio" button
+  - Configuration section navigation and access
+  - Equipment Action Reason Configuration table interaction
+  - Add form workflow with dropdown and text field interactions
+  - Client-side validation triggering via blur event
+  - Validation error message verification
+  - Form state verification (disabled Save button)
+
+  The existing TC-001 test covered car by release page workflows but did not
+  cover Configuration module access, administrative table management, or form
+  validation scenarios. No existing locators, page objects, or helper methods
+  could be reused for Configuration section interactions.
+
+Test execution requirements:
+  - Environment variables must be set: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL
+  - User must have administrative permissions to access Configuration section
+  - User must have permissions to manage Equipment Action Reason Configuration
+  - Test validates form validation behavior (blank required field)
+  - Uses robust multi-strategy locator approach (role-based → label → CSS → text)
+  - Includes explicit waits for page load states and element visibility
+  - Handles conditional elements (cookies acceptance popup)
+  - Validates both positive (element visibility) and negative (validation error) scenarios
+
+Files changed:
+  - generated-scripts/dsp/tc-002-equipment-action-reason-blank-validation.py (created)
+  - generated-scripts/dsp/tc-002-equipment-action-reason-blank-validation.json (created)
+  - page_locators/step_001.json through step_015.json (created - 15 files)
+  - CHANGELOG.txt (updated - this entry)
+
+No existing files were modified. No existing tests were broken.
+The framework structure and standards documented in README.md and existing
+DSP test patterns were strictly followed.
+
+================================================================================

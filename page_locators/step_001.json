@@ -1,0 +1,11 @@
+{
+  "step_number": 1,
+  "action": "clear",
+  "description": "Clear all browser cookies and cache",
+  "selector": "N/A - Browser context method",
+  "selector_type": "api",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Browser context cleared via page.context.clear_cookies() and clear_permissions() API methods",
+  "screenshot_file": null
+}

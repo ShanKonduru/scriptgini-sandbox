@@ -1,0 +1,11 @@
+{
+  "step_number": 3,
+  "action": "click",
+  "description": "Click on 'Login with Despachoprevio' button",
+  "selector": "button:has-text('Login with Despachoprevio')",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Multi-strategy selector: role-based (button/link 'Login with Despachoprevio') with CSS fallback for button containing text or id*='despacho'. Actual selector depends on live application structure.",
+  "screenshot_file": null
+}

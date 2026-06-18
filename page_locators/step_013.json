@@ -1,0 +1,11 @@
+{
+  "step_number": 13,
+  "action": "select",
+  "description": "Select 'Cancelled' action from the Action dropdown",
+  "selector": "select[name*='action']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Multi-strategy selection: role-based combobox named 'Action', label association, or CSS selector for select[name*='action'], select[id*='action']. Tries select_option with label='Cancelled', then value='Cancelled', then handles custom dropdown by clicking and selecting option element. Pega may use standard select or custom dropdown components.",
+  "screenshot_file": null
+}

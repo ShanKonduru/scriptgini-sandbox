@@ -1,0 +1,11 @@
+{
+  "step_number": 11,
+  "action": "verify",
+  "description": "Verify Equipment Action Reason Configuration table shows Action, Reason, and Audit History columns with Add and Delete controls",
+  "selector": "th:has-text('Action')",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Multi-element verification: checks for table headers (th elements) for 'Action', 'Reason', and 'Audit History' columns, plus visibility of Add button and Delete controls. Pega applications use standard HTML table structures or custom grid components with semantic headers.",
+  "screenshot_file": null
+}

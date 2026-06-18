@@ -1,0 +1,11 @@
+{
+  "step_number": 5,
+  "action": "click",
+  "description": "Click on Next button",
+  "selector": "button:has-text('Next')",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Multi-strategy selector: role-based button named 'Next' with CSS fallbacks for button containing 'Next' text, input[type='submit'][value*='Next'], or button[id*='next']. Common in multi-step OAuth flows.",
+  "screenshot_file": null
+}

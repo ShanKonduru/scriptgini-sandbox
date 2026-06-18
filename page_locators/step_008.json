@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "click",
+  "description": "If cookies acceptance popup appears, click on Accept button (conditional)",
+  "selector": "button:has-text('Accept')",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Conditional step with try-except handling. Multi-strategy selector: role-based button named 'Accept' or 'Accept all' with CSS fallbacks. Wait timeout of 3000ms to check for popup presence. If not found, test continues.",
+  "screenshot_file": null
+}

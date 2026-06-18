@@ -1,0 +1,50 @@
+{
+  "script_id": 102,
+  "project_name": "DSP",
+  "test_case_title": "TC-002 Equipment Action Reason Configuration - Blank Reason Validation",
+  "framework": "playwright_python",
+  "llm_provider": "anthropic",
+  "llm_model": "claude-sonnet-4-5",
+  "exported_at": "2026-06-18T09:15:00.000000+00:00",
+  "script_path": "generated-scripts/dsp/tc-002-equipment-action-reason-blank-validation.py",
+  "test_steps": [
+    "Clear all browser cookies and cache",
+    "Navigate to base URL",
+    "Click on 'Login with Despachoprevio' button",
+    "Enter email address in the email field",
+    "Click on Next button",
+    "Enter password in the password field",
+    "Click on Sign in button",
+    "If cookies acceptance popup appears, click on Accept button",
+    "Click on Configuration icon from the left menu",
+    "Verify Equipment Action Reason Configuration section is displayed",
+    "Verify Equipment Action Reason Configuration table shows Action, Reason, and Audit History columns with Add and Delete controls",
+    "Click on Add button in Equipment Action Reason Configuration section",
+    "Select 'Cancelled' action from the Action dropdown",
+    "Leave the Reason text box empty/blank",
+    "Click outside of the Reason text box to trigger validation"
+  ],
+  "expected_results": [
+    "Browser cookies and cache are cleared successfully",
+    "Base URL loads successfully",
+    "Login with Despachoprevio button is clicked and redirects to login page",
+    "Email address is entered in the email field",
+    "Next button is clicked and password page loads",
+    "Password is entered in the password field",
+    "Sign in button is clicked and user is authenticated",
+    "Cookies acceptance popup is handled if present",
+    "Configuration page is loaded successfully",
+    "Equipment Action Reason Configuration section is visible with proper table structure",
+    "Table displays Action, Reason, and Audit History columns with Add and Delete controls",
+    "Add form/dialog appears for creating new equipment action reason",
+    "Cancelled action is selected from dropdown",
+    "Reason field remains empty",
+    "Validation error appears indicating that Reason field is required/mandatory"
+  ],
+  "preconditions": [
+    "Valid DSP user credentials available in DSP_USERNAME and DSP_PASSWORD environment variables",
+    "DSP application base URL configured in DSP_BASE_URL environment variable",
+    "User has permissions to access Configuration section",
+    "User has permissions to manage Equipment Action Reason Configuration"
+  ]
+}

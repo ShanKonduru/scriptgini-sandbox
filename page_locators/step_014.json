@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "verify",
+  "description": "Leave the Reason text box empty/blank and verify it remains empty",
+  "selector": "input[name*='reason']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Locates Reason field via role-based textbox, label association, or CSS selectors for input/textarea with 'reason' in name or id. Explicitly verifies field is empty using input_value() assertion. This step does NOT fill the field - it confirms the field remains blank.",
+  "screenshot_file": null
+}

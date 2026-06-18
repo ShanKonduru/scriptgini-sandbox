@@ -1,0 +1,11 @@
+{
+  "step_number": 4,
+  "action": "fill",
+  "description": "Enter email address in the email field",
+  "selector": "input[name='email']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Multi-strategy selector: role-based textbox named 'email', label association, or CSS selector for input[name='email'], input[id='email'], input[type='email']. OAuth/SSO login pages typically use standard email input fields.",
+  "screenshot_file": null
+}

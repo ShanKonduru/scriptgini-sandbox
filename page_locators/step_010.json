@@ -1,0 +1,11 @@
+{
+  "step_number": 10,
+  "action": "verify",
+  "description": "Verify Equipment Action Reason Configuration section is displayed",
+  "selector": "text=/Equipment Action Reason Configuration/i",
+  "selector_type": "text",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Text-based locator with case-insensitive regex, fallback to class-based selectors for equipment/action keywords, section tags, or data-test-id attributes. Verifies section visibility on Configuration page.",
+  "screenshot_file": null
+}

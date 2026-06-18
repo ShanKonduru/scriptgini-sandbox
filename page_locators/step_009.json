@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "click",
+  "description": "Click on Configuration icon from the left menu",
+  "selector": "a[href*='config']:has-text('Configuration')",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Multi-strategy selector for Pega left navigation: role-based link/button named 'Configuration', or CSS selectors for nav links, data-test-id attributes, or list items containing 'Configuration' text. Pega applications use left-side navigation menus.",
+  "screenshot_file": null
+}

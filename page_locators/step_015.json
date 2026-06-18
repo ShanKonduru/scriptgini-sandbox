@@ -1,0 +1,11 @@
+{
+  "step_number": 15,
+  "action": "click",
+  "description": "Click outside of the Reason text box to trigger validation (blur event)",
+  "selector": "label:not([for*='reason']), h1, h2, h3, .form-header",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "Clicks on a neutral safe element (label not associated with reason field, heading, form header, or body) to trigger blur event on Reason field. Uses force=true to ensure click. After blur, validates that error message appears with text containing 'required', 'mandatory', 'empty', 'blank', or 'must'. Checks for validation error via class*='error', role='alert', or .error-message/.validation-message selectors. Optionally verifies Save button is disabled.",
+  "screenshot_file": null
+}

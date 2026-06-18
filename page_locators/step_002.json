@@ -1,0 +1,11 @@
+{
+  "step_number": 2,
+  "action": "navigate",
+  "description": "Navigate to base URL",
+  "selector": "N/A - Navigation action",
+  "selector_type": "url",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Navigation performed via page.goto() with base_url from environment variable DSP_BASE_URL",
+  "screenshot_file": null
+}

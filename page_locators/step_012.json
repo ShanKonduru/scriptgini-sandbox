@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "click",
+  "description": "Click on Add button in Equipment Action Reason Configuration section",
+  "selector": "button:has-text('Add')",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": null,
+  "validation_note": "CSS selector targeting button containing 'Add' text, with fallbacks for class*='add' or data-test-id*='add'. Pega applications typically show inline edit forms or modal dialogs after clicking Add. Waits 1000ms for form to appear.",
+  "screenshot_file": null
+}
