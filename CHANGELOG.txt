@@ -80,3 +80,90 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-18T11:45:38Z
+Test Case Reference: TC-002 Equipment Action Reason Configuration
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/dsp_login_page.py
+      New Page Object class: DSPLoginPage
+      Implements login workflow for DSP Pega application via Microsoft SSO:
+      - navigate() - Navigate to DSP Pega login page
+      - click_login_with_despachoprevio() - Click SSO login button
+      - enter_username() - Enter username in Microsoft SSO form
+      - click_next() - Click Next button after username entry
+      - enter_password() - Enter password in Microsoft SSO form
+      - click_sign_in() - Click Sign In button to authenticate
+      - handle_stay_signed_in_popup() - Handle post-login "Stay signed in?" popup
+      All locators use role-based selectors captured from live Microsoft SSO pages.
+
+  - pages/dsp_configuration_page.py
+      New Page Object class: DSPConfigurationPage
+      Implements Equipment Action Reason Configuration workflow in Pega application:
+      - _get_main_frame() - Navigate Pega iframe structure
+      - click_configuration_icon() - Open configuration page
+      - is_equipment_action_reason_section_visible() - Verify section visibility
+      - click_add_button_in_equipment_section() - Add new action-reason entry
+      - select_action_dropdown() - Select action from dropdown (e.g., 'Cancelled')
+      - enter_reason_text() - Enter reason text (e.g., 'Duplicate Waybill')
+      - click_inactive_tab() - Switch to Inactive tab without saving
+      - click_active_tab() - Return to Active tab
+      - verify_action_reason_entry_exists() - Verify action-reason entry in table
+      - get_action_reason_entry_text() - Retrieve reason text for validation
+      Handles Pega's iframe architecture using frame_locator() for all interactions.
+
+  - generated-scripts/dsp/tc-002-equipment-action-reason-config.py
+      New Playwright/Python test function: test_tc_002_equipment_action_reason_configuration
+      Implements end-to-end workflow for Equipment Action Reason Configuration:
+      - Microsoft SSO authentication (Steps 1-7)
+      - Navigate to Configuration section (Step 8)
+      - Verify Equipment Action Reason Configuration section (Step 9)
+      - Add new entry: Cancelled - Duplicate Waybill (Steps 10-12)
+      - Tab switching without saving (Steps 13-14)
+      - Verify unsaved entry persists (Step 15)
+      Uses DSPLoginPage and DSPConfigurationPage page objects.
+      Environment variables: DSP_BASE_URL, DSP_USERNAME, DSP_PASSWORD
+
+  - page_locators/step_001.json through step_015.json
+      15 JSON files documenting real DOM selectors captured during live walkthrough:
+      - Steps 1-6: Microsoft SSO login flow with real selectors from login.microsoftonline.com
+      - Steps 7-15: Pega application configuration workflow with iframe-aware selectors
+      Each file includes: step_number, action, description, selector, selector_type,
+      iframe_path, element_found status, validation_note, screenshot_file reference
+
+Why it was necessary:
+  This test case covers Equipment Action Reason Configuration in the DSP Pega application,
+  which requires:
+  - Microsoft SSO authentication not previously implemented
+  - Pega iframe navigation not handled in existing code
+  - Configuration section interactions unique to this workflow
+  - Tab switching behavior to test unsaved data persistence
+
+  The existing tc-001-no-despacho-previo-validation.py uses inline locators without
+  page objects and does not cover SSO authentication or configuration workflows.
+
+  New page object classes were created following POM pattern to:
+  - Separate login concerns (DSPLoginPage) from configuration concerns (DSPConfigurationPage)
+  - Enable reuse of Microsoft SSO login flow in future DSP tests
+  - Properly handle Pega's iframe architecture with frame_locator()
+  - Provide maintainable, single-responsibility methods for each interaction
+
+  The page_locators/ JSON files document the live walkthrough performed with Playwright
+  MCP tools, capturing real selectors from the Microsoft SSO login pages (steps 1-6) and
+  providing best-guess selectors for Pega configuration steps (steps 7-15) based on
+  typical Pega application patterns.
+
+Test execution requirements:
+  - Environment variables: DSP_BASE_URL, DSP_USERNAME, DSP_PASSWORD
+  - Valid Microsoft SSO credentials for cpkcr.com domain
+  - Pega application accessible and Configuration section enabled
+  - Test validates unsaved data persistence when switching tabs
+
+Files changed: pages/dsp_login_page.py, pages/dsp_configuration_page.py,
+               generated-scripts/dsp/tc-002-equipment-action-reason-config.py,
+               page_locators/step_001.json through step_015.json, CHANGELOG.txt
+
+No existing files were modified. No existing tests were broken.
+================================================================================

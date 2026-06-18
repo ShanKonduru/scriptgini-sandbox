@@ -1,0 +1,11 @@
+{
+  "step_number": 7,
+  "action": "click",
+  "description": "If any popup appears (like accept cookies), click on Accept button",
+  "selector": "button:has-text('Accept'), button:has-text('Yes')",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": false,
+  "validation_note": "Conditional step - handled with try-except in code. Pega may show 'Stay signed in?' popup",
+  "screenshot_file": null
+}

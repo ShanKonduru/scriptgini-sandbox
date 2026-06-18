@@ -1,0 +1,11 @@
+{
+  "step_number": 15,
+  "action": "verify",
+  "description": "Verify the newly added action-reason entry",
+  "selector": "td:has-text('Cancelled'), td:has-text('Duplicate Waybill')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Ifr'], iframe[id*='Ifr']",
+  "element_found": false,
+  "validation_note": "Final verification - the unsaved entry should still be visible in the table",
+  "screenshot_file": null
+}

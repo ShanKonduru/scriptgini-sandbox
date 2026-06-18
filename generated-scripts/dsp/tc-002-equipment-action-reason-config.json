@@ -1,0 +1,27 @@
+{
+  "script_id": 102,
+  "project_name": "DSP",
+  "test_case_title": "TC-002 Equipment Action Reason Configuration",
+  "framework": "playwright_python",
+  "llm_provider": "anthropic",
+  "llm_model": "claude-sonnet-4-5",
+  "exported_at": "2026-06-18T11:45:38.000000+00:00",
+  "script_path": "generated-scripts/dsp/tc-002-equipment-action-reason-config.py",
+  "test_steps": [
+    "Navigate to base URL: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth",
+    "Click on Login with Despachoprevio button",
+    "Enter Username: SivaRajesh.Gottumukkala@cpkcr.com",
+    "Click on Next button",
+    "Enter Password",
+    "Click on Sign in button",
+    "If any popup appears (like accept cookies), click on Accept button",
+    "Navigate to Configuration icon and click on it",
+    "Verify Equipment Action Reason Configuration section is displayed at the bottom",
+    "Click on Add button in Equipment Action Reason Configuration section",
+    "Select Cancelled from Action column dropdown",
+    "Enter Reason as 'Duplicate Waybill' in the Reason column",
+    "Click on Inactive tab without clicking Save button",
+    "Navigate back to Active tab",
+    "Verify the newly added action-reason entry"
+  ]
+}

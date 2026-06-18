@@ -1,0 +1,11 @@
+{
+  "step_number": 10,
+  "action": "click",
+  "description": "Click on Add button in Equipment Action Reason Configuration section",
+  "selector": "button:has-text('Add'), button[title='Add']",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Ifr'], iframe[id*='Ifr']",
+  "element_found": false,
+  "validation_note": "Add button within Equipment Action Reason Configuration section",
+  "screenshot_file": null
+}

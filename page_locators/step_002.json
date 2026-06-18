@@ -1,0 +1,12 @@
+{
+  "step_number": 2,
+  "action": "click",
+  "description": "Click on Login with Despachoprevio button",
+  "selector": "button:has(a[href*='despachoprevio'])",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Button clicked successfully, navigated to Microsoft SSO login",
+  "screenshot_file": "step_002_after_click_despachoprevio.png",
+  "playwright_method": "page.get_by_role('button', name='Login with despachoprevio')"
+}

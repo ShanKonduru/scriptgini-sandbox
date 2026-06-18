@@ -1,0 +1,12 @@
+{
+  "step_number": 3,
+  "action": "fill",
+  "description": "Enter Username: SivaRajesh.Gottumukkala@cpkcr.com",
+  "selector": "input[type='email'][name='loginfmt']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Username field filled successfully",
+  "screenshot_file": "step_003_after_enter_username.png",
+  "playwright_method": "page.get_by_role('textbox', name='Enter your email, phone, or')"
+}

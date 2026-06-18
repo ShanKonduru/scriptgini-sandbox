@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "click",
+  "description": "Navigate back to Active tab",
+  "selector": "a:has-text('Active'), button:has-text('Active'), div[role='tab']:has-text('Active')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Ifr'], iframe[id*='Ifr']",
+  "element_found": false,
+  "validation_note": "Navigate back to Active tab to verify unsaved entry persists",
+  "screenshot_file": null
+}

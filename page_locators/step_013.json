@@ -1,0 +1,11 @@
+{
+  "step_number": 13,
+  "action": "click",
+  "description": "Click on Inactive tab without clicking Save button",
+  "selector": "a:has-text('Inactive'), button:has-text('Inactive'), div[role='tab']:has-text('Inactive')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Ifr'], iframe[id*='Ifr']",
+  "element_found": false,
+  "validation_note": "Tab switch without saving - tests unsaved data handling",
+  "screenshot_file": null
+}

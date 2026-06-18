@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "verify",
+  "description": "Verify Equipment Action Reason Configuration section is displayed at the bottom",
+  "selector": "div:has-text('Equipment Action Reason Configuration'), section:has-text('Equipment Action Reason')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Ifr'], iframe[id*='Ifr']",
+  "element_found": false,
+  "validation_note": "Verification step - section should be visible at bottom of configuration page",
+  "screenshot_file": null
+}

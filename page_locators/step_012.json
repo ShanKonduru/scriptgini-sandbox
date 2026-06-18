@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "fill",
+  "description": "Enter Reason as 'Duplicate Waybill' in the Reason column",
+  "selector": "input[name*='Reason'], input[id*='Reason']",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Ifr'], iframe[id*='Ifr']",
+  "element_found": false,
+  "validation_note": "Text input in Reason column of the newly added row",
+  "screenshot_file": null
+}

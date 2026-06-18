@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "click",
+  "description": "Navigate to Configuration icon and click on it",
+  "selector": "button[data-test-id='20141007070909068563467'], button[title*='Configuration'], a:has-text('Configuration')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Ifr'], iframe[id*='Ifr']",
+  "element_found": false,
+  "validation_note": "Pega uses iframes extensively. Configuration likely in main Pega iframe",
+  "screenshot_file": null
+}
