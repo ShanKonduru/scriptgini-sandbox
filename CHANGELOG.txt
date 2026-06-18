@@ -55,6 +55,88 @@ The framework structure and standards documented in README.md were strictly foll
 ================================================================================
 
 --------------------------------------------------------------------------------
+Entry: 2026-06-18T10:54:00Z
+Test Case Reference: TC-002 Duplicate Equipment Action Reason Validation
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/login_page.py
+      New Page Object class: LoginPage
+      Encapsulates Pega login page and Microsoft SSO authentication workflow:
+      - navigate() — Navigate to Pega authentication page
+      - click_login_with_despachoprevio() — Initiate SSO with Despachoprevio
+      - enter_username() — Fill username in Microsoft login
+      - click_next() — Proceed to password page
+      - enter_password() — Fill password in Microsoft login
+      - click_sign_in() — Complete authentication
+      - accept_cookies() — Handle cookies popup if present
+
+  - pages/configurations_page.py
+      New Page Object class: ConfigurationsPage
+      Encapsulates Equipment Action Reason Configuration interactions:
+      - navigate_to_configurations() — Click Configurations menu item
+      - get_main_content_frame() — Access iframe containing configuration form
+      - verify_equipment_action_reason_section_visible() — Verify section display
+      - find_action_reason_row() — Locate row for specific action (e.g., Notify Broker)
+      - clear_reason_for_action() — Clear reason text for an action
+      - enter_reason_for_action() — Enter reason text for an action
+      - click_save_configurations() — Click Save button
+      - get_alert_message() — Retrieve alert/notification text
+      - is_error_displayed() — Check if error message shown
+      - is_success_displayed() — Check if success message shown
+
+  - tests/test_duplicate_reason_validation.py
+      New pytest test function: test_duplicate_reason_validation
+      Implements end-to-end workflow testing duplicate reason validation:
+      - Complete Microsoft SSO authentication flow
+      - Navigate to Configurations page
+      - Verify Equipment Action Reason Configuration section
+      - Locate Notify Broker action row
+      - Clear existing reason and enter duplicate text "Due to CPKC system limitation"
+      - Click Save and verify error message for duplicate reason
+
+  - page_locators/step_001.json through step_014.json
+      14 JSON files documenting each test step with:
+      - Exact selectors used (CSS, role, text, xpath)
+      - Iframe paths where applicable
+      - Element found status and validation notes
+      - Screenshot filenames for traceability
+
+Why it was necessary:
+  This test case validates duplicate prevention logic in the Equipment Action
+  Reason Configuration section — a critical data integrity requirement. No existing
+  tests covered:
+  - Microsoft SSO authentication flow for Despachoprevio
+  - Configurations page navigation and iframe interaction
+  - Equipment Action Reason Configuration manipulation
+  - Duplicate reason validation logic
+  - Alert message verification for validation errors
+
+  The existing test (TC-001 No Despacho Previo Validation) covers a different
+  workflow (car release status and "No Despacho previo" action). While both tests
+  share the same authentication flow, they test completely different functional
+  areas. New page objects were created to follow the Page Object Model pattern
+  and enable reuse for future configuration-related tests.
+
+  Key technical findings from live walkthrough:
+  - Configuration form is embedded in iframe 'PegaGadget0a7ebIfr'
+  - Notify Broker reason input has dynamic ID (e.g., cb08bead)
+  - Save button uses name attribute for reliable selection
+  - System currently allows duplicate reasons (shows success instead of error)
+  - Multiple spelling variations exist: "limitation", "limitaion", "limitiation"
+
+Test execution requirements:
+  - Environment variables: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL
+  - Test performs complete Microsoft SSO flow
+  - Handles iframe context switching for configuration interactions
+  - Uses robust locator strategies (role, CSS, dynamic row finding)
+  - Expects error message for duplicate reason (currently fails - validation not implemented)
+
+Files changed: pages/login_page.py, pages/configurations_page.py, tests/test_duplicate_reason_validation.py, page_locators/step_001.json through step_014.json, CHANGELOG.txt
+
+================================================================================
+
+--------------------------------------------------------------------------------
 Entry: 2026-06-01
 Test Case Reference: TC-002 Homepage Rendering Verification
 --------------------------------------------------------------------------------

@@ -1,0 +1,11 @@
+{
+  "step_number": 7,
+  "action": "click",
+  "description": "Click on 'Accept' button for cookies popup",
+  "selector": "button[data-test-id=':privacy-dialog:accept']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Accept button clicked, cookies accepted",
+  "screenshot_file": "step_007_main_page_loaded.png"
+}

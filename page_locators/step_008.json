@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "click",
+  "description": "Click on Configuration icon from the menu",
+  "selector": "a[href*='configurations']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Configurations link clicked successfully",
+  "screenshot_file": "step_008_configurations_page.png"
+}

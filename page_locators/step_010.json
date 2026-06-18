@@ -1,0 +1,11 @@
+{
+  "step_number": 10,
+  "action": "verify",
+  "description": "Locate the action 'Notify Broker' in the Equipment Action Reason Configuration section",
+  "selector": "select option:has-text('Notify Broker')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0a7ebIfr']",
+  "element_found": true,
+  "validation_note": "Notify Broker action found in row 45 of the configuration table",
+  "screenshot_file": "step_010_notify_broker_field_highlighted.png"
+}

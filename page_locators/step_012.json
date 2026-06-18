@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "fill",
+  "description": "Enter the duplicate reason text 'Due to CPKC system limitation' in the reason textbox",
+  "selector": "#cb08bead",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0a7ebIfr']",
+  "element_found": true,
+  "validation_note": "Duplicate reason text entered successfully",
+  "screenshot_file": "step_011_duplicate_reason_entered.png"
+}

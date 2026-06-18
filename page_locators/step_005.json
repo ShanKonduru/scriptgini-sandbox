@@ -1,0 +1,11 @@
+{
+  "step_number": 5,
+  "action": "fill",
+  "description": "Enter Password in the password field",
+  "selector": "input[type='password'], input[name='passwd']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Password filled successfully",
+  "screenshot_file": "step_005_password_filled.png"
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 13,
+  "action": "click",
+  "description": "Click on 'Save configuration' button",
+  "selector": "button[name='DSPConfiguration_pyDisplayHarness_13']",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0a7ebIfr']",
+  "element_found": true,
+  "validation_note": "Save configurations button clicked successfully",
+  "screenshot_file": "step_012_save_button_highlighted.png"
+}

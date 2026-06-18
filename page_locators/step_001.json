@@ -1,0 +1,11 @@
+{
+  "step_number": 1,
+  "action": "navigate",
+  "description": "Navigate to the base URL",
+  "selector": "https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth",
+  "selector_type": "url",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Successfully navigated to login page",
+  "screenshot_file": "step_001_login_page.png"
+}

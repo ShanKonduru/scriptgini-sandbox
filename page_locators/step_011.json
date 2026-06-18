@@ -1,0 +1,11 @@
+{
+  "step_number": 11,
+  "action": "fill",
+  "description": "Clear the existing reason text beside the 'Notify Broker' action",
+  "selector": "#cb08bead",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0a7ebIfr']",
+  "element_found": true,
+  "validation_note": "Reason input field cleared successfully using ID selector",
+  "screenshot_file": "step_010_notify_broker_field_highlighted.png"
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 3,
+  "action": "fill",
+  "description": "Enter Username 'SivaRajesh.Gottumukkala@cpkcr.com' in the username field",
+  "selector": "input[type='email'], input[name='loginfmt']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Username filled successfully using role-based selector",
+  "screenshot_file": "step_003_username_filled.png"
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "verify",
+  "description": "Verify that an error message is displayed indicating duplicate reason is not allowed",
+  "selector": "[role='alert']",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0a7ebIfr']",
+  "element_found": true,
+  "validation_note": "Alert found but shows 'Data Saved Successfully' - duplicate validation may not be implemented or is case-sensitive. Test expectation: should show error for duplicate reason.",
+  "screenshot_file": "step_014_success_message.png"
+}

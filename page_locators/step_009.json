@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "verify",
+  "description": "Verify Equipment Action Reason Configuration section is displayed",
+  "selector": "text=Equipment Action Reason Configuration",
+  "selector_type": "text",
+  "iframe_path": "iframe[name='PegaGadget0a7ebIfr']",
+  "element_found": true,
+  "validation_note": "Equipment Action Reason Configuration section found in iframe",
+  "screenshot_file": "step_009_equipment_action_config.png"
+}
