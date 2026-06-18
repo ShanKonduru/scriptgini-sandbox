@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "verify",
+  "description": "Verify DSP Home page is displayed successfully after login",
+  "selector": "link[name='Configurations']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "DSP Home page loaded with Configurations link visible",
+  "screenshot_file": "step_011_dsp_home_page.png"
+}

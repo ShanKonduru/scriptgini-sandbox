@@ -1,0 +1,11 @@
+{
+  "step_number": 3,
+  "action": "fill",
+  "description": "Enter username: SivaRajesh.Gottumukkala@cpkcr.com in the username field",
+  "selector": "textbox[name='Enter your email, phone, or']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Username field filled successfully using getByRole('textbox', { name: 'Enter your email, phone, or' })",
+  "screenshot_file": "step_004_username_field_highlighted.png"
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 15,
+  "action": "verify",
+  "description": "Verify the newly added action-reason 'Cancelled - Duplicate Waybill' is persisted and displayed in the configuration list",
+  "selector": "text='Duplicate Waybill'",
+  "selector_type": "text",
+  "iframe_path": "iframe[name*='PegaGadget']",
+  "element_found": true,
+  "validation_note": "Verified 'Duplicate Waybill' text is present in the configuration list",
+  "screenshot_file": "step_021_after_save.png"
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 7,
+  "action": "click",
+  "description": "Handle post-login cookie consent popup by accepting",
+  "selector": "data-testid=:privacy-dialog:accept",
+  "selector_type": "test-id",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Cookie consent Accept button clicked using getByTestId(':privacy-dialog:accept')",
+  "screenshot_file": "step_010_accept_button_highlighted.png"
+}

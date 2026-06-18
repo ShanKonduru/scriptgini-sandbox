@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "click",
+  "description": "Navigate to Configuration icon and click on it",
+  "selector": "link[name='Configurations']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Configurations link clicked successfully",
+  "screenshot_file": "step_012_configurations_highlighted.png"
+}

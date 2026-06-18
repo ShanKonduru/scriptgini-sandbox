@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "click",
+  "description": "Click on Save button under Reason configuration",
+  "selector": "button.pzbutton:has-text('Save')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*='PegaGadget']",
+  "element_found": true,
+  "validation_note": "Save button clicked in Equipment Action Reason section within iframe",
+  "screenshot_file": "step_020_save_button_highlighted.png"
+}

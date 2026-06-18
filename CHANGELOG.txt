@@ -80,3 +80,81 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-18T12:21:18Z
+Test Case Reference: Equipment Action Reason Configuration - Add Cancelled/Duplicate Waybill
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/login_page.py
+      New Page Object class: LoginPage
+      Methods: navigate(), click_despachoprevio_sso(), enter_username(), click_next(),
+               enter_password(), click_signin(), accept_cookies()
+      Handles Microsoft SSO authentication flow for DSP application including
+      cookie consent popup handling.
+
+  - pages/dsp_home_page.py
+      New Page Object class: DSPHomePage
+      Methods: navigate_to_configurations(), is_displayed()
+      Manages DSP home page navigation and verification.
+
+  - pages/configurations_page.py
+      New Page Object class: ConfigurationsPage
+      Methods: verify_equipment_action_reason_section(), click_add_button(),
+               select_action(), enter_reason(), click_save_button(),
+               verify_action_reason_persisted()
+      Handles Equipment Action Reason configuration management within Pega iframe.
+      Uses frame_locator() to interact with nested iframe content.
+
+  - tests/test_equipment_action_reason.py
+      New test function: test_add_equipment_action_reason_cancelled_duplicate_waybill()
+      Fixture: logged_in_page() - handles complete SSO login flow
+      Implements end-to-end workflow for adding equipment action reason:
+      - SSO login via Despachoprevio (Microsoft authentication)
+      - Cookie consent acceptance
+      - Navigation to Configurations page
+      - Adding new action-reason: Cancelled - Duplicate Waybill
+      - Verification of persistence in configuration list
+
+  - page_locators/step_001.json through step_015.json
+      Captured real DOM selectors from live Pega application walkthrough
+      Documents exact locators used including iframe paths, element types,
+      and validation notes for each test step.
+
+Why it was necessary:
+  This is a new test scenario for Equipment Action Reason configuration in the
+  DSP Pega application. No existing tests covered:
+  - Microsoft SSO authentication via Despachoprevio
+  - Pega iframe-based configuration management
+  - Equipment Action Reason CRUD operations
+  - Configuration persistence verification
+
+  The existing DSP test (tc-001) only covers "No Despacho previo" workflow and
+  does not include:
+  - SSO login flow (it uses direct login)
+  - Configuration page interactions
+  - Iframe navigation patterns required for Pega applications
+
+  New page objects were required because:
+  - LoginPage: handles Microsoft SSO multi-step flow not present in existing tests
+  - DSPHomePage: manages DSP-specific navigation patterns
+  - ConfigurationsPage: implements iframe interaction patterns using frame_locator()
+    for Pega's nested iframe structure
+
+  The page locator JSON files document real selectors captured from live application
+  walkthrough using Playwright MCP tools, ensuring accuracy and maintainability.
+
+Test execution requirements:
+  - Environment variables: APP_USERNAME, APP_PASSWORD, BASE_URL (optional)
+  - Credentials must have access to DSP Configurations page
+  - Test validates complete CRUD workflow with persistence verification
+  - Uses synchronous Playwright API matching existing codebase patterns
+  - Implements Page Object Model for maintainability
+
+Files changed: pages/login_page.py, pages/dsp_home_page.py, pages/configurations_page.py,
+               tests/test_equipment_action_reason.py, page_locators/step_001.json through
+               step_015.json
+
+No existing files were modified. No existing tests were broken.
+================================================================================

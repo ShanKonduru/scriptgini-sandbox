@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "select",
+  "description": "Select 'Cancelled' from the Action dropdown",
+  "selector": "select[name*='pActionReason']:last-of-type",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*='PegaGadget']",
+  "element_found": true,
+  "validation_note": "Selected 'Cancelled' from the last empty dropdown in the list",
+  "screenshot_file": "step_017_action_dropdown_highlighted.png"
+}

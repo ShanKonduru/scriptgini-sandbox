@@ -1,0 +1,11 @@
+{
+  "step_number": 2,
+  "action": "click",
+  "description": "Click on Despachoprevio button for SSO login",
+  "selector": "button[name='Login with despachoprevio']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Button clicked successfully using getByRole('button', { name: 'Login with despachoprevio' })",
+  "screenshot_file": "step_002_despachoprevio_highlighted.png"
+}

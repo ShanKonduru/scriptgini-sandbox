@@ -1,0 +1,11 @@
+{
+  "step_number": 13,
+  "action": "fill",
+  "description": "Enter 'Duplicate Waybill' in the Reason text field",
+  "selector": "input[name*='pActionReason'][name*='pKey']:last-of-type",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*='PegaGadget']",
+  "element_found": true,
+  "validation_note": "Filled 'Duplicate Waybill' in the last empty reason input field",
+  "screenshot_file": "step_019_reason_filled.png"
+}

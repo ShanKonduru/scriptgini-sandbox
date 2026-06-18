@@ -1,0 +1,11 @@
+{
+  "step_number": 11,
+  "action": "click",
+  "description": "Click on Add button to add new action reason",
+  "selector": "button.pzbutton:has-text('Add')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*='PegaGadget']",
+  "element_found": true,
+  "validation_note": "Add button clicked in Equipment Action Reason section within iframe",
+  "screenshot_file": "step_015_add_button_highlighted.png"
+}
