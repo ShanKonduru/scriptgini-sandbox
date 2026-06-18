@@ -1,0 +1,11 @@
+{
+  "step_number": 2,
+  "action": "click",
+  "description": "Click on Despachoprevio button for SSO login",
+  "selector": "button:has(a[href*='despachoprevio'])",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Successfully clicked SSO button, redirected to Microsoft login",
+  "screenshot_file": "step_002_after_sso_click.png"
+}

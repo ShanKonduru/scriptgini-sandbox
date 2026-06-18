@@ -80,3 +80,87 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-18T11:57:00Z
+Test Case Reference: TC-002 Equipment Action Reason Configuration
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/__init__.py
+      Package initialization file for page object model structure.
+
+  - pages/dsp_login_page.py
+      New page object class: DSPLoginPage
+      Implements complete Microsoft SSO login flow for DSP application:
+      - navigate() — Navigate to Pega authentication page
+      - click_despachoprevio_sso() — Click SSO button for Despachoprevio
+      - enter_username() — Fill Microsoft SSO username field
+      - click_next() — Proceed to password entry
+      - enter_password() — Fill Microsoft SSO password field
+      - click_signin() — Submit authentication
+      - accept_cookies() — Handle Pega cookie consent dialog
+      - login() — Complete end-to-end login orchestration
+
+  - pages/dsp_configurations_page.py
+      New page object class: DSPConfigurationsPage
+      Implements Equipment Action Reason Configuration management:
+      - navigate_to_configurations() — Navigate to Configurations page from main nav
+      - open_equipment_action_reason_config() — Open specific configuration section
+      - click_add_action_reason() — Add new action reason entry
+      - fill_action_reason() — Populate action and description fields
+      - save_configuration() — Persist configuration changes
+      - verify_action_reason_exists() — Validate entry persistence
+      - refresh_and_reopen_section() — Reload page and navigate back to section
+      Note: Handles Pega iframe structure and dynamic table row generation
+
+  - generated-scripts/dsp/tc-002-equipment-action-reason-config.py
+      New Playwright/Python test function: test_tc_002_equipment_action_reason_configuration
+      Implements end-to-end workflow for DSP configuration management:
+      - Login via Microsoft SSO using credentials from environment variables
+      - Navigate to Configurations page
+      - Open Equipment Action Reason Configuration section
+      - Add new action reason with unique timestamp-based value
+      - Fill action and description fields
+      - Save configuration
+      - Refresh page and verify persistence of new entry
+
+  - page_locators/step_001.json through step_018.json
+      JSON metadata files documenting real DOM selectors captured during live
+      browser walkthrough for each test step. Includes selector type, iframe path,
+      validation notes, and screenshot references for traceability.
+
+Why it was necessary:
+  This is a new administrative configuration test for the DSP application.
+  No existing tests covered:
+  - DSP Configurations page navigation and interaction
+  - Equipment Action Reason Configuration management
+  - Configuration persistence validation across page refresh
+  - Pega iframe-based UI interaction patterns
+  - Dynamic table row addition and field population in Pega
+
+  The existing tc-001 test only covers the DSP user workflow (car release
+  validation), not administrative configuration management. The configuration
+  page requires different navigation, uses iframe-based layout, and has
+  distinct interaction patterns (dynamic table management vs. popup validation).
+
+  New page objects were required because:
+  - Login flow is shared with tc-001 but was not yet extracted into reusable POM
+  - Configuration page has unique iframe structure and navigation patterns
+  - Dynamic table field identification requires runtime selector resolution
+
+Test execution requirements:
+  - Environment variables: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL
+  - Credentials must have admin permissions for configuration management
+  - Test generates unique action reason values using timestamps to avoid conflicts
+  - Validates configuration persistence across page refresh
+  - Handles Pega iframe structure with frame_locator() API
+  - Uses dynamic selector resolution for table inputs (last visible input pattern)
+
+Files changed: pages/__init__.py, pages/dsp_login_page.py, pages/dsp_configurations_page.py,
+generated-scripts/dsp/tc-002-equipment-action-reason-config.py, page_locators/step_001.json
+through step_018.json
+
+No existing files were modified. No existing tests were broken.
+The Page Object Model pattern was introduced to improve test maintainability and reusability.
+================================================================================

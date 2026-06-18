@@ -1,0 +1,11 @@
+{
+  "step_number": 4,
+  "action": "fill",
+  "description": "Enter password Kasiviswanatha9949874966 in the password field",
+  "selector": "input[type='password']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Successfully filled password in Microsoft SSO login",
+  "screenshot_file": "step_004_after_password.png"
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "fill",
+  "description": "Populate Action column with reason value",
+  "selector": "input:visible:last",
+  "selector_type": "css",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Successfully filled action/reason field with test value 'Test Action Reason AutoGen'",
+  "screenshot_file": "step_012_after_fill_action.png"
+}

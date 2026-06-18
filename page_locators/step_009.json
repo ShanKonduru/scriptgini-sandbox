@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "click",
+  "description": "Locate and navigate to Equipment Action Reason Configuration section",
+  "selector": "text='Equipment Action Reason Configuration'",
+  "selector_type": "text",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Successfully clicked Equipment Action Reason Configuration link inside iframe",
+  "screenshot_file": "step_009_before_click_equipment_config.png"
+}

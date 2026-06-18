@@ -1,0 +1,11 @@
+{
+  "step_number": 5,
+  "action": "click",
+  "description": "Click on Sign in button to authenticate",
+  "selector": "button[type='submit']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Successfully clicked Sign in button, redirected to application with cookie consent popup",
+  "screenshot_file": "step_005_after_signin_cookie_popup.png"
+}

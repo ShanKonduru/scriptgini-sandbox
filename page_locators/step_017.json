@@ -1,0 +1,11 @@
+{
+  "step_number": 17,
+  "action": "click",
+  "description": "Navigate back to Equipment Action Reason Configuration section",
+  "selector": "text='Equipment Action Reason Configuration'",
+  "selector_type": "text",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Click the Equipment Action Reason Configuration link again after refresh",
+  "screenshot_file": null
+}

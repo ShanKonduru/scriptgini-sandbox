@@ -1,0 +1,11 @@
+{
+  "step_number": 6,
+  "action": "click",
+  "description": "Handle cookie consent popup if present by accepting or dismissing",
+  "selector": "button:contains('Accept')",
+  "selector_type": "text",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Successfully accepted cookie consent, test id ':privacy-dialog:accept'",
+  "screenshot_file": "step_006_before_accept_cookie.png"
+}

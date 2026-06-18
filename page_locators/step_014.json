@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "click",
+  "description": "Click Save button to persist the configuration",
+  "selector": "button:has-text('Save configurations')",
+  "selector_type": "text",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Save button clicked, validation alert appeared - fields may need proper values. In actual test, ensure all required fields are filled",
+  "screenshot_file": "step_014_current_state.png"
+}

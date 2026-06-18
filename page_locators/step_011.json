@@ -1,0 +1,11 @@
+{
+  "step_number": 11,
+  "action": "click",
+  "description": "Click on Add button to create new action reason",
+  "selector": "button:has-text('Add'):nth(1)",
+  "selector_type": "css",
+  "iframe_path": "iframe",
+  "element_found": true,
+  "validation_note": "Successfully clicked Add button for Equipment Action Reason Configuration (second Add button on page)",
+  "screenshot_file": "step_011_after_add_button.png"
+}

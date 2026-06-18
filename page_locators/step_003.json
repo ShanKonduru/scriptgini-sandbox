@@ -1,0 +1,11 @@
+{
+  "step_number": 3,
+  "action": "fill",
+  "description": "Enter username SivaRajesh.Gottumukkala@cpkcr.com in the username field",
+  "selector": "input[type='email']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Successfully filled username in Microsoft SSO login",
+  "screenshot_file": "step_003_after_username.png"
+}
