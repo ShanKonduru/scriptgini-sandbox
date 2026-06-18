@@ -1,0 +1,11 @@
+{
+  "step_number": 7,
+  "action": "click",
+  "description": "Locate and click on existing action reason entry with Action 'Notify Broker' and Reason 'Due to chop code invalid'",
+  "selector": "table tr:has-text('Notify Broker'):has-text('Due to chop code invalid'), tr td:has-text('Notify Broker') ~ td:has-text('Due to chop code invalid')",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Iframe'], iframe[name='PegaGadget1Iframe']",
+  "element_found": false,
+  "validation_note": "Could not verify - login failed. Pega uses table-based layouts extensively. Row should contain both action and reason values.",
+  "screenshot_file": null
+}

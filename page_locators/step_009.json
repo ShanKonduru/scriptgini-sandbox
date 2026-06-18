@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "click",
+  "description": "Click on Save configuration button",
+  "selector": "button:has-text('Save'), button[type='submit'], input[type='submit'][value*='Save']",
+  "selector_type": "text",
+  "iframe_path": "iframe[name='PegaGadget0Iframe'], iframe[name='PegaGadget1Iframe']",
+  "element_found": false,
+  "validation_note": "Could not verify - login failed. Save button typically at bottom of form. Pega often uses button elements with text 'Save' or submit inputs.",
+  "screenshot_file": null
+}

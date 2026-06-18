@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "fill",
+  "description": "Clear the reason field and keep it blank",
+  "selector": "input[name*='Reason'], textarea[name*='Reason'], input[id*='Reason']",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Iframe'], iframe[name='PegaGadget1Iframe']",
+  "element_found": false,
+  "validation_note": "Could not verify - login failed. Reason field typically an input or textarea element. Will use clear() or fill with empty string.",
+  "screenshot_file": null
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 5,
+  "action": "click",
+  "description": "Click on Configuration icon from the menu",
+  "selector": "button[data-test-id*='Configuration'], button[title*='Configuration'], a[title*='Configuration'], button:has-text('Configuration'), [class*='config']",
+  "selector_type": "css",
+  "iframe_path": "iframe[name='PegaGadget0Iframe'], iframe[name='PegaGadget1Iframe']",
+  "element_found": false,
+  "validation_note": "Could not verify - login failed. Typical Pega apps use iframes for content. Configuration icon usually in top navigation or sidebar menu.",
+  "screenshot_file": null
+}

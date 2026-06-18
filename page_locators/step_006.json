@@ -1,0 +1,11 @@
+{
+  "step_number": 6,
+  "action": "click",
+  "description": "Navigate to Equipment Action Reason Configuration section",
+  "selector": "a:has-text('Equipment Action Reason'), button:has-text('Equipment Action Reason'), [data-test-id*='EquipmentActionReason']",
+  "selector_type": "text",
+  "iframe_path": "iframe[name='PegaGadget0Iframe'], iframe[name='PegaGadget1Iframe']",
+  "element_found": false,
+  "validation_note": "Could not verify - login failed. Pega configuration sections typically displayed as links or expandable menu items.",
+  "screenshot_file": null
+}

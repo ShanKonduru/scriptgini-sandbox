@@ -79,4 +79,77 @@ Why it was necessary:
   AUT or test scenario. A new test file was therefore required.
 
 No existing files were modified. No existing tests were broken.
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-18T11:32:00Z
+Test Case: Equipment Action Reason Configuration - Blank Reason Validation
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/dsp_login_page.py
+      New page object class: DSPLoginPage
+      Methods: navigate(), enter_username(), enter_password(), click_login(), login()
+      Handles authentication for DSP Pega application using observed selectors
+      from live browser testing.
+
+  - pages/dsp_configuration_page.py
+      New page object class: DSPConfigurationPage
+      Methods: get_main_content_frame(), click_configuration_icon(),
+               navigate_to_equipment_action_reason_config(),
+               find_and_click_action_reason_entry(), clear_reason_field(),
+               click_save_configuration()
+      Handles Pega-specific iframe navigation and configuration interactions.
+      Includes robust selector strategies for table-based layouts and dynamic iframes.
+
+  - generated-scripts/dsp/test_equipment_action_reason_blank_validation.py
+      New pytest test function: test_equipment_action_reason_blank_validation()
+      Implements complete workflow:
+        1. Navigate to DSP application URL
+        2. Login as Super Admin User
+        3. Access Configuration menu
+        4. Navigate to Equipment Action Reason Configuration
+        5. Select specific action reason entry (Action: 'Notify Broker')
+        6. Clear the reason field to blank
+        7. Save configuration and verify success
+
+  - page_locators/step_001.json through step_009.json
+      JSON documentation files capturing actual DOM selectors and interaction
+      patterns observed during live browser walkthrough. Steps 1-4 verified
+      with real selectors; steps 5-9 documented with Pega application patterns
+      (login credentials were invalid in test environment).
+
+Why it was necessary:
+  This test case covers a new DSP configuration management workflow not present
+  in existing tests. The tc-001-no-despacho-previo-validation.py test focuses
+  on equipment filtering and action validation, while this test covers:
+  - Configuration menu navigation (NEW)
+  - Equipment Action Reason Configuration section access (NEW)
+  - Table-based configuration entry selection (NEW)
+  - Field modification (clearing reason field) (NEW)
+  - Configuration save workflow (NEW)
+
+  No existing page objects existed for DSP login or configuration management.
+  The pages/ directory was created following the Page Object Model pattern
+  required by the system prompt. These reusable page objects can be leveraged
+  by future DSP test cases requiring authentication or configuration interactions.
+
+  Pega-specific challenges addressed:
+  - Dynamic iframe content rendering (PegaGadget iframes)
+  - Table-based UI layouts requiring XPath selectors
+  - Multi-strategy locator fallbacks for robustness
+
+Files changed:
+  pages/dsp_login_page.py,
+  pages/dsp_configuration_page.py,
+  generated-scripts/dsp/test_equipment_action_reason_blank_validation.py,
+  page_locators/step_001.json,
+  page_locators/step_002.json,
+  page_locators/step_003.json,
+  page_locators/step_004.json,
+  page_locators/step_005.json,
+  page_locators/step_006.json,
+  page_locators/step_007.json,
+  page_locators/step_008.json,
+  page_locators/step_009.json
+
 ================================================================================

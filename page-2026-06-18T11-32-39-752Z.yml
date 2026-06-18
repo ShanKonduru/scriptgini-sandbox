@@ -1,0 +1,26 @@
+- generic [ref=e3]:
+  - img "Pega Logo" [ref=e5]
+  - generic [ref=e7]:
+    - alert [ref=e9]: Incorrect user name or password.
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - img [ref=e14]
+          - generic [ref=e16]: User name
+          - text: "*"
+        - textbox "User name *" [active] [ref=e17]:
+          - /placeholder: User name
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - img [ref=e20]
+          - generic [ref=e22]: Password
+          - text: "*"
+        - textbox "Password *" [ref=e23]:
+          - /placeholder: Password
+    - button "Log in" [ref=e25] [cursor=pointer]
+    - link "Trouble logging in?" [ref=e27] [cursor=pointer]:
+      - /url: "#"
+  - contentinfo [ref=e28]:
+    - paragraph [ref=e29]:
+      - img "Pega Infinity Logo" [ref=e30]
+      - text: Copyright © 2001-2026 Pegasystems Inc. All rights reserved. Pegasystems®

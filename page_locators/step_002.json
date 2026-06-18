@@ -1,0 +1,11 @@
+{
+  "step_number": 2,
+  "action": "fill",
+  "description": "Enter username in login form",
+  "selector": "input[placeholder='User name']",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Username field filled successfully using role=textbox with name 'User name *'",
+  "screenshot_file": "step_001_fill_username.png"
+}
