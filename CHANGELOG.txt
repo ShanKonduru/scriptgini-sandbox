@@ -3,6 +3,101 @@ CHANGELOG
 ================================================================================
 
 --------------------------------------------------------------------------------
+Entry: 2026-06-29T04:50:00Z
+Test Case Reference: TC-002 Equipment Action Reason Configuration and No Despacho Previo Action
+--------------------------------------------------------------------------------
+
+What was added:
+  - generated-scripts/dsp/tc-002-equipment-action-reason-configuration.py
+      New Playwright/Python test function: test_tc_002_equipment_action_reason_configuration
+      Implements comprehensive end-to-end workflow for DSP admin/user testing equipment
+      action reason configuration and applying the configured reason to equipment:
+      - Microsoft SSO login via "Login with Despachoprevio" flow
+      - Navigation to Configurations page
+      - Adding new Equipment Action Reason Configuration entry
+      - Selecting "Cancelled" action and entering "Duplicate Waybill" reason
+      - Saving the configuration and verifying persistence
+      - Navigation to Cars By Release Status page
+      - Verifying page elements (search, status filters, actions button, export button, table)
+      - Filtering equipment by "to be released" status
+      - Selecting equipment via checkbox
+      - Applying "No Despacho Previo" action
+      - Selecting the newly configured "Duplicate Waybill" reason from dropdown
+      - Submitting the action
+
+  - page_locators/step_001.json through step_024.json (24 JSON files)
+      Locator metadata files documenting each test step's actual DOM selector,
+      selector type (role/css/text/xpath), iframe path, element validation status,
+      and screenshot filename. These files provide complete traceability of all
+      locators captured during live Playwright walkthrough of the application.
+      Each JSON file includes:
+        * step_number: Sequential step identifier
+        * action: Type of action (navigate/click/fill/select/verify)
+        * description: Human-readable step description
+        * selector: Exact CSS selector, XPath, or JavaScript evaluation used
+        * selector_type: Categorization of selector strategy
+        * iframe_path: Nested iframe context (Pega application uses iframes extensively)
+        * element_found: Boolean validation that selector resolved successfully
+        * validation_note: Additional context about selector choice and success
+        * screenshot_file: Corresponding screenshot from live walkthrough
+
+Why it was necessary:
+  This test case extends the DSP application test coverage to include:
+  1. Configuration management workflows (Equipment Action Reason Configuration)
+  2. Microsoft Single Sign-On (SSO) authentication flow via OIDC
+  3. Complex iframe-based interactions (Pega application uses nested iframes)
+  4. End-to-end validation that configuration changes persist and are usable
+  5. Verification that newly configured reasons appear in action dropdown menus
+
+  The existing TC-001 test covered basic login and "No Despacho Previo" action
+  but did NOT cover:
+  - Microsoft SSO login flow (TC-001 used generic login form)
+  - Configuration page navigation and interaction
+  - Adding/editing equipment action reason configurations
+  - Persistence validation of configuration changes
+  - Using a custom-configured reason in a workflow
+  - Complex iframe DOM traversal and manipulation
+  - Radio button status filters on Cars By Release page
+
+  No existing page objects or helper methods exist in the codebase (tests are
+  written inline following the existing pattern in TC-001). All locators were
+  captured via live Playwright MCP tool walkthrough of the actual application,
+  ensuring selectors are verified against real DOM structure.
+
+Technical notes:
+  - Application uses nested iframes extensively; all iframe interactions use
+    JavaScript evaluation via page.evaluate() to access contentDocument
+  - Microsoft SSO flow requires role-based selectors for accessibility-labeled inputs
+  - Pega navigation menu uses dynamic text matching (no stable IDs/attributes)
+  - Equipment table checkboxes have dynamic IDs; selection uses name attribute patterns
+  - Configuration container identification uses text search for heading, then
+    DOM traversal to find associated controls
+
+Test execution requirements:
+  - Environment variables: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL
+  - Valid Microsoft SSO credentials that can authenticate to the DSP application
+  - Application must have "to be released" equipment available for testing
+  - Test creates a new Equipment Action Reason configuration entry (Cancelled / Duplicate Waybill)
+    which will persist in the system after test execution
+
+Files changed:
+  generated-scripts/dsp/tc-002-equipment-action-reason-configuration.py,
+  page_locators/step_001.json, page_locators/step_002.json, page_locators/step_003.json,
+  page_locators/step_004.json, page_locators/step_005.json, page_locators/step_006.json,
+  page_locators/step_007.json, page_locators/step_008.json, page_locators/step_009.json,
+  page_locators/step_010.json, page_locators/step_011.json, page_locators/step_012.json,
+  page_locators/step_013.json, page_locators/step_014.json, page_locators/step_015.json,
+  page_locators/step_016.json, page_locators/step_017.json, page_locators/step_018.json,
+  page_locators/step_019.json, page_locators/step_020.json, page_locators/step_021.json,
+  page_locators/step_022.json, page_locators/step_023.json, page_locators/step_024.json,
+  CHANGELOG.txt
+
+No existing files were modified except CHANGELOG.txt. No existing tests were broken.
+The framework structure documented in conftest.py and pytest.ini was strictly followed.
+
+================================================================================
+
+--------------------------------------------------------------------------------
 Entry: 2026-06-04 11:49:00
 Test Case Reference: TC-001 No Despacho Previo Validation
 --------------------------------------------------------------------------------

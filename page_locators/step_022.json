@@ -1,0 +1,11 @@
+{
+  "step_number": 22,
+  "action": "click",
+  "description": "Click on 'Select No Despacho Previo Action Reason' dropdown in the popup",
+  "selector": "select element where associated label contains 'Reason'",
+  "selector_type": "css",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Reason dropdown located in popup modal",
+  "screenshot_file": "step_021_select_reason_dropdown.png"
+}

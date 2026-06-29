@@ -1,0 +1,11 @@
+{
+  "step_number": 23,
+  "action": "select",
+  "description": "Select 'Duplicate Waybill' from the reason dropdown options",
+  "selector": "select element with option 'Duplicate Waybill'",
+  "selector_type": "css",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Duplicate Waybill option selected successfully from dropdown (options: Equipment returned to origin, New billing issued with correct route, Setback to Mexico, Released on other waybill, Duplicate Waybill, Equipment Bad Order, Diversion)",
+  "screenshot_file": "step_022_duplicate_waybill_selected.png"
+}

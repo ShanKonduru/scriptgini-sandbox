@@ -1,0 +1,11 @@
+{
+  "step_number": 16,
+  "action": "verify",
+  "description": "Verify basic search, status options, actions button, export to excel button and table with equipment details are visible",
+  "selector": "Multiple elements: buttons with 'Actions', 'Export', and table element",
+  "selector_type": "multiple",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "All required page elements verified: Actions button, Export button, and equipment table",
+  "screenshot_file": "step_016_verify_page_elements.png"
+}

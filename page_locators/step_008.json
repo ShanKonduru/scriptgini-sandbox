@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "click",
+  "description": "Navigate to Configuration page from the left navigation menu",
+  "selector": "JavaScript evaluation - finds 'Configurations' in nav items",
+  "selector_type": "text",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Configurations link clicked using JavaScript to find exact text match in navigation",
+  "screenshot_file": "step_008_navigate_configuration.png"
+}

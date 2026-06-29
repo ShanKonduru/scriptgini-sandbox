@@ -1,0 +1,11 @@
+{
+  "step_number": 24,
+  "action": "click",
+  "description": "Click on 'Submit' button to complete the action",
+  "selector": "button with text 'Submit'",
+  "selector_type": "text",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Submit button clicked successfully, action completed",
+  "screenshot_file": "step_023_submit_action.png"
+}

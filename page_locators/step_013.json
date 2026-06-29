@@ -1,0 +1,11 @@
+{
+  "step_number": 13,
+  "action": "click",
+  "description": "Click on 'Save configuration' button in Equipment Action Reason Configuration container",
+  "selector": "button with text containing 'save' in Equipment Action Reason Configuration container",
+  "selector_type": "text",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Save configurations button clicked successfully",
+  "screenshot_file": "step_013_save_configuration.png"
+}

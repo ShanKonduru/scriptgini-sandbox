@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "fill",
+  "description": "Enter reason 'Duplicate Waybill' in the reason text box",
+  "selector": "input[type='text'] (last input in Equipment Action Reason Configuration container)",
+  "selector_type": "css",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Reason field filled successfully with 'Duplicate Waybill'",
+  "screenshot_file": "step_012_enter_reason.png"
+}

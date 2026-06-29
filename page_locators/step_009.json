@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "verify",
+  "description": "Locate 'Equipment Action Reason Configuration' container",
+  "selector": "div containing text 'Equipment Action Reason Configuration' inside iframe",
+  "selector_type": "text",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Container located successfully inside iframe using text search",
+  "screenshot_file": "step_009_configuration_page.png"
+}

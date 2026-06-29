@@ -1,0 +1,11 @@
+{
+  "step_number": 17,
+  "action": "verify",
+  "description": "Select 'to be released' status from the status filter options",
+  "selector": "input[type='radio'] associated with label 'TO BE RELEASED'",
+  "selector_type": "css",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "TO BE RELEASED radio button is already selected by default",
+  "screenshot_file": "step_017_to_be_released_status.png"
+}

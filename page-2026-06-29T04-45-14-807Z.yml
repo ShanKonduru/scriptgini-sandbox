@@ -1,0 +1,1402 @@
+- generic [ref=e2]:
+  - generic [ref=e22]:
+    - generic "Skip navigation menu" [ref=e23]:
+      - generic [ref=e24]:
+        - button "Go to main content"
+      - generic [ref=e25]:
+        - generic: Shortcuts
+        - list "Shortcuts":
+          - listitem [ref=e26]:
+            - generic [ref=e27]: Jump to toast
+            - generic:
+              - generic [ref=e28]: ⌥
+              - generic [ref=e29]:
+                - text: ↵
+                - generic [ref=e30]: Enter
+          - listitem [ref=e31]:
+            - generic [ref=e32]: Dismiss toast
+            - generic:
+              - generic [ref=e33]: ⌥
+              - generic [ref=e34]: Q
+          - listitem [ref=e35]:
+            - generic [ref=e36]: Next region
+            - generic [ref=e37]: F9
+          - listitem [ref=e38]:
+            - generic [ref=e39]: Previous region
+            - generic:
+              - generic [ref=e40]:
+                - text: ⇧
+                - generic [ref=e41]: Shift
+              - generic [ref=e42]: F9
+    - navigation "Main" [ref=e43]:
+      - link "Despacho Previo" [ref=e44] [cursor=pointer]:
+        - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+        - img "Despacho Previo" [ref=e45]
+        - text: Despacho Previo
+      - generic [ref=e46]:
+        - list [ref=e48]:
+          - listitem [ref=e49]:
+            - link "Cars By Release Status" [ref=e50] [cursor=pointer]:
+              - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont
+              - generic [ref=e92]: Cars By Release Status
+          - listitem [ref=e54]:
+            - link "Cars History" [ref=e55] [cursor=pointer]:
+              - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/cars-history
+              - generic [ref=e93]: Cars History
+          - listitem [ref=e59]:
+            - link "DSP Reports" [ref=e60] [cursor=pointer]:
+              - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/dsp-reports
+              - generic [ref=e94]: DSP Reports
+          - listitem [ref=e64]:
+            - link "Configurations" [ref=e65] [cursor=pointer]:
+              - /url: https://cndral-termmg-stg2.pegacloud.net/prweb/PRAuth/app/dsp-cont/configurations
+              - generic [ref=e95]: Configurations
+        - generic:
+          - list
+      - list [ref=e70]:
+        - listitem [ref=e96]:
+          - button "Account" [ref=e97] [cursor=pointer]:
+            - img "SivaRajesh Gottumukkala" [ref=e99]: SG
+            - generic [ref=e100]: Account
+      - button "Collapse navigation" [active] [ref=e102] [cursor=pointer]
+    - main [ref=e79]:
+      - iframe [ref=e106]:
+        - generic [ref=f2e3]:
+          - text: 
+          - generic [ref=f2e4]:
+            - banner "Top Panel" [ref=f2e5]:
+              - generic [ref=f2e9]:
+                - heading "Configuration" [level=1] [ref=f2e10]
+                - button "Click to Open Glossary" [ref=f2e15] [cursor=pointer]
+            - region "Center Panel" [ref=f2e17]:
+              - tablist [ref=f2e21]:
+                - button "scrol to left": 
+                - generic [ref=f2e22]:
+                  - tab "General" [selected] [ref=f2e23] [cursor=pointer]
+                  - tabpanel "General" [ref=f2e24]:
+                    - generic [ref=f2e30]:
+                      - generic [ref=f2e32]:
+                        - generic [ref=f2e35]:
+                          - generic [ref=f2e40]:
+                            - generic [ref=f2e41]: Export Number Configuration
+                            - generic [ref=f2e42]: Audit History
+                            - generic [ref=f2e44]:
+                              - checkbox "Export Number Required" [ref=f2e45]
+                              - generic [ref=f2e46]: Export Number Required
+                            - button [ref=f2e50]
+                          - generic [ref=f2e55]:
+                            - generic [ref=f2e56]: Fraction Calculation Configuration
+                            - generic [ref=f2e57]: Audit History
+                            - generic [ref=f2e59]:
+                              - checkbox "Fraction Calculation Required" [ref=f2e60]
+                              - generic [ref=f2e61]: Fraction Calculation Required
+                            - button [ref=f2e65]
+                        - generic [ref=f2e69]:
+                          - generic [ref=f2e77]:
+                            - generic [ref=f2e78]: Unit Train Configuration
+                            - generic [ref=f2e79]: Audit History
+                            - generic [ref=f2e81]:
+                              - generic [ref=f2e82]:
+                                - generic [ref=f2e83]: Number Of Cars
+                                - textbox "Number Of Cars" [ref=f2e86]:
+                                  - /placeholder: ""
+                                  - text: "9"
+                              - generic [ref=f2e90]:
+                                - table [ref=f2e93]:
+                                  - rowgroup [ref=f2e94]:
+                                    - row "STCC" [ref=f2e95]:
+                                      - columnheader "STCC" [ref=f2e96]:
+                                        - generic [ref=f2e99]: STCC
+                                      - columnheader [ref=f2e100]
+                                    - row "0114410 Delete this rule" [ref=f2e104]:
+                                      - cell "0114410" [ref=f2e105] [cursor=pointer]:
+                                        - textbox [ref=f2e108]: "0114410"
+                                      - cell "Delete this rule" [ref=f2e109] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e112]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "0114411 Delete this rule" [ref=f2e113]:
+                                      - cell "0114411" [ref=f2e114] [cursor=pointer]:
+                                        - textbox [ref=f2e117]: "0114411"
+                                      - cell "Delete this rule" [ref=f2e118] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e121]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "0114415 Delete this rule" [ref=f2e122]:
+                                      - cell "0114415" [ref=f2e123] [cursor=pointer]:
+                                        - textbox [ref=f2e126]: "0114415"
+                                      - cell "Delete this rule" [ref=f2e127] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e130]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "0114416 Delete this rule" [ref=f2e131]:
+                                      - cell "0114416" [ref=f2e132] [cursor=pointer]:
+                                        - textbox [ref=f2e135]: "0114416"
+                                      - cell "Delete this rule" [ref=f2e136] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e139]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "0114425 Delete this rule" [ref=f2e140]:
+                                      - cell "0114425" [ref=f2e141] [cursor=pointer]:
+                                        - textbox [ref=f2e144]: "0114425"
+                                      - cell "Delete this rule" [ref=f2e145] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e148]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "2041933 Delete this rule" [ref=f2e149]:
+                                      - cell "2041933" [ref=f2e150] [cursor=pointer]:
+                                        - textbox [ref=f2e153]: "2041933"
+                                      - cell "Delete this rule" [ref=f2e154] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e157]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "2071230 Delete this rule" [ref=f2e158]:
+                                      - cell "2071230" [ref=f2e159] [cursor=pointer]:
+                                        - textbox [ref=f2e162]: "2071230"
+                                      - cell "Delete this rule" [ref=f2e163] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e166]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "0113930 Delete this rule" [ref=f2e167]:
+                                      - cell "0113930" [ref=f2e168] [cursor=pointer]:
+                                        - textbox [ref=f2e171]: "0113930"
+                                      - cell "Delete this rule" [ref=f2e172] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e175]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "0113990 Delete this rule" [ref=f2e176]:
+                                      - cell "0113990" [ref=f2e177] [cursor=pointer]:
+                                        - textbox [ref=f2e180]: "0113990"
+                                      - cell "Delete this rule" [ref=f2e181] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e184]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "2092390 Delete this rule" [ref=f2e185]:
+                                      - cell "2092390" [ref=f2e186] [cursor=pointer]:
+                                        - textbox [ref=f2e189]: "2092390"
+                                      - cell "Delete this rule" [ref=f2e190] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e193]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "2082335 Delete this rule" [ref=f2e194]:
+                                      - cell "2082335" [ref=f2e195] [cursor=pointer]:
+                                        - textbox [ref=f2e198]: "2082335"
+                                      - cell "Delete this rule" [ref=f2e199] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e202]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "2041110 Delete this rule" [ref=f2e203]:
+                                      - cell "2041110" [ref=f2e204] [cursor=pointer]:
+                                        - textbox [ref=f2e207]: "2041110"
+                                      - cell "Delete this rule" [ref=f2e208] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e211]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "2082330 Delete this rule" [ref=f2e212]:
+                                      - cell "2082330" [ref=f2e213] [cursor=pointer]:
+                                        - textbox [ref=f2e216]: "2082330"
+                                      - cell "Delete this rule" [ref=f2e217] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e220]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "3711120 Delete this rule" [ref=f2e221]:
+                                      - cell "3711120" [ref=f2e222] [cursor=pointer]:
+                                        - textbox [ref=f2e225]: "3711120"
+                                      - cell "Delete this rule" [ref=f2e226] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e229]:
+                                          - /url: ""
+                                          - text: 
+                                    - row "Delete this rule" [ref=f2e230]:
+                                      - cell [ref=f2e231] [cursor=pointer]:
+                                        - textbox [ref=f2e234]
+                                      - cell "Delete this rule" [ref=f2e235] [cursor=pointer]:
+                                        - link "Delete this rule" [ref=f2e238]:
+                                          - /url: ""
+                                          - text: 
+                                - button "Add" [ref=f2e241] [cursor=pointer]
+                            - link [ref=f2e246] [cursor=pointer]:
+                              - /url: ""
+                              - link [ref=f2e248]
+                          - button "Save configurations" [ref=f2e253] [cursor=pointer]
+                      - generic [ref=f2e255]:
+                        - heading "Equipment Action Reason Configuration" [level=2] [ref=f2e258]
+                        - generic [ref=f2e260]:
+                          - radiogroup "pyCaption" [ref=f2e264]:
+                            - generic [ref=f2e265]:
+                              - generic [ref=f2e266]:
+                                - radio "ALL" [ref=f2e267]
+                                - generic [ref=f2e268] [cursor=pointer]: ALL
+                              - generic [ref=f2e269]:
+                                - radio "Active" [checked] [ref=f2e270]
+                                - generic [ref=f2e271]: Active
+                              - generic [ref=f2e272]:
+                                - radio "Inactive" [ref=f2e273]
+                                - generic [ref=f2e274] [cursor=pointer]: Inactive
+                          - generic [ref=f2e279]:
+                            - table [ref=f2e282]:
+                              - rowgroup [ref=f2e283]:
+                                - row "Action Reason Audit History" [ref=f2e284]:
+                                  - columnheader "Action" [ref=f2e285]:
+                                    - generic [ref=f2e286]:
+                                      - generic [ref=f2e288]: Action
+                                      - link "Click to filter" [ref=f2e289] [cursor=pointer]
+                                  - columnheader "Reason" [ref=f2e290] [cursor=pointer]:
+                                    - generic [ref=f2e291]:
+                                      - generic [ref=f2e292]:
+                                        - generic [ref=f2e293]: Reason
+                                        - generic "Click to sort"
+                                      - link "Click to filter" [ref=f2e294]
+                                  - columnheader "Audit History" [ref=f2e295]:
+                                    - generic [ref=f2e298]: Audit History
+                                  - columnheader [ref=f2e299]
+                                - row "Cancelled Duplicate Waybill Delete this rule" [ref=f2e303]:
+                                  - cell "Cancelled" [ref=f2e304] [cursor=pointer]:
+                                    - combobox [ref=f2e306]:
+                                      - option "Select"
+                                      - option "Cancelled" [selected]
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Duplicate Waybill" [ref=f2e307] [cursor=pointer]:
+                                    - textbox [ref=f2e310]: Duplicate Waybill
+                                  - cell [ref=f2e311] [cursor=pointer]:
+                                    - link [ref=f2e315]
+                                  - cell "Delete this rule" [ref=f2e316] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e319]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Cancelled Equipment Bad Order Delete this rule" [ref=f2e320]:
+                                  - cell "Cancelled" [ref=f2e321] [cursor=pointer]:
+                                    - combobox [ref=f2e323]:
+                                      - option "Select"
+                                      - option "Cancelled" [selected]
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Equipment Bad Order" [ref=f2e324] [cursor=pointer]:
+                                    - textbox [ref=f2e327]: Equipment Bad Order
+                                  - cell [ref=f2e328] [cursor=pointer]:
+                                    - link [ref=f2e332]
+                                  - cell "Delete this rule" [ref=f2e333] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e336]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Capture Offline Payment Offline Payment - Wire Transfer Delete this rule" [ref=f2e337]:
+                                  - cell "Capture Offline Payment" [ref=f2e338] [cursor=pointer]:
+                                    - combobox [ref=f2e340]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment" [selected]
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Offline Payment - Wire Transfer" [ref=f2e341] [cursor=pointer]:
+                                    - textbox [ref=f2e344]: Offline Payment - Wire Transfer
+                                  - cell [ref=f2e345] [cursor=pointer]:
+                                    - link [ref=f2e349]
+                                  - cell "Delete this rule" [ref=f2e350] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e353]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Capture Offline Payment Gateway Failure Delete this rule" [ref=f2e354]:
+                                  - cell "Capture Offline Payment" [ref=f2e355] [cursor=pointer]:
+                                    - combobox [ref=f2e357]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment" [selected]
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Gateway Failure" [ref=f2e358] [cursor=pointer]:
+                                    - textbox [ref=f2e361]: Gateway Failure
+                                  - cell [ref=f2e362] [cursor=pointer]:
+                                    - link [ref=f2e366]
+                                  - cell "Delete this rule" [ref=f2e367] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e370]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Divert/Cancel Equipment Railroad Error Delete this rule" [ref=f2e371]:
+                                  - cell "Divert/Cancel Equipment" [ref=f2e372] [cursor=pointer]:
+                                    - combobox [ref=f2e374]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment" [selected]
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Railroad Error" [ref=f2e375] [cursor=pointer]:
+                                    - textbox [ref=f2e378]: Railroad Error
+                                  - cell [ref=f2e379] [cursor=pointer]:
+                                    - link [ref=f2e383]
+                                  - cell "Delete this rule" [ref=f2e384] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e387]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Divert/Cancel Equipment Diversion Delete this rule" [ref=f2e388]:
+                                  - cell "Divert/Cancel Equipment" [ref=f2e389] [cursor=pointer]:
+                                    - combobox [ref=f2e391]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment" [selected]
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Diversion" [ref=f2e392] [cursor=pointer]:
+                                    - textbox [ref=f2e395]: Diversion
+                                  - cell [ref=f2e396] [cursor=pointer]:
+                                    - link [ref=f2e400]
+                                  - cell "Delete this rule" [ref=f2e401] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e404]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Divert/Cancel Equipment Cancellation Delete this rule" [ref=f2e405]:
+                                  - cell "Divert/Cancel Equipment" [ref=f2e406] [cursor=pointer]:
+                                    - combobox [ref=f2e408]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment" [selected]
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Cancellation" [ref=f2e409] [cursor=pointer]:
+                                    - textbox [ref=f2e412]: Cancellation
+                                  - cell [ref=f2e413] [cursor=pointer]:
+                                    - link [ref=f2e417]
+                                  - cell "Delete this rule" [ref=f2e418] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e421]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Divert/Cancel Equipment Setback Delete this rule" [ref=f2e422]:
+                                  - cell "Divert/Cancel Equipment" [ref=f2e423] [cursor=pointer]:
+                                    - combobox [ref=f2e425]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment" [selected]
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Setback" [ref=f2e426] [cursor=pointer]:
+                                    - textbox [ref=f2e429]: Setback
+                                  - cell [ref=f2e430] [cursor=pointer]:
+                                    - link [ref=f2e434]
+                                  - cell "Delete this rule" [ref=f2e435] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e438]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Move to Despacho Previo Incorrectly placed in Origin hold Delete this rule" [ref=f2e439]:
+                                  - cell "Move to Despacho Previo" [ref=f2e440] [cursor=pointer]:
+                                    - combobox [ref=f2e442]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo" [selected]
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Incorrectly placed in Origin hold" [ref=f2e443] [cursor=pointer]:
+                                    - textbox [ref=f2e446]: Incorrectly placed in Origin hold
+                                  - cell [ref=f2e447] [cursor=pointer]:
+                                    - link [ref=f2e451]
+                                  - cell "Delete this rule" [ref=f2e452] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e455]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Move to Despacho Previo Customer agreement/exception to hold at origin Delete this rule" [ref=f2e456]:
+                                  - cell "Move to Despacho Previo" [ref=f2e457] [cursor=pointer]:
+                                    - combobox [ref=f2e459]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo" [selected]
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Customer agreement/exception to hold at origin" [ref=f2e460] [cursor=pointer]:
+                                    - textbox [ref=f2e463]: Customer agreement/exception to hold at origin
+                                  - cell [ref=f2e464] [cursor=pointer]:
+                                    - link [ref=f2e468]
+                                  - cell "Delete this rule" [ref=f2e469] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e472]:
+                                      - /url: ""
+                                      - text: 
+                                - row "No Despacho Previo Equipment returned to origin Delete this rule" [ref=f2e473]:
+                                  - cell "No Despacho Previo" [ref=f2e474] [cursor=pointer]:
+                                    - combobox [ref=f2e476]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo" [selected]
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Equipment returned to origin" [ref=f2e477] [cursor=pointer]:
+                                    - textbox [ref=f2e480]: Equipment returned to origin
+                                  - cell [ref=f2e481] [cursor=pointer]:
+                                    - link [ref=f2e485]
+                                  - cell "Delete this rule" [ref=f2e486] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e489]:
+                                      - /url: ""
+                                      - text: 
+                                - row "No Despacho Previo Setback to Mexico Delete this rule" [ref=f2e490]:
+                                  - cell "No Despacho Previo" [ref=f2e491] [cursor=pointer]:
+                                    - combobox [ref=f2e493]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo" [selected]
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Setback to Mexico" [ref=f2e494] [cursor=pointer]:
+                                    - textbox [ref=f2e497]: Setback to Mexico
+                                  - cell [ref=f2e498] [cursor=pointer]:
+                                    - link [ref=f2e502]
+                                  - cell "Delete this rule" [ref=f2e503] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e506]:
+                                      - /url: ""
+                                      - text: 
+                                - row "No Despacho Previo Duplicate Waybill Delete this rule" [ref=f2e507]:
+                                  - cell "No Despacho Previo" [ref=f2e508] [cursor=pointer]:
+                                    - combobox [ref=f2e510]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo" [selected]
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Duplicate Waybill" [ref=f2e511] [cursor=pointer]:
+                                    - textbox [ref=f2e514]: Duplicate Waybill
+                                  - cell [ref=f2e515] [cursor=pointer]:
+                                    - link [ref=f2e519]
+                                  - cell "Delete this rule" [ref=f2e520] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e523]:
+                                      - /url: ""
+                                      - text: 
+                                - row "No Despacho Previo Diversion Delete this rule" [ref=f2e524]:
+                                  - cell "No Despacho Previo" [ref=f2e525] [cursor=pointer]:
+                                    - combobox [ref=f2e527]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo" [selected]
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Diversion" [ref=f2e528] [cursor=pointer]:
+                                    - textbox [ref=f2e531]: Diversion
+                                  - cell [ref=f2e532] [cursor=pointer]:
+                                    - link [ref=f2e536]
+                                  - cell "Delete this rule" [ref=f2e537] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e540]:
+                                      - /url: ""
+                                      - text: 
+                                - row "No Despacho Previo Equipment Bad Order Delete this rule" [ref=f2e541]:
+                                  - cell "No Despacho Previo" [ref=f2e542] [cursor=pointer]:
+                                    - combobox [ref=f2e544]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo" [selected]
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Equipment Bad Order" [ref=f2e545] [cursor=pointer]:
+                                    - textbox [ref=f2e548]: Equipment Bad Order
+                                  - cell [ref=f2e549] [cursor=pointer]:
+                                    - link [ref=f2e553]
+                                  - cell "Delete this rule" [ref=f2e554] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e557]:
+                                      - /url: ""
+                                      - text: 
+                                - row "No Despacho Previo New billing issued with correct route Delete this rule" [ref=f2e558]:
+                                  - cell "No Despacho Previo" [ref=f2e559] [cursor=pointer]:
+                                    - combobox [ref=f2e561]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo" [selected]
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "New billing issued with correct route" [ref=f2e562] [cursor=pointer]:
+                                    - textbox [ref=f2e565]: New billing issued with correct route
+                                  - cell [ref=f2e566] [cursor=pointer]:
+                                    - link [ref=f2e570]
+                                  - cell "Delete this rule" [ref=f2e571] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e574]:
+                                      - /url: ""
+                                      - text: 
+                                - row "No Despacho Previo Released on other waybill Delete this rule" [ref=f2e575]:
+                                  - cell "No Despacho Previo" [ref=f2e576] [cursor=pointer]:
+                                    - combobox [ref=f2e578]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo" [selected]
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Released on other waybill" [ref=f2e579] [cursor=pointer]:
+                                    - textbox [ref=f2e582]: Released on other waybill
+                                  - cell [ref=f2e583] [cursor=pointer]:
+                                    - link [ref=f2e587]
+                                  - cell "Delete this rule" [ref=f2e588] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e591]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Notify Broker Due to CPKC system limitaion Delete this rule" [ref=f2e592]:
+                                  - cell "Notify Broker" [ref=f2e593] [cursor=pointer]:
+                                    - combobox [ref=f2e595]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker" [selected]
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to CPKC system limitaion" [ref=f2e596] [cursor=pointer]:
+                                    - textbox [ref=f2e599]: Due to CPKC system limitaion
+                                  - cell [ref=f2e600] [cursor=pointer]:
+                                    - link [ref=f2e604]
+                                  - cell "Delete this rule" [ref=f2e605] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e608]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Notify Broker Due to CPKC system limitation Delete this rule" [ref=f2e609]:
+                                  - cell "Notify Broker" [ref=f2e610] [cursor=pointer]:
+                                    - combobox [ref=f2e612]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker" [selected]
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to CPKC system limitation" [ref=f2e613] [cursor=pointer]:
+                                    - textbox [ref=f2e616]: Due to CPKC system limitation
+                                  - cell [ref=f2e617] [cursor=pointer]:
+                                    - link [ref=f2e621]
+                                  - cell "Delete this rule" [ref=f2e622] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e625]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Released with charges- allow to enter pedimento Due to sales/ncs/ and customer agreement Delete this rule" [ref=f2e626]:
+                                  - cell "Released with charges- allow to enter pedimento" [ref=f2e627] [cursor=pointer]:
+                                    - combobox [ref=f2e629]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento" [selected]
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to sales/ncs/ and customer agreement" [ref=f2e630] [cursor=pointer]:
+                                    - textbox [ref=f2e633]: Due to sales/ncs/ and customer agreement
+                                  - cell [ref=f2e634] [cursor=pointer]:
+                                    - link [ref=f2e638]
+                                  - cell "Delete this rule" [ref=f2e639] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e642]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Release Origin Hold Modified dummy data Delete this rule" [ref=f2e643]:
+                                  - cell "Release Origin Hold" [ref=f2e644] [cursor=pointer]:
+                                    - combobox [ref=f2e646]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold" [selected]
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Modified dummy data" [ref=f2e647] [cursor=pointer]:
+                                    - textbox [ref=f2e650]: Modified dummy data
+                                  - cell [ref=f2e651] [cursor=pointer]:
+                                    - link [ref=f2e655]
+                                  - cell "Delete this rule" [ref=f2e656] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e659]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Release Origin Hold Conditions Fulfilled Delete this rule" [ref=f2e660]:
+                                  - cell "Release Origin Hold" [ref=f2e661] [cursor=pointer]:
+                                    - combobox [ref=f2e663]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold" [selected]
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Conditions Fulfilled" [ref=f2e664] [cursor=pointer]:
+                                    - textbox [ref=f2e667]: Conditions Fulfilled
+                                  - cell [ref=f2e668] [cursor=pointer]:
+                                    - link [ref=f2e672]
+                                  - cell "Delete this rule" [ref=f2e673] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e676]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Release Origin Hold Due to Customer Complaint Delete this rule" [ref=f2e677]:
+                                  - cell "Release Origin Hold" [ref=f2e678] [cursor=pointer]:
+                                    - combobox [ref=f2e680]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold" [selected]
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to Customer Complaint" [ref=f2e681] [cursor=pointer]:
+                                    - textbox [ref=f2e684]: Due to Customer Complaint
+                                  - cell [ref=f2e685] [cursor=pointer]:
+                                    - link [ref=f2e689]
+                                  - cell "Delete this rule" [ref=f2e690] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e693]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Release Origin Hold Manual Release Delete this rule" [ref=f2e694]:
+                                  - cell "Release Origin Hold" [ref=f2e695] [cursor=pointer]:
+                                    - combobox [ref=f2e697]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold" [selected]
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Manual Release" [ref=f2e698] [cursor=pointer]:
+                                    - textbox [ref=f2e701]: Manual Release
+                                  - cell [ref=f2e702] [cursor=pointer]:
+                                    - link [ref=f2e706]
+                                  - cell "Delete this rule" [ref=f2e707] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e710]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Set Out System did not apply the setout fee Delete this rule" [ref=f2e711]:
+                                  - cell "Set Out" [ref=f2e712] [cursor=pointer]:
+                                    - combobox [ref=f2e714]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out" [selected]
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "System did not apply the setout fee" [ref=f2e715] [cursor=pointer]:
+                                    - textbox [ref=f2e718]: System did not apply the setout fee
+                                  - cell [ref=f2e719] [cursor=pointer]:
+                                    - link [ref=f2e723]
+                                  - cell "Delete this rule" [ref=f2e724] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e727]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Undo Cancelled Due to waybill dates are correct Delete this rule" [ref=f2e728]:
+                                  - cell "Undo Cancelled" [ref=f2e729] [cursor=pointer]:
+                                    - combobox [ref=f2e731]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled" [selected]
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to waybill dates are correct" [ref=f2e732] [cursor=pointer]:
+                                    - textbox [ref=f2e735]: Due to waybill dates are correct
+                                  - cell [ref=f2e736] [cursor=pointer]:
+                                    - link [ref=f2e740]
+                                  - cell "Delete this rule" [ref=f2e741] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e744]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Undo Cancelled Undo Cancellation Delete this rule" [ref=f2e745]:
+                                  - cell "Undo Cancelled" [ref=f2e746] [cursor=pointer]:
+                                    - combobox [ref=f2e748]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled" [selected]
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Undo Cancellation" [ref=f2e749] [cursor=pointer]:
+                                    - textbox [ref=f2e752]: Undo Cancellation
+                                  - cell [ref=f2e753] [cursor=pointer]:
+                                    - link [ref=f2e757]
+                                  - cell "Delete this rule" [ref=f2e758] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e761]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Undo Set Out Due to SAT System limitation Delete this rule" [ref=f2e762]:
+                                  - cell "Undo Set Out" [ref=f2e763] [cursor=pointer]:
+                                    - combobox [ref=f2e765]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out" [selected]
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to SAT System limitation" [ref=f2e766] [cursor=pointer]:
+                                    - textbox [ref=f2e769]: Due to SAT System limitation
+                                  - cell [ref=f2e770] [cursor=pointer]:
+                                    - link [ref=f2e774]
+                                  - cell "Delete this rule" [ref=f2e775] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e778]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Undo Set Out Due to Duplicate Waybill Delete this rule" [ref=f2e779]:
+                                  - cell "Undo Set Out" [ref=f2e780] [cursor=pointer]:
+                                    - combobox [ref=f2e782]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out" [selected]
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to Duplicate Waybill" [ref=f2e783] [cursor=pointer]:
+                                    - textbox [ref=f2e786]: Due to Duplicate Waybill
+                                  - cell [ref=f2e787] [cursor=pointer]:
+                                    - link [ref=f2e791]
+                                  - cell "Delete this rule" [ref=f2e792] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e795]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Undo Set Out Due to no Mexico Manifest Delete this rule" [ref=f2e796]:
+                                  - cell "Undo Set Out" [ref=f2e797] [cursor=pointer]:
+                                    - combobox [ref=f2e799]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out" [selected]
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to no Mexico Manifest" [ref=f2e800] [cursor=pointer]:
+                                    - textbox [ref=f2e803]: Due to no Mexico Manifest
+                                  - cell [ref=f2e804] [cursor=pointer]:
+                                    - link [ref=f2e808]
+                                  - cell "Delete this rule" [ref=f2e809] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e812]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Undo Set Out Due to fastway system not passing the waybill Delete this rule" [ref=f2e813]:
+                                  - cell "Undo Set Out" [ref=f2e814] [cursor=pointer]:
+                                    - combobox [ref=f2e816]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out" [selected]
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to fastway system not passing the waybill" [ref=f2e817] [cursor=pointer]:
+                                    - textbox [ref=f2e820]: Due to fastway system not passing the waybill
+                                  - cell [ref=f2e821] [cursor=pointer]:
+                                    - link [ref=f2e825]
+                                  - cell "Delete this rule" [ref=f2e826] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e829]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Update Current Chargable Date Due to CPKC System limitiation Delete this rule" [ref=f2e830]:
+                                  - cell "Update Current Chargable Date" [ref=f2e831] [cursor=pointer]:
+                                    - combobox [ref=f2e833]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date" [selected]
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to CPKC System limitiation" [ref=f2e834] [cursor=pointer]:
+                                    - textbox [ref=f2e837]: Due to CPKC System limitiation
+                                  - cell [ref=f2e838] [cursor=pointer]:
+                                    - link [ref=f2e842]
+                                  - cell "Delete this rule" [ref=f2e843] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e846]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Update Current Chargable Date Due to Duplicate Waybill Delete this rule" [ref=f2e847]:
+                                  - cell "Update Current Chargable Date" [ref=f2e848] [cursor=pointer]:
+                                    - combobox [ref=f2e850]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date" [selected]
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to Duplicate Waybill" [ref=f2e851] [cursor=pointer]:
+                                    - textbox [ref=f2e854]: Due to Duplicate Waybill
+                                  - cell [ref=f2e855] [cursor=pointer]:
+                                    - link [ref=f2e859]
+                                  - cell "Delete this rule" [ref=f2e860] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e863]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Update Current Chargable Date Due to SAT System limitation Delete this rule" [ref=f2e864]:
+                                  - cell "Update Current Chargable Date" [ref=f2e865] [cursor=pointer]:
+                                    - combobox [ref=f2e867]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date" [selected]
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to SAT System limitation" [ref=f2e868] [cursor=pointer]:
+                                    - textbox [ref=f2e871]: Due to SAT System limitation
+                                  - cell [ref=f2e872] [cursor=pointer]:
+                                    - link [ref=f2e876]
+                                  - cell "Delete this rule" [ref=f2e877] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e880]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Update DSP Hold Due to Duplicate Waybill Delete this rule" [ref=f2e881]:
+                                  - cell "Update DSP Hold" [ref=f2e882] [cursor=pointer]:
+                                    - combobox [ref=f2e884]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold" [selected]
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to Duplicate Waybill" [ref=f2e885] [cursor=pointer]:
+                                    - textbox [ref=f2e888]: Due to Duplicate Waybill
+                                  - cell [ref=f2e889] [cursor=pointer]:
+                                    - link [ref=f2e893]
+                                  - cell "Delete this rule" [ref=f2e894] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e897]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Update DSP Hold Due to CPKC System limitiation Delete this rule" [ref=f2e898]:
+                                  - cell "Update DSP Hold" [ref=f2e899] [cursor=pointer]:
+                                    - combobox [ref=f2e901]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold" [selected]
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to CPKC System limitiation" [ref=f2e902] [cursor=pointer]:
+                                    - textbox [ref=f2e905]: Due to CPKC System limitiation
+                                  - cell [ref=f2e906] [cursor=pointer]:
+                                    - link [ref=f2e910]
+                                  - cell "Delete this rule" [ref=f2e911] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e914]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Update First Chargable Date Due to Duplicate Waybill Delete this rule" [ref=f2e915]:
+                                  - cell "Update First Chargable Date" [ref=f2e916] [cursor=pointer]:
+                                    - combobox [ref=f2e918]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date" [selected]
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to Duplicate Waybill" [ref=f2e919] [cursor=pointer]:
+                                    - textbox [ref=f2e922]: Due to Duplicate Waybill
+                                  - cell [ref=f2e923] [cursor=pointer]:
+                                    - link [ref=f2e927]
+                                  - cell "Delete this rule" [ref=f2e928] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e931]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Update First Chargable Date Due to SAT System limitation Delete this rule" [ref=f2e932]:
+                                  - cell "Update First Chargable Date" [ref=f2e933] [cursor=pointer]:
+                                    - combobox [ref=f2e935]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date" [selected]
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to SAT System limitation" [ref=f2e936] [cursor=pointer]:
+                                    - textbox [ref=f2e939]: Due to SAT System limitation
+                                  - cell [ref=f2e940] [cursor=pointer]:
+                                    - link [ref=f2e944]
+                                  - cell "Delete this rule" [ref=f2e945] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e948]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Update First Chargable Date Due to CPKC System Delete this rule" [ref=f2e949]:
+                                  - cell "Update First Chargable Date" [ref=f2e950] [cursor=pointer]:
+                                    - combobox [ref=f2e952]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date" [selected]
+                                      - option "Validate Broker Exception"
+                                  - cell "Due to CPKC System" [ref=f2e953] [cursor=pointer]:
+                                    - textbox [ref=f2e956]: Due to CPKC System
+                                  - cell [ref=f2e957] [cursor=pointer]:
+                                    - link [ref=f2e961]
+                                  - cell "Delete this rule" [ref=f2e962] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e965]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Validate Broker Exception Due to Duplicate Waybill Delete this rule" [ref=f2e966]:
+                                  - cell "Validate Broker Exception" [ref=f2e967] [cursor=pointer]:
+                                    - combobox [ref=f2e969]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception" [selected]
+                                  - cell "Due to Duplicate Waybill" [ref=f2e970] [cursor=pointer]:
+                                    - textbox [ref=f2e973]: Due to Duplicate Waybill
+                                  - cell [ref=f2e974] [cursor=pointer]:
+                                    - link [ref=f2e978]
+                                  - cell "Delete this rule" [ref=f2e979] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e982]:
+                                      - /url: ""
+                                      - text: 
+                                - row "Validate Broker Exception Due to CPKC system limitation Delete this rule" [ref=f2e983]:
+                                  - cell "Validate Broker Exception" [ref=f2e984] [cursor=pointer]:
+                                    - combobox [ref=f2e986]:
+                                      - option "Select"
+                                      - option "Cancelled"
+                                      - option "Capture Offline Payment"
+                                      - option "Divert/Cancel Equipment"
+                                      - option "Move to Despacho Previo"
+                                      - option "No Despacho Previo"
+                                      - option "Notify Broker"
+                                      - option "Released with charges- allow to enter pedimento"
+                                      - option "Release Origin Hold"
+                                      - option "Set Out"
+                                      - option "Undo Cancelled"
+                                      - option "Undo Set Out"
+                                      - option "Update Current Chargable Date"
+                                      - option "Update DSP Hold"
+                                      - option "Update First Chargable Date"
+                                      - option "Validate Broker Exception" [selected]
+                                  - cell "Due to CPKC system limitation" [ref=f2e987] [cursor=pointer]:
+                                    - textbox [ref=f2e990]: Due to CPKC system limitation
+                                  - cell [ref=f2e991] [cursor=pointer]:
+                                    - link [ref=f2e995]
+                                  - cell "Delete this rule" [ref=f2e996] [cursor=pointer]:
+                                    - link "Delete this rule" [ref=f2e999]:
+                                      - /url: ""
+                                      - text: 
+                            - generic [ref=f2e1000]:
+                              - button "Add" [ref=f2e1002] [cursor=pointer]
+                              - button "Save configurations" [ref=f2e1005] [cursor=pointer]
+                - generic [ref=f2e1006]:
+                  - tab "Free-Time" [ref=f2e1007] [cursor=pointer]
+                  - text:                  
+                - generic [ref=f2e1008]:
+                  - tab "Priority" [ref=f2e1009] [cursor=pointer]
+                  - text:   
+                - generic [ref=f2e1010]:
+                  - tab "Doc Delay Charge" [ref=f2e1011] [cursor=pointer]
+                  - text: 
+                - generic [ref=f2e1012]:
+                  - tab "Broker Exception" [ref=f2e1013] [cursor=pointer]
+                  - text:    –– ––   tab    –– ––   tab
+                - tab "Origin Hold" [ref=f2e1015] [cursor=pointer]
+                - generic [ref=f2e1016]:
+                  - tab "Hold Reasons" [ref=f2e1017] [cursor=pointer]
+                  - text:                 
+                - generic [ref=f2e1018]:
+                  - tab "Holiday List" [ref=f2e1019] [cursor=pointer]
+                  - text:  
+                - generic [ref=f2e1020]:
+                  - tab "Setout Fee" [ref=f2e1021] [cursor=pointer]
+                  - text:      
+                - generic [ref=f2e1022]:
+                  - tab "Broker Validation" [ref=f2e1023] [cursor=pointer]
+                  - text:                    
+                - generic [ref=f2e1024]:
+                  - tab "Config Chopcode" [ref=f2e1025] [cursor=pointer]
+                  - text:      
+                - tab "SyncUp" [ref=f2e1027] [cursor=pointer]
+                - generic [ref=f2e1028]:
+                  - tab "Glossary" [ref=f2e1029] [cursor=pointer]
+                  - text:          
+                - generic [ref=f2e1030]:
+                  - button "scrol to right" [ref=f2e1031] [cursor=pointer]: 
+                  - button "navigation menu" [ref=f2e1032]:
+                    - generic [ref=f2e1033]: 
+                - text: tab
+  - log [ref=e3]:
+    - heading "Polite Announcements" [level=6] [ref=e4]
+  - log [ref=e5]:
+    - heading "Assertive Announcements" [level=6] [ref=e6]

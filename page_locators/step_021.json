@@ -1,0 +1,11 @@
+{
+  "step_number": 21,
+  "action": "click",
+  "description": "Select 'No Despacho Previo' option from the actions dropdown",
+  "selector": "a with text 'No Despacho Previo'",
+  "selector_type": "text",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "No Despacho Previo option clicked successfully from actions dropdown",
+  "screenshot_file": "step_020_no_despacho_previo.png"
+}

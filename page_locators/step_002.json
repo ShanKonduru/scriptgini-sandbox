@@ -1,0 +1,11 @@
+{
+  "step_number": 2,
+  "action": "click",
+  "description": "Click on 'Login with Despachoprevio' button",
+  "selector": "button:has-text('Login with despachoprevio')",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Button clicked successfully using page.get_by_role('button', name='Login with despachoprevio')",
+  "screenshot_file": "step_002_login_despachoprevio.png"
+}

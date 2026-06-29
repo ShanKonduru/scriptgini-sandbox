@@ -1,0 +1,11 @@
+{
+  "step_number": 19,
+  "action": "click",
+  "description": "Select an equipment by clicking the checkbox next to it",
+  "selector": "input[type='checkbox'][name*='ppxResults'][name*='ppySelected'] (first equipment row)",
+  "selector_type": "css",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "First equipment checkbox clicked and verified as checked",
+  "screenshot_file": "step_018_select_equipment.png"
+}

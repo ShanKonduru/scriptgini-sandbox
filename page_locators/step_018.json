@@ -1,0 +1,11 @@
+{
+  "step_number": 18,
+  "action": "verify",
+  "description": "Verify equipments with 'to be released' status are displayed",
+  "selector": "table[2] tbody tr containing checkboxes with name*='ppxResults'",
+  "selector_type": "css",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Equipment table contains multiple rows with 'to be released' status",
+  "screenshot_file": "step_018_select_equipment.png"
+}

@@ -1,0 +1,11 @@
+{
+  "step_number": 20,
+  "action": "click",
+  "description": "Click on 'Actions' button",
+  "selector": "button with text 'Actions'",
+  "selector_type": "text",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Actions button clicked successfully, dropdown menu appeared",
+  "screenshot_file": "step_019_click_actions.png"
+}

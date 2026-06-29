@@ -1,0 +1,11 @@
+{
+  "step_number": 11,
+  "action": "select",
+  "description": "In the last row added, select 'Cancelled' from the Action dropdown",
+  "selector": "select (last select element in Equipment Action Reason Configuration container)",
+  "selector_type": "css",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Cancelled option selected successfully from last dropdown in the container",
+  "screenshot_file": "step_011_select_cancelled.png"
+}

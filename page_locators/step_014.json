@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "verify",
+  "description": "Verify newly added action-reason pair is saved successfully",
+  "selector": "Last select and input elements in Equipment Action Reason Configuration container",
+  "selector_type": "css",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Verified action='Cancelled' and reason='Duplicate Waybill' are persisted",
+  "screenshot_file": "step_014_verify_saved.png"
+}

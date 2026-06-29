@@ -1,0 +1,11 @@
+{
+  "step_number": 10,
+  "action": "click",
+  "description": "Click on 'Add' button in Equipment Action Reason Configuration section",
+  "selector": "button in container with 'Equipment Action Reason Configuration' heading",
+  "selector_type": "text",
+  "iframe_path": "iframe (first on page)",
+  "element_found": true,
+  "validation_note": "Add button clicked successfully using JavaScript to find button in Equipment Action Reason Configuration container",
+  "screenshot_file": "step_010_click_add_button.png"
+}
