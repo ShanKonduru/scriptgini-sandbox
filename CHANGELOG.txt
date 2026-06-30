@@ -80,3 +80,85 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-06-30T04:03:00Z
+Test Case: Equipment Action Reason Configuration and Validation
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/dsp/login_page.py
+      New LoginPage class with methods for Microsoft OAuth login flow:
+      * navigate(base_url) - Navigate to DSP authentication page
+      * click_login_with_despachoprevio() - Click 'Login with Despachoprevio' button
+      * enter_username(username) - Fill username/email field
+      * click_next() - Click 'Next' button
+      * enter_password(password) - Fill password field
+      * click_sign_in() - Click 'Sign in' button
+      * handle_accept_cookies_if_present() - Handle optional cookie consent popup
+
+  - pages/dsp/home_page.py
+      New HomePage class with methods for DSP Home page navigation:
+      * verify_home_page_loaded() - Verify DSP Home page with menu items
+      * navigate_to_configuration() - Navigate to Configuration page
+      * navigate_to_cars_by_release() - Navigate to Cars By Release page
+
+  - pages/dsp/configuration_page.py
+      New ConfigurationPage class with methods for Equipment Action Reason Configuration:
+      * verify_configuration_page_loaded() - Verify Configuration page display
+      * select_action_no_despacho_previo() - Select 'No Despacho Previo' action
+      * get_reason_text_field() - Get editable reason text field locator
+      * update_reason_text(new_reason) - Update reason text with new value
+      * click_save_configuration() - Save configuration changes
+      * verify_reason_saved(expected_reason) - Verify updated reason is saved
+
+  - pages/dsp/cars_by_release_page.py
+      New CarsByReleasePage class with methods for Cars By Release workflow:
+      * verify_cars_by_release_page_loaded() - Verify page elements loaded
+      * select_status_to_be_released() - Filter by 'to be released' status
+      * select_equipment_by_checkbox() - Select equipment checkbox
+      * click_actions_button() - Open actions dropdown
+      * select_no_despacho_previo_action() - Select 'No Despacho Previo' action
+      * get_action_reason_dropdown() - Get reason dropdown locator
+      * click_action_reason_dropdown() - Open action reason dropdown
+      * select_reason_cancelled_waybill() - Select 'Cancelled waybill' reason
+      * click_submit_button() - Submit action
+      * verify_action_completed() - Verify action submission and popup close
+
+  - tests/dsp/test_equipment_action_reason_configuration_and_validation.py
+      New test function: test_equipment_action_reason_configuration_and_validation
+      Implements complete end-to-end workflow covering 21 steps:
+      1-7: Microsoft OAuth login flow via 'Login with Despachoprevio'
+      8-13: Navigate to Configuration, update Equipment Action Reason for 'No Despacho Previo' to 'Cancelled waybill', save
+      14-21: Navigate to Cars By Release, filter by status, select equipment, perform 'No Despacho Previo' action, select 'Cancelled waybill' reason, submit
+
+Why it was necessary:
+  This test case introduces a new comprehensive workflow combining configuration management
+  and operational validation that was not covered by existing tests:
+
+  - Existing tc-001 test only validates the 'No Despacho Previo' action reason popup
+    but does not cover the configuration update workflow
+  - No existing tests navigate to or interact with the Configuration page
+  - No existing tests update Equipment Action Reason Configuration settings
+  - No existing tests validate the end-to-end flow of configuration change → operational validation
+
+  The Page Object Model (POM) pattern was applied to create reusable, maintainable page objects:
+  - Separates page interactions from test logic
+  - Each page object encapsulates locators and methods for a single page/module
+  - Page object methods perform single actions with no assertions (assertions in test only)
+  - All locators defined as instance attributes in __init__ (never inline)
+
+  This is the first implementation using POM pattern in the DSP test suite,
+  establishing a foundation for future DSP test development with improved
+  maintainability and reduced code duplication.
+
+Test execution requirements:
+  - Environment variables: DSP_USERNAME, DSP_PASSWORD, DSP_BASE_URL (optional, has default)
+  - pytest command: pytest tests/dsp/test_equipment_action_reason_configuration_and_validation.py
+  - Test validates complete workflow from authentication to action submission
+  - Uses role-based locators with CSS fallbacks for robustness
+  - Includes explicit assertions at critical verification points
+
+Files changed: pages/dsp/login_page.py, pages/dsp/home_page.py, pages/dsp/configuration_page.py, pages/dsp/cars_by_release_page.py, tests/dsp/test_equipment_action_reason_configuration_and_validation.py, CHANGELOG.txt
+
+================================================================================
