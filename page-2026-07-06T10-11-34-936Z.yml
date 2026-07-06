@@ -1,0 +1,17 @@
+- generic [ref=f2e8]:
+  - generic [ref=f2e9]:
+    - img "Organization background image" [ref=f2e11]
+    - generic [ref=f2e17]:
+      - img "Organization banner logo" [ref=f2e20]
+      - main [ref=f2e21]:
+        - generic [ref=f2e24]:
+          - heading "Sign in" [level=1] [ref=f2e28]
+          - generic [ref=f2e29]:
+            - alert
+            - generic [ref=f2e31]:
+              - textbox "Enter your email, phone, or Skype." [active] [ref=f2e32]:
+                - /placeholder: Email, phone, or Skype
+              - textbox [ref=f2e33]
+          - button "Next" [ref=f2e39] [cursor=pointer]
+  - contentinfo [ref=f2e40]:
+    - button "Click here for troubleshooting information" [ref=f2e42] [cursor=pointer]: ...

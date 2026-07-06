@@ -1,0 +1,11 @@
+{
+  "step_number": 15,
+  "action": "verify",
+  "description": "Verify the audit trail displays Event, Created by, Created On, Updated by, and Updated On information",
+  "selector": "[role=\"dialog\"], .modal",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*=\"PegaGadget\"]",
+  "element_found": true,
+  "validation_note": "Audit trail modal displayed with audit history information",
+  "screenshot_file": "step_015_verify_audit_trail.png"
+}

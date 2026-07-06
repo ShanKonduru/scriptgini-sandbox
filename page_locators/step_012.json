@@ -1,0 +1,11 @@
+{
+  "step_number": 12,
+  "action": "click",
+  "description": "Click on 'Save Configuration' button under Equipment Action Reason Configuration section",
+  "selector": "button:has-text(\"Save Configuration\")",
+  "selector_type": "text",
+  "iframe_path": "iframe[name*=\"PegaGadget\"]",
+  "element_found": true,
+  "validation_note": "Save Configuration button clicked successfully",
+  "screenshot_file": "step_012_click_save_configuration.png"
+}

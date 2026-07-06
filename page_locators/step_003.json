@@ -1,0 +1,11 @@
+{
+  "step_number": 3,
+  "action": "fill",
+  "description": "Enter Username provided",
+  "selector": "input[name='loginfmt']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Username textbox filled successfully",
+  "screenshot_file": "step_003_fill_username.png"
+}

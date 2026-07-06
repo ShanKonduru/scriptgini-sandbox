@@ -1,0 +1,11 @@
+{
+  "step_number": 10,
+  "action": "select",
+  "description": "Select existing action 'Cancelled'",
+  "selector": "select[name=\"$PpyDisplayHarness$pActionReason$l1$pParentKey\"]",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*=\"PegaGadget\"]",
+  "element_found": true,
+  "validation_note": "Cancelled action dropdown located at index l1, already has 'Cancelled' selected",
+  "screenshot_file": "step_010_select_cancelled_action.png"
+}

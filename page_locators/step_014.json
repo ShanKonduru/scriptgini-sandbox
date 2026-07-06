@@ -1,0 +1,11 @@
+{
+  "step_number": 14,
+  "action": "click",
+  "description": "Click on eye icon to view Pega audit history/log",
+  "selector": "tr:has(select[name=\"$PpyDisplayHarness$pActionReason$l1$pParentKey\"]) a:last-of-type",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*=\"PegaGadget\"]",
+  "element_found": true,
+  "validation_note": "Audit history icon clicked, modal displayed",
+  "screenshot_file": "step_014_click_audit_history.png"
+}

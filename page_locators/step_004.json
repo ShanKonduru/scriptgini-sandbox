@@ -1,0 +1,11 @@
+{
+  "step_number": 4,
+  "action": "click",
+  "description": "Click on 'Next' button",
+  "selector": "button[type='submit']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Next button clicked, password page displayed",
+  "screenshot_file": "step_004_click_next.png"
+}

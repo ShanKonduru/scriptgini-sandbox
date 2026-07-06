@@ -1,0 +1,11 @@
+{
+  "step_number": 7,
+  "action": "click",
+  "description": "Accept cookies popup if present",
+  "selector": "button:has-text(\"Accept\")",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Accept button clicked, cookies popup dismissed",
+  "screenshot_file": "step_007_accept_cookies.png"
+}

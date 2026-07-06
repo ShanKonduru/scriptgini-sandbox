@@ -1,0 +1,11 @@
+{
+  "step_number": 9,
+  "action": "verify",
+  "description": "Locate 'Equipment Action Reason Configuration' container",
+  "selector": "text=Equipment Action Reason Configuration",
+  "selector_type": "text",
+  "iframe_path": "iframe[name*=\"PegaGadget\"]",
+  "element_found": true,
+  "validation_note": "Equipment Action Reason Configuration container located inside PegaGadget iframe",
+  "screenshot_file": "step_009_locate_equipment_action_config.png"
+}

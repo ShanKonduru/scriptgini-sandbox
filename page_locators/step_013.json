@@ -1,0 +1,11 @@
+{
+  "step_number": 13,
+  "action": "verify",
+  "description": "Verify the updated action-reason pair is displayed with Action: 'Cancelled' and Reason: 'Duplicate Waybill'",
+  "selector": "select[name=\"$PpyDisplayHarness$pActionReason$l1$pParentKey\"] and input[name=\"$PpyDisplayHarness$pActionReason$l1$pKey\"]",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*=\"PegaGadget\"]",
+  "element_found": true,
+  "validation_note": "Verified Action='Cancelled' and Reason='Duplicate Waybill' are correctly displayed",
+  "screenshot_file": "step_013_verify_updated_pair.png"
+}

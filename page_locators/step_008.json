@@ -1,0 +1,11 @@
+{
+  "step_number": 8,
+  "action": "click",
+  "description": "Navigate to Configuration page from the left menu",
+  "selector": "a:has-text(\"Configuration\")",
+  "selector_type": "css",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Configuration link clicked, Configuration page displayed",
+  "screenshot_file": "step_008_navigate_configuration.png"
+}

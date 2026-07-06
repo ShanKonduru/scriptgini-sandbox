@@ -1,0 +1,11 @@
+{
+  "step_number": 11,
+  "action": "fill",
+  "description": "Update reason to 'Duplicate Waybill'",
+  "selector": "input[name=\"$PpyDisplayHarness$pActionReason$l1$pKey\"]",
+  "selector_type": "css",
+  "iframe_path": "iframe[name*=\"PegaGadget\"]",
+  "element_found": true,
+  "validation_note": "Reason input field filled with 'Duplicate Waybill'",
+  "screenshot_file": "step_011_update_reason.png"
+}

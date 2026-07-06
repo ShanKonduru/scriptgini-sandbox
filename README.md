@@ -241,6 +241,51 @@ Worktop automation targeting this repository should:
 - Default pytest mode from pytest.ini: headed
 - Runtime screenshots: enabled through conftest.py hooks
 
+## Required Environment Variables
+
+The following environment variables must be set before running tests that require authentication or access to external systems:
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `BASE_URL` | Application base URL for login | `https://your-application-url.com/` |
+| `APP_USERNAME` | Application username or email for authentication | `your_username` |
+| `APP_PASSWORD` | Application password for authentication | `your_password` |
+
+### Setting Environment Variables
+
+**Windows (CMD):**
+```cmd
+set BASE_URL=https://your-application-url.com/
+set APP_USERNAME=your_username
+set APP_PASSWORD=your_password
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:BASE_URL="https://your-application-url.com/"
+$env:APP_USERNAME="your_username"
+$env:APP_PASSWORD="your_password"
+```
+
+**Linux/macOS (bash):**
+```bash
+export BASE_URL="https://your-application-url.com/"
+export APP_USERNAME="your_username"
+export APP_PASSWORD="your_password"
+```
+
+**Using a .env file (recommended for local development):**
+
+Create a `.env` file in the repository root:
+
+```env
+BASE_URL=https://your-application-url.com/
+APP_USERNAME=your_username
+APP_PASSWORD=your_password
+```
+
+**Note:** Never commit the `.env` file or any file containing real credentials to version control.
+
 ## Maintainers Notes
 
 If framework conventions change, update this README first so Worktop generation remains aligned with the active standard.

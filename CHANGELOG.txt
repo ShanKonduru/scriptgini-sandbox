@@ -80,3 +80,104 @@ Why it was necessary:
 
 No existing files were modified. No existing tests were broken.
 ================================================================================
+
+--------------------------------------------------------------------------------
+Entry: 2026-07-06T10:14:00Z
+Test Case Reference: TC-002 Update Equipment Action Reason Configuration - DSP
+--------------------------------------------------------------------------------
+
+What was added:
+  - pages/login_page.py
+      New Page Object class: LoginPage
+      Implements Pega SSO authentication via Microsoft OAuth including:
+      - navigate() - Navigate to Pega PRAuth base URL
+      - click_despachoprevio_login() - Click SSO login button
+      - enter_username() - Fill Microsoft username field
+      - click_next() - Navigate to password page
+      - enter_password() - Fill Microsoft password field
+      - click_signin() - Submit authentication
+      - accept_cookies_if_present() - Handle Pega cookies popup
+      All locators use role-based and stable selectors (get_by_role, get_by_test_id)
+      following Playwright best practices.
+
+  - pages/configuration_page.py
+      New Page Object class: ConfigurationPage
+      Implements DSP Configuration page interactions including:
+      - navigate_to_configuration() - Navigate to Configuration page
+      - find_row_with_action() - Locate existing action-reason configuration rows
+      - get_action_dropdown_for_row() - Get action dropdown by row index
+      - get_reason_input_for_row() - Get reason input by row index
+      - update_reason() - Update reason text for a configuration
+      - click_save_configuration() - Save configuration changes
+      - click_audit_history() - Open Pega audit history modal
+      Properly handles Pega iframe structure using frame_locator('iframe[name*="PegaGadget"]')
+      with dynamic row indexing for Equipment Action Reason Configuration.
+
+  - tests/test_dsp_equipment_action_reason_update.py
+      New pytest test function: test_update_equipment_action_reason_configuration
+      Implements complete 15-step workflow:
+      1-7: Microsoft SSO authentication and cookie acceptance
+      8-9: Navigation to Configuration page and locating Equipment Action Reason section
+      10-13: Finding existing 'Cancelled' action, updating reason to 'Duplicate Waybill',
+             saving, and verifying the update
+      14-15: Viewing Pega audit history and verifying audit trail fields
+      Each step includes action, screenshot, and Playwright expect() assertion.
+      All credentials read from environment variables (BASE_URL, APP_USERNAME, APP_PASSWORD).
+
+  - page_locators/step_001.json through step_015.json
+      JSON locator documentation for all 15 test steps capturing:
+      - Actual selectors used during live walkthrough
+      - Element types (role, CSS, text)
+      - Iframe paths for Pega content
+      - Validation notes and screenshot references
+      These files serve as documentation of the real DOM structure observed.
+
+  - README.md (updated)
+      Added "## Required Environment Variables" section documenting:
+      - BASE_URL, APP_USERNAME, APP_PASSWORD requirements
+      - Setup instructions for Windows (CMD/PowerShell), Linux/macOS
+      - Example .env file format with placeholder values (no real credentials)
+
+Why it was necessary:
+  This is a new test scenario for the DSP application covering configuration management.
+  No existing tests covered:
+  - Equipment Action Reason Configuration editing
+  - Pega iframe-based UI interaction patterns
+  - Configuration save and verification workflows
+  - Pega audit history/log viewing
+
+  The existing DSP test (tc-001) only covers the "No Despacho previo" user workflow
+  from the car release page. It does not include:
+  - Configuration page navigation or interaction
+  - Equipment Action Reason Configuration container
+  - Action-reason pair management
+  - Audit trail verification
+
+  New page object classes were required because:
+  - LoginPage: Existing tests used inline login code; this creates reusable SSO login
+  - ConfigurationPage: No existing page object for DSP Configuration page or Pega
+    iframe handling with dynamic table row indexing
+
+  The Page Object Model (POM) pattern was applied to:
+  - Separate locators from test logic (all selectors in page __init__)
+  - Enable reuse of login flow across multiple DSP tests
+  - Encapsulate Pega iframe interaction complexity
+  - Follow Playwright best practices for locator naming (UI purpose, not DOM attributes)
+
+Test execution requirements:
+  - Environment variables: BASE_URL, APP_USERNAME, APP_PASSWORD
+  - Validates 15-step workflow with per-step assertions
+  - Uses synchronous Playwright API (playwright.sync_api)
+  - Handles Pega iframe structure with frame_locator
+  - Screenshots saved to screenshots/ directory (15 screenshots total)
+
+Files changed:
+  pages/login_page.py (NEW),
+  pages/configuration_page.py (NEW),
+  tests/test_dsp_equipment_action_reason_update.py (NEW),
+  page_locators/step_001.json through step_015.json (NEW),
+  README.md (UPDATED)
+
+No existing files were modified except README.md for documentation.
+No existing tests were broken.
+================================================================================

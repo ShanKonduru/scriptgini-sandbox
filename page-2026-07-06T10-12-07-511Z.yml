@@ -1,0 +1,14 @@
+- generic [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - log [ref=f5e3]:
+      - heading "Polite Announcements" [level=6] [ref=f5e4]
+    - log [ref=f5e5]:
+      - heading "Assertive Announcements" [level=6] [ref=f5e6]
+  - alertdialog "About cookies in this application" [ref=f5e9]:
+    - banner [ref=f5e10]:
+      - heading "About cookies in this application" [level=1] [ref=f5e11]:
+        - generic [ref=f5e12]: About cookies in this application
+    - generic [ref=f5e16]: This application uses cookies and requires all of them to function properly. By using this application, you agree to allow cookies to be stored to enable this experience.
+    - contentinfo [ref=f5e17]:
+      - button "Log off" [active] [ref=f5e18] [cursor=pointer]
+      - button "Accept" [ref=f5e19] [cursor=pointer]

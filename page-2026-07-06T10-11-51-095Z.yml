@@ -1,0 +1,20 @@
+- generic [ref=f2e8]:
+  - generic [ref=f2e9]:
+    - img "Organization background image" [ref=f2e11]
+    - generic [ref=f2e17]:
+      - img "Organization banner logo" [ref=f2e20]
+      - main [ref=f2e21]:
+        - generic [ref=f2e22]:
+          - generic [ref=f2e55]:
+            - button "Back" [ref=f2e56] [cursor=pointer]
+            - generic "sivarajesh.gottumukkala@cpkcr.com" [ref=f2e57]
+          - generic [ref=f2e58]:
+            - textbox [ref=f2e59]: sivarajesh.gottumukkala@cpkcr.com
+            - heading "Enter password" [level=1] [ref=f2e61]
+            - generic [ref=f2e63]:
+              - alert
+              - textbox "Enter the password for sivarajesh.gottumukkala@cpkcr.com" [active] [ref=f2e65]:
+                - /placeholder: Password
+            - button "Sign in" [ref=f2e72] [cursor=pointer]
+  - contentinfo [ref=f2e40]:
+    - button "Click here for troubleshooting information" [ref=f2e42] [cursor=pointer]: ...

@@ -1,0 +1,11 @@
+{
+  "step_number": 5,
+  "action": "fill",
+  "description": "Enter password provided",
+  "selector": "input[name='passwd']",
+  "selector_type": "role",
+  "iframe_path": null,
+  "element_found": true,
+  "validation_note": "Password textbox filled successfully (masked)",
+  "screenshot_file": "step_005_fill_password.png"
+}
